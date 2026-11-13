@@ -1,0 +1,177 @@
+[
+  {
+    "solutionId": "SOL-001",
+    "summary": "Build a clear starting point for your digital presence.",
+    "description": "An unclear website, inconsistent identity or missing inquiry path. Build a clear starting point for your digital presence. This solution offers a route to discuss connected work, with the final services, deliverables and costs defined in the proposal.",
+    "audience": "New businesses or organizations improving how they explain and present their offer.",
+    "problem": "An unclear website, inconsistent identity or missing inquiry path.",
+    "categories": "Web & Software Development; UI/UX, Graphic Design & Branding; relevant Digital Marketing.",
+    "approach": "review audience and offer; agree identity/content/site scope; design/build selected deliverables; verify inquiry paths; hand off",
+    "relatedPageIds": ["SOL-03", "SOL-05"],
+    "faqs": [
+      {
+        "question": "Does this include every branding and website service?",
+        "answer": "No. The final package identifies included services and deliverables. The solution name and starting price do not establish a complete branding or website scope."
+      },
+      {
+        "question": "Can this work with our existing systems?",
+        "answer": "Existing systems are reviewed for access, compatibility, licensing and condition. Reuse or replacement must be justified and agreed; neither is automatic."
+      },
+      {
+        "question": "What determines the final scope and fee?",
+        "answer": "Your objectives, the selected services (SVC-001, SVC-004, SVC-043, SVC-045, SVC-047), deliverable quantities, dependencies and ongoing responsibilities determine the proposal. Starting prices are indicative and third-party costs must be identified."
+      },
+      {
+        "question": "How is the engagement delivered?",
+        "answer": "We propose to review audience and offer; agree identity/content/site scope; design/build selected deliverables; verify inquiry paths; hand off. The actual sequence, review points and milestones are agreed before delivery."
+      }
+    ],
+    "metaDescription": "Build a clear starting point for your digital presence. Explore ARADUN’s Digital Presence solution, engagement options and scope considerations.",
+    "candidateServiceIds": [
+      "SVC-001",
+      "SVC-004",
+      "SVC-043",
+      "SVC-045",
+      "SVC-047"
+    ]
+  },
+  {
+    "solutionId": "SOL-002",
+    "summary": "Connect customer workflows and reduce repetitive administration.",
+    "description": "Repeated manual handoffs, inconsistent customer records or unclear follow-up. Connect customer workflows and reduce repetitive administration. This solution offers a route to discuss connected work, with the final services, deliverables and costs defined in the proposal.",
+    "audience": "Owners, sales and operations teams with disconnected processes.",
+    "problem": "Repeated manual handoffs, inconsistent customer records or unclear follow-up.",
+    "categories": "AI Automation & CRM; Web & Software Development where custom work is needed.",
+    "approach": "map current process; select systems and rules; agree data/access and exceptions; configure/test; document handoff",
+    "relatedPageIds": ["SOL-04", "SOL-05"],
+    "faqs": [
+      {
+        "question": "Does business automation require AI?",
+        "answer": "No. Rule-based workflows and CRM configuration may be more appropriate. AI is considered only for a defined, reviewed task and is not automatically included."
+      },
+      {
+        "question": "Can this work with our existing systems?",
+        "answer": "Existing systems are reviewed for access, compatibility, licensing and condition. Reuse or replacement must be justified and agreed; neither is automatic."
+      },
+      {
+        "question": "What determines the final scope and fee?",
+        "answer": "Your objectives, the selected services (SVC-011, SVC-012, SVC-013, SVC-017), deliverable quantities, dependencies and ongoing responsibilities determine the proposal. Starting prices are indicative and third-party costs must be identified."
+      },
+      {
+        "question": "How is the engagement delivered?",
+        "answer": "We propose to map current process; select systems and rules; agree data/access and exceptions; configure/test; document handoff. The actual sequence, review points and milestones are agreed before delivery."
+      }
+    ],
+    "metaDescription": "Connect customer workflows and reduce repetitive administration. Explore ARADUN’s Business Automation solution, engagement options and scope considerations.",
+    "candidateServiceIds": ["SVC-011", "SVC-012", "SVC-013", "SVC-017"]
+  },
+  {
+    "solutionId": "SOL-003",
+    "summary": "Coordinate marketing activity around clear business priorities.",
+    "description": "Scattered campaigns, inconsistent content or uncertain measurement. Coordinate marketing activity around clear business priorities. This solution offers a route to discuss connected work, with the final services, deliverables and costs defined in the proposal.",
+    "audience": "Businesses seeking a more structured approach to acquisition and communication.",
+    "problem": "Scattered campaigns, inconsistent content or uncertain measurement.",
+    "categories": "Digital Marketing; UI/UX, Graphic Design & Branding; Video Editing & Production where selected.",
+    "approach": "review goals and measurement; choose channels/workload; agree budget and approvals; deliver selected work; review evidence",
+    "relatedPageIds": ["SOL-01", "SOL-05"],
+    "faqs": [
+      {
+        "question": "Does the monthly price include ad spend and all channels?",
+        "answer": "No. Channels, workload and production are defined in scope. Advertising spend and applicable platform/production costs are separate unless expressly included."
+      },
+      {
+        "question": "Can this work with our existing systems?",
+        "answer": "Existing systems are reviewed for access, compatibility, licensing and condition. Reuse or replacement must be justified and agreed; neither is automatic."
+      },
+      {
+        "question": "What determines the final scope and fee?",
+        "answer": "Your objectives, the selected services (SVC-018, SVC-019, SVC-020, SVC-022, SVC-025), deliverable quantities, dependencies and ongoing responsibilities determine the proposal. Starting prices are indicative and third-party costs must be identified."
+      },
+      {
+        "question": "How is the engagement delivered?",
+        "answer": "We propose to review goals and measurement; choose channels/workload; agree budget and approvals; deliver selected work; review evidence. The actual sequence, review points and milestones are agreed before delivery."
+      }
+    ],
+    "metaDescription": "Coordinate marketing activity around clear business priorities. Explore ARADUN’s Business Growth solution, engagement options and scope considerations.",
+    "candidateServiceIds": [
+      "SVC-018",
+      "SVC-019",
+      "SVC-020",
+      "SVC-022",
+      "SVC-025"
+    ]
+  },
+  {
+    "solutionId": "SOL-004",
+    "summary": "Create a clearer foundation for deployment and operations.",
+    "description": "Inconsistent releases, unclear hosting responsibilities or limited operational visibility. Create a clearer foundation for deployment and operations. This solution offers a route to discuss connected work, with the final services, deliverables and costs defined in the proposal.",
+    "audience": "Technical founders and teams planning infrastructure or delivery improvements.",
+    "problem": "Inconsistent releases, unclear hosting responsibilities or limited operational visibility.",
+    "categories": "Cloud & DevOps; Cybersecurity; relevant Web & Software Development.",
+    "approach": "review application/workload; agree environment and responsibilities; implement selected controls; verify operation/recovery as scoped; hand off",
+    "relatedPageIds": ["SOL-02", "SOL-05"],
+    "faqs": [
+      {
+        "question": "Does this include round-the-clock infrastructure support?",
+        "answer": "No. Operating hours, response responsibilities, monitoring and maintenance must be explicitly agreed. Setup does not automatically create an ongoing managed service."
+      },
+      {
+        "question": "Can this work with our existing systems?",
+        "answer": "Existing systems are reviewed for access, compatibility, licensing and condition. Reuse or replacement must be justified and agreed; neither is automatic."
+      },
+      {
+        "question": "What determines the final scope and fee?",
+        "answer": "Your objectives, the selected services (SVC-027, SVC-028, SVC-029, SVC-032, SVC-033), deliverable quantities, dependencies and ongoing responsibilities determine the proposal. Starting prices are indicative and third-party costs must be identified."
+      },
+      {
+        "question": "How is the engagement delivered?",
+        "answer": "We propose to review application/workload; agree environment and responsibilities; implement selected controls; verify operation/recovery as scoped; hand off. The actual sequence, review points and milestones are agreed before delivery."
+      }
+    ],
+    "metaDescription": "Create a clearer foundation for deployment and operations. Explore ARADUN’s Cloud & Technology solution, engagement options and scope considerations.",
+    "candidateServiceIds": [
+      "SVC-027",
+      "SVC-028",
+      "SVC-029",
+      "SVC-032",
+      "SVC-033"
+    ]
+  },
+  {
+    "solutionId": "SOL-005",
+    "summary": "Plan connected digital work across your business.",
+    "description": "A wider change spans presence, software, operations or growth without an agreed sequence. Plan connected digital work across your business. This solution offers a route to discuss connected work, with the final services, deliverables and costs defined in the proposal.",
+    "audience": "Businesses with several related digital needs that require discovery and prioritization.",
+    "problem": "A wider change spans presence, software, operations or growth without an agreed sequence.",
+    "categories": "Any of the eight approved categories, only as selected after discovery.",
+    "approach": "clarify business goals; map dependencies; prioritize a scoped sequence; agree milestones and responsibilities; deliver/review in manageable stages",
+    "relatedPageIds": ["SOL-01", "SOL-02", "SOL-03", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Does “Complete” include all 57 services?",
+        "answer": "No. It means a custom coordinated engagement, not unlimited services. Every tier remains Custom, and the proposal defines the actual work, stages and boundaries."
+      },
+      {
+        "question": "Can this work with our existing systems?",
+        "answer": "Existing systems are reviewed for access, compatibility, licensing and condition. Reuse or replacement must be justified and agreed; neither is automatic."
+      },
+      {
+        "question": "What determines the final scope and fee?",
+        "answer": "Your objectives, the selected services (SVC-001, SVC-003, SVC-011, SVC-012, SVC-026, SVC-027), deliverable quantities, dependencies and ongoing responsibilities determine the proposal. Starting prices are indicative and third-party costs must be identified."
+      },
+      {
+        "question": "How is the engagement delivered?",
+        "answer": "We propose to clarify business goals; map dependencies; prioritize a scoped sequence; agree milestones and responsibilities; deliver/review in manageable stages. The actual sequence, review points and milestones are agreed before delivery."
+      }
+    ],
+    "metaDescription": "Plan connected digital work across your business. Explore ARADUN’s Complete Digital Business solution, engagement options and scope considerations.",
+    "candidateServiceIds": [
+      "SVC-001",
+      "SVC-003",
+      "SVC-011",
+      "SVC-012",
+      "SVC-026",
+      "SVC-027"
+    ]
+  }
+]

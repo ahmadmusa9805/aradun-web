@@ -1,0 +1,61 @@
+.staff-sign-in {
+  max-width: 36rem;
+  padding-block: var(--section-padding);
+}
+.inquiry-reader {
+  max-width: 70rem;
+  overflow-wrap: anywhere;
+}
+.inquiry-list {
+  list-style: none;
+  padding: 0;
+}
+.inquiry-list li,
+.inquiry-reader dl > div {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border-control);
+}
+.inquiry-reader dt {
+  font-weight: 700;
+}
+.inquiry-reader dd {
+  margin: var(--space-2) 0 0;
+  white-space: pre-wrap;
+}
+.inquiry-reader .ui-actions {
+  flex-wrap: wrap;
+}
+.staff-sign-in-eyebrow {
+  margin-top: var(--space-8);
+  color: var(--color-text-muted);
+}
+.staff-sign-in-card {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-control);
+  border-radius: var(--radius-control);
+}
+.staff-sign-in-card form {
+  display: grid;
+  gap: var(--space-4);
+}
+.staff-sign-in-card .ui-feedback:empty {
+  display: none;
+}
+@media (max-width: 30rem) {
+  .staff-sign-in-card {
+    padding: var(--space-4);
+  }
+}
+
+.security-secret,
+.security-codes code {
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+.staff-sign-in-card section + section {
+  margin-top: var(--space-8);
+}
+.security-codes {
+  padding-left: var(--space-6);
+}

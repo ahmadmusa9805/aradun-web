@@ -1,0 +1,16 @@
+# Reviewed migration records
+
+No business migration is currently approved. Do not create a migration collection, generic runner, future schemas or mutable audit backfill for this foundation task. The executable synthetic migration rehearsal is in backend/tests/database.test.ts and runs only inside the existing verified disposable MongoDB fixture.
+
+For each actual change, add a numbered reviewed record here alongside its owning task (for example `NNNN-descriptive-change.md`). Include:
+
+1. Immutable change ID, owner/approval, source/task references, code/catalog release and checksum. State supported old/new schemaVersion ranges and deployment compatibility; preserve inquiry historical snapshots.
+2. Preconditions: exact environment/database/topology, separately privileged operator identity, application versions, no concurrent incompatible operator, and resource/credential isolation. Do not infer a target from a shell default.
+3. Read-only dry-run filters/counts, affected index names/options, duplicate/integrity checks, representative query plan and impact/batch/time budget. Do not emit record contents, credentials or duplicate values. Stop on unexpected counts or ambiguity.
+4. Real backup reference and evidence that the relevant data/config/catalog can be restored under approved recovery targets. Owner's S3/backup implementation remains deferred; this prerequisite does not choose a provider, approve recovery targets or prove a backup exists. Production changes remain blocked until evidence and separate release authorization exist.
+5. Repeat-safe expand/backfill/verify/switch/contract steps only as needed. Use bounded indexed batches, explicit checkpoint/compare-and-set filters and transaction sessions for cross-record invariants. Capture progress externally in a deployment-owned execution ledger; do not add an application migration collection by default. A failed batch must be safely resumable without duplicate side effects.
+6. Verification: counts, actual index options, relationships, validation, representative reads and compatible app smoke checks. Rehearse apply twice and failure/resume on owned synthetic data first. Retry neither destructive DDL nor a partially completed operation blindly.
+7. Rollback/forward-fix decision: classify reversible expansion versus destructive/irreversible transformation; define old/new reader compatibility and restore/write-loss implications. App rollback alone cannot undo a data migration. Any drop/rename/retention shortening needs a separate reviewed explicit change; never run syncIndexes or startup repair.
+8. Store externally reviewed start/end/checkpoint/result evidence without PII; release owner accepts verification before closing. Keep operational privileges separate from normal application insert/read/update grants and restricted audit insert/find grants.
+
+Synthetic fixtures must be repeat-safe and labeled SAMPLE/DEMO. They must refuse production/unknown targets before mutation and verify the owned test process/DB marker before reset. Catalog stays source-controlled and is not seeded into competing collections. Staff bootstrap is a separate identity task; never ship a default password or real identity/contact data in fixtures.

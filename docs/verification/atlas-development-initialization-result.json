@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-12T21:31:14.531Z",
+  "database": "aradun_development",
+  "authorization": "Owner Approve and next: one-time existing MONGODB_URI credential exception; additive 12 collections / 30 indexes only",
+  "emptyTargetCollections": 0,
+  "beforeFingerprint": "18699558e10e3d1e83fe9cff0efeb0d62a8912ae91297ca9d5a616416d362d79",
+  "reconstructionEvidence": "m06-06-atlas-initialization.md: two owned disposable reconstruction tests passed; empty baseline contains no records to restore",
+  "dataBackupClaimed": false,
+  "status": "verified",
+  "verifiedAt": "2026-11-12T21:31:19.590Z",
+  "collections": 12,
+  "applicationIndexes": 30,
+  "applicationRecords": 0,
+  "afterFingerprint": "ae2526f8aba893ce5bd73ca4f3f4d08d2bfb0d3cabac0120cfab8b1b986d4d41",
+  "independentIndexRecheck": true,
+  "localDatabaseTouched": false,
+  "otherDatabasesTouched": false,
+  "accountsCreated": false,
+  "emailSent": false
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "types": ["node"],
+    "paths": { "@/*": ["../frontend/src/*", "../backend/src/*"] }
+  },
+  "include": [
+    "../vitest.config.ts",
+    "../playwright.config.ts",
+    "./**/*.ts",
+    "./**/*.tsx",
+    "../backend/tests/**/*.ts",
+    "../backend/scripts/**/*.ts",
+    "../frontend/tests/**/*.tsx"
+  ]
+}

@@ -1,0 +1,185 @@
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.header-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+}
+.brand-name {
+  display: block;
+  color: var(--color-text);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+}
+.brand-name span {
+  display: block;
+  font-size: var(--type-small);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+.header-actions > a:not(.ui-button),
+.desktop-navigation a,
+.navigation-disclosure summary,
+.mobile-navigation nav > a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+.navigation-disclosure > summary {
+  cursor: pointer;
+  gap: var(--space-2);
+  font-weight: 600;
+  list-style: none;
+}
+.navigation-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.navigation-disclosure > summary::after {
+  content: "+";
+  margin-inline-start: auto;
+}
+.navigation-disclosure[open] > summary::after {
+  content: "−";
+}
+.desktop-navigation {
+  display: none;
+}
+.mobile-navigation {
+  border-block: 1px solid var(--color-border-subtle);
+}
+.mobile-navigation > nav {
+  padding-block: var(--space-4);
+}
+.mobile-navigation .category-menu {
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.mobile-navigation .category-panel {
+  padding-inline: var(--space-4);
+  padding-block: var(--space-2);
+}
+.mobile-navigation a {
+  display: block;
+  padding-block: var(--space-3);
+}
+.mobile-navigation .ui-button {
+  display: inline-flex;
+  margin-block: var(--space-3);
+}
+.category-panel ul {
+  display: grid;
+  gap: var(--space-2);
+}
+.menu-overview {
+  font-weight: 600;
+  margin-block-end: var(--space-3);
+}
+.site-footer {
+  padding-block: var(--space-12);
+  border-top: 1px solid var(--color-border-subtle);
+  background: var(--color-surface-subtle);
+}
+.footer-identity {
+  margin-block-end: var(--space-8);
+}
+.footer-identity > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.footer-groups {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+}
+.footer-groups h2 {
+  font-size: var(--type-ui);
+  font-weight: 700;
+  margin-block-end: var(--space-3);
+}
+.footer-groups a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: var(--space-2);
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.breadcrumbs a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.section-heading h2 {
+  font-size: var(--type-h2);
+  font-weight: 700;
+  line-height: 1.2;
+}
+.section-heading > div {
+  max-width: var(--width-reading);
+  margin-block-start: var(--space-4);
+}
+@media (min-width: 1200px) {
+  .header-actions .compact-contact,
+  .mobile-navigation {
+    display: none;
+  }
+  .desktop-navigation {
+    display: flex;
+    gap: var(--space-6);
+    align-items: center;
+    position: relative;
+    border-block: 1px solid var(--color-border-subtle);
+  }
+  .desktop-navigation > ul {
+    display: flex;
+    gap: var(--space-6);
+    flex-wrap: wrap;
+  }
+  .desktop-navigation .navigation-disclosure > summary {
+    gap: var(--space-3);
+  }
+  .desktop-navigation .category-panel {
+    position: absolute;
+    z-index: var(--z-navigation);
+    inset-inline: 0;
+    top: 100%;
+    padding: var(--space-6);
+    border: 1px solid var(--color-border-control);
+    background: var(--color-surface);
+    border-radius: var(--radius-panel);
+  }
+  .desktop-navigation .category-panel ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-8);
+  }
+}
+@media (min-width: 1200px) and (prefers-reduced-motion: no-preference) {
+  .header-actions .ui-button {
+    transition: background-color 120ms;
+  }
+  .header-actions .ui-button:hover {
+    background: var(--color-brand-hover);
+  }
+}

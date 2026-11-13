@@ -1,0 +1,1655 @@
+[
+  {
+    "serviceId": "SVC-001",
+    "summary": "Build a business website that explains your offer and gives visitors a clear next step.",
+    "fit": "Your current website does not explain your services clearly or makes inquiries difficult. This service starts by defining the work around your situation. The engagement can address page structure, content responsibilities, forms, editing and handoff.",
+    "problem": "Your current website does not explain your services clearly or makes inquiries difficult.",
+    "benefit": "Make services easier to understand and inquiries easier to start.",
+    "candidates": "page/content plan; responsive page implementation; agreed inquiry forms; handoff notes.",
+    "approach": "clarify audience and goals; agree pages and content; design and build; review forms and devices; hand off. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S043", "PUB-S045", "PUB-S005", "SOL-01"],
+    "faqs": [
+      {
+        "question": "Who supplies the website content?",
+        "answer": "Content responsibilities are agreed before work starts. You may supply approved text and images; writing or asset preparation is included only when explicitly scoped."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare brand files, service details, approved copy, images and domain access arrangements. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Build a business website that explains your offer and gives visitors a clear next step. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-002",
+    "summary": "Create an online store around your catalog, customer journey and operational requirements.",
+    "fit": "Products, purchasing steps and order operations need a coherent storefront. This service starts by defining the work around your situation. The engagement can address catalog, checkout, shipping/tax requirements, integrations and store administration.",
+    "problem": "Products, purchasing steps and order operations need a coherent storefront.",
+    "benefit": "Give customers a clearer purchasing path and staff a defined operating workflow.",
+    "candidates": "catalog structure; product and checkout journeys; agreed store integrations; administration guidance.",
+    "approach": "review catalog and sales rules; agree platform/integrations; build storefront; test purchase and order scenarios; hand off. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S007", "PUB-S018", "PUB-S005", "SOL-01"],
+    "faqs": [
+      {
+        "question": "Are payment-provider charges included?",
+        "answer": "Payment-provider charges are separate unless your proposal explicitly says otherwise. Provider eligibility, fees and integration requirements must be confirmed for the store."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare product data, shipping/tax requirements, provider accounts and brand assets. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Create an online store around your catalog, customer journey and operational requirements. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-003",
+    "summary": "Develop a browser-based application around the workflows your business needs.",
+    "fit": "Off-the-shelf tools or spreadsheets do not fit important operational tasks. This service starts by defining the work around your situation. The engagement can address users, workflows, roles, integrations, acceptance criteria and discovery.",
+    "problem": "Off-the-shelf tools or spreadsheets do not fit important operational tasks.",
+    "benefit": "Support a defined process with software shaped around its users and constraints.",
+    "candidates": "workflow specification; role-based application screens; agreed integrations; acceptance and handoff documentation.",
+    "approach": "discover workflows; define roles and acceptance; plan increments; build and review; verify and hand off. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S044", "PUB-S015", "PUB-S028", "SOL-01"],
+    "faqs": [
+      {
+        "question": "How will you estimate a custom application?",
+        "answer": "An estimate follows a review of workflows, roles, data, integrations and acceptance criteria. Complex or unclear work may need separately agreed discovery before a dependable proposal."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare user roles, process examples, data requirements, integration documentation and constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Develop a browser-based application around the workflows your business needs. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-004",
+    "summary": "Improve an existing website while planning carefully for content and URL continuity.",
+    "fit": "An outdated structure or experience makes information hard to find. This service starts by defining the work around your situation. The engagement can address existing-site review, content migration, URL continuity and cutover responsibilities.",
+    "problem": "An outdated structure or experience makes information hard to find.",
+    "benefit": "Make the website easier to use while managing the risks of replacing it.",
+    "candidates": "existing-site review; revised page structure; agreed design/build changes; migration and cutover plan.",
+    "approach": "review current site; map content and URLs; agree improvements; rebuild and verify; coordinate cutover. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S048", "PUB-S043", "PUB-S005", "SOL-01"],
+    "faqs": [
+      {
+        "question": "Can existing content and URLs be retained?",
+        "answer": "Existing content and URLs can be assessed for retention. Necessary changes require an approved mapping and redirect plan; preservation depends on the current platform and agreed scope."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare current URL inventory, analytics where available, content access and brand files. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Improve an existing website while planning carefully for content and URL continuity. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-005",
+    "summary": "Keep an agreed website environment maintained through a clearly defined recurring scope.",
+    "fit": "Routine upkeep and small requests lack a clear owner or boundary. This service starts by defining the work around your situation. The engagement can address covered systems, routine work, request limits and out-of-scope changes.",
+    "problem": "Routine upkeep and small requests lack a clear owner or boundary.",
+    "benefit": "Make maintenance responsibilities and outstanding issues easier to track.",
+    "candidates": "supported-system inventory; agreed routine checks/updates; defined small-change allowance; maintenance report.",
+    "approach": "review website condition; agree coverage and limits; establish access; perform scoped work; report and reassess. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S004", "PUB-S032", "PUB-S035", "SOL-01"],
+    "faqs": [
+      {
+        "question": "What counts as maintenance versus new development?",
+        "answer": "Maintenance covers only the systems and routine work listed in the agreement. New pages, features or integrations may require separate development scope rather than being included automatically."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare technology versions, hosting access process, known issues and current maintenance arrangements. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Keep an agreed website environment maintained through a clearly defined recurring scope. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-006",
+    "summary": "Build a mobile application around a defined business or customer workflow.",
+    "fit": "Users need a practical mobile route to tasks currently handled elsewhere. This service starts by defining the work around your situation. The engagement can address business workflows, supported devices, backend dependencies and release responsibilities.",
+    "problem": "Users need a practical mobile route to tasks currently handled elsewhere.",
+    "benefit": "Provide a focused mobile experience for the selected use case.",
+    "candidates": "user-flow specification; agreed mobile screens; backend connections; release preparation and handoff.",
+    "approach": "define users/platforms; design flows; confirm backend; develop and test; prepare release. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S009", "PUB-S003", "PUB-S010", "SOL-05"],
+    "faqs": [
+      {
+        "question": "Does the app need a separate backend?",
+        "answer": "An app needs a suitable way to manage any shared data or server-side work. An existing backend may be reusable; a new backend is separate scope when needed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare user tasks, platform needs, data/access rules, existing API details and store-account responsibilities. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Build a mobile application around a defined business or customer workflow. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-007",
+    "summary": "Connect a mobile shopping experience to your catalog and order operations.",
+    "fit": "Customers need mobile access to an existing or planned commerce workflow. This service starts by defining the work around your situation. The engagement can address store integration, catalog, orders, accounts and payment dependencies.",
+    "problem": "Customers need mobile access to an existing or planned commerce workflow.",
+    "benefit": "Make mobile shopping tasks more coherent across the selected systems.",
+    "candidates": "catalog/product screens; cart/account flows; agreed order/payment integration; release preparation.",
+    "approach": "review store/API; define purchase flows; design/build; test order and payment states; prepare release. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S002", "PUB-S009", "PUB-S010", "SOL-05"],
+    "faqs": [
+      {
+        "question": "Can it connect to our existing store?",
+        "answer": "Connection depends on the store’s APIs, permissions, licensing and supported operations. We assess those constraints before including integration in the quote."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare store platform/API documentation, catalog, provider requirements and account responsibilities. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Connect a mobile shopping experience to your catalog and order operations. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-008",
+    "summary": "Scope a custom mobile product around its users, device needs and integrations.",
+    "fit": "Your app idea has specialized behavior that needs careful discovery. This service starts by defining the work around your situation. The engagement can address product requirements, device capabilities, integrations and release planning.",
+    "problem": "Your app idea has specialized behavior that needs careful discovery.",
+    "benefit": "Turn a complex app idea into defined, reviewable work.",
+    "candidates": "requirements and technical approach; scoped device functions; application increments; release/handoff plan.",
+    "approach": "discover needs; validate device/integration constraints; prototype; build agreed increments; test and prepare release. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S009", "PUB-S015", "PUB-S010", "SOL-05"],
+    "faqs": [
+      {
+        "question": "What information is needed to scope the app?",
+        "answer": "Share the intended users, key tasks, platform/device needs, data and integration requirements, and constraints. Unknowns may need discovery or a prototype before final scope and fees."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare user scenarios, device features, platform targets, integrations and acceptance conditions. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Scope a custom mobile product around its users, device needs and integrations. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-009",
+    "summary": "Design mobile flows and screens before committing to application development.",
+    "fit": "An app’s navigation and interaction states are not yet clear. This service starts by defining the work around your situation. The engagement can address user flows, screens, interaction states, prototype and developer handoff.",
+    "problem": "An app’s navigation and interaction states are not yet clear.",
+    "benefit": "Clarify how the app should work and reduce ambiguity during development.",
+    "candidates": "user flows; screen layouts; interactive prototype; developer handoff specification.",
+    "approach": "review users/tasks; map flows; design screens/states; review prototype; prepare handoff. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S006", "PUB-S008", "PUB-S044", "SOL-05"],
+    "faqs": [
+      {
+        "question": "Does the design package include app development?",
+        "answer": "The design service covers the agreed design deliverables. Application development is separate unless explicitly included in a combined scope; approved designs can inform later development."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare product goals, user tasks, brand assets, platform targets and existing research. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Design mobile flows and screens before committing to application development. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-010",
+    "summary": "Maintain an agreed mobile application with defined support and release responsibilities.",
+    "fit": "Compatibility issues and defects need an explicit maintenance process. This service starts by defining the work around your situation. The engagement can address supported app versions, defects, compatibility work and release assistance.",
+    "problem": "Compatibility issues and defects need an explicit maintenance process.",
+    "benefit": "Make upkeep predictable within agreed limits.",
+    "candidates": "supported-version inventory; scoped defect/compatibility work; release assistance; maintenance notes.",
+    "approach": "assess app/version state; agree coverage; establish access; investigate and update; verify release. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S006", "PUB-S008", "PUB-S032", "SOL-05"],
+    "faqs": [
+      {
+        "question": "Are new features included?",
+        "answer": "New features are not automatically part of maintenance. The agreement distinguishes defect/compatibility work from enhancements and defines how additional work is quoted."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare source access arrangements, platform/version list, issue reports and store-account ownership. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Maintain an agreed mobile application with defined support and release responsibilities. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-011",
+    "summary": "Connect repetitive tasks into workflows with clear rules and exception handling.",
+    "fit": "People repeatedly copy information or move work between disconnected systems. This service starts by defining the work around your situation. The engagement can address triggers, actions, connected systems, exceptions and handoff.",
+    "problem": "People repeatedly copy information or move work between disconnected systems.",
+    "benefit": "Reduce avoidable manual steps where rules and integrations support automation.",
+    "candidates": "trigger/action map; approved system connections; exception handling; workflow handoff.",
+    "approach": "map current process; define rules/exceptions; configure connections; test outcomes/failures; document handoff. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S012", "PUB-S013", "PUB-S017", "SOL-02"],
+    "faqs": [
+      {
+        "question": "What happens if an automated step fails?",
+        "answer": "Failure behavior must be defined in scope, including what is logged, retried or escalated and who follows up. Automation should not silently discard failed work."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare process examples, system/API access, data boundaries and exception owners. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Connect repetitive tasks into workflows with clear rules and exception handling. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-012",
+    "summary": "Configure a CRM around the way your team manages prospects and customers.",
+    "fit": "Customer information, stages and responsibilities are inconsistent. This service starts by defining the work around your situation. The engagement can address pipelines, fields, migration boundaries, access and user orientation.",
+    "problem": "Customer information, stages and responsibilities are inconsistent.",
+    "benefit": "Give staff a more consistent view of customer work.",
+    "candidates": "pipeline/field configuration; scoped data mapping/import; role/access setup; user orientation.",
+    "approach": "review sales process; define fields/stages; map access/data; configure and verify; orient users. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S011", "PUB-S013", "PUB-S017", "SOL-02"],
+    "faqs": [
+      {
+        "question": "Can existing customer records be imported?",
+        "answer": "Existing records can be assessed for import. Mapping, duplicates, data quality, permissions and validation must be reviewed; the proposal defines the import scope and exclusions."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare current process, field definitions, approved records, user roles and CRM access. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Configure a CRM around the way your team manages prospects and customers. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-013",
+    "summary": "Plan follow-up automation with approved messages, clear triggers and stopping rules.",
+    "fit": "Follow-up depends on memory and inconsistent manual actions. This service starts by defining the work around your situation. The engagement can address follow-up triggers, channels, message approvals, stop conditions and staff handoff.",
+    "problem": "Follow-up depends on memory and inconsistent manual actions.",
+    "benefit": "Make routine follow-up more consistent without losing staff control.",
+    "candidates": "trigger/channel rules; reviewed message sequences; stop conditions; human handoff.",
+    "approach": "review lead journey; confirm channels/permissions; draft and approve messages; configure stop/handoff rules; test. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S012", "PUB-S023", "PUB-S017", "SOL-02"],
+    "faqs": [
+      {
+        "question": "When does automated follow-up stop?",
+        "answer": "Stopping rules are agreed before activation, such as opt-out, a reply, a stage change or completion. Exact rules depend on the selected channels and workflow; staff handoff must be defined."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare lead stages, approved communication purposes, channel accounts and message/consent rules. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Plan follow-up automation with approved messages, clear triggers and stopping rules. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-014",
+    "summary": "Add a chatbot for defined questions and tasks using approved information.",
+    "fit": "Visitors or staff repeatedly need answers from a limited knowledge set. This service starts by defining the work around your situation. The engagement can address approved knowledge, supported tasks, uncertainty, escalation and usage costs.",
+    "problem": "Visitors or staff repeatedly need answers from a limited knowledge set.",
+    "benefit": "Provide a guided route to information while making limitations clear.",
+    "candidates": "approved knowledge scope; conversation paths; uncertainty/escalation behavior; evaluation scenarios.",
+    "approach": "define use case; review knowledge/data; design responses and handoff; integrate; evaluate and refine. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S015", "PUB-S011", "PUB-S017", "SOL-02"],
+    "faqs": [
+      {
+        "question": "What happens when the chatbot cannot answer?",
+        "answer": "The bot should acknowledge uncertainty and offer an approved human or alternative route. It must not invent an answer or imply a task succeeded without confirmation."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare approved knowledge, allowed tasks, escalation contacts and privacy constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Add a chatbot for defined questions and tasks using approved information. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-015",
+    "summary": "Connect an AI capability to a defined task and evaluate it against practical requirements.",
+    "fit": "A business task may benefit from AI but data boundaries and quality checks are unclear. This service starts by defining the work around your situation. The engagement can address intended AI task, connected systems, data boundaries, evaluation and usage costs.",
+    "problem": "A business task may benefit from AI but data boundaries and quality checks are unclear.",
+    "benefit": "Assess usefulness and limitations before relying on AI in a workflow.",
+    "candidates": "task definition; provider/data-flow review; agreed integration; evaluation and fallback design.",
+    "approach": "define task/acceptance; review data/provider; prototype integration; evaluate errors; agree deployment controls. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S011", "PUB-S014", "PUB-S017", "SOL-02"],
+    "faqs": [
+      {
+        "question": "What data will the AI provider receive?",
+        "answer": "Only data approved for the selected use case should be sent. The actual provider, fields, retention and processing arrangements must be reviewed before integration; no universal privacy guarantee is implied."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare task examples, permitted data, system interfaces, evaluation cases and review responsibility. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Connect an AI capability to a defined task and evaluate it against practical requirements. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-016",
+    "summary": "Design a voice agent for a defined call purpose with clear escalation and operational limits.",
+    "fit": "Repetitive call interactions need a structured route and human fallback. This service starts by defining the work around your situation. The engagement can address call purposes, supported interactions, disclosure, escalation and telephony costs.",
+    "problem": "Repetitive call interactions need a structured route and human fallback.",
+    "benefit": "Support selected call tasks while preserving review and escalation.",
+    "candidates": "approved call flow; telephony integration scope; disclosure/handoff rules; test scenarios.",
+    "approach": "define call purpose; review legal/consent and telephony needs; design flow; integrate and test; define operations. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S012", "PUB-S013", "PUB-S017", "SOL-02"],
+    "faqs": [
+      {
+        "question": "Can calls transfer to a person?",
+        "answer": "A transfer to a person depends on the selected telephony platform, staff availability and agreed flow. It must be configured and tested; the service name alone does not guarantee live coverage."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare call purpose, supported languages, telephony account, escalation staff and applicable disclosure requirements. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Design a voice agent for a defined call purpose with clear escalation and operational limits. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-017",
+    "summary": "Maintain agreed automations and CRM connections as their dependencies change.",
+    "fit": "Workflow failures and platform changes need a named maintenance owner. This service starts by defining the work around your situation. The engagement can address monitored workflows, failure investigation, dependency changes and update limits.",
+    "problem": "Workflow failures and platform changes need a named maintenance owner.",
+    "benefit": "Keep responsibility for existing automations clear.",
+    "candidates": "covered-workflow inventory; scoped failure investigation; dependency updates; maintenance reporting.",
+    "approach": "inventory workflows; agree limits; establish monitoring/access; investigate/update; report and verify. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S011", "PUB-S012", "PUB-S015", "SOL-02"],
+    "faqs": [
+      {
+        "question": "Are new automations included?",
+        "answer": "New automations are separate unless explicitly included in the maintenance allowance. The agreement defines covered workflows, update limits and how additional work is handled."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare workflow definitions, integration accounts, known issues and escalation owners. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Maintain agreed automations and CRM connections as their dependencies change. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-018",
+    "summary": "Prioritize search visibility work around your website’s technical and content needs.",
+    "fit": "Search-related issues and content priorities lack a structured plan. This service starts by defining the work around your situation. The engagement can address technical/content priorities, approved implementation scope and reporting.",
+    "problem": "Search-related issues and content priorities lack a structured plan.",
+    "benefit": "Make search improvement work and its limitations clearer.",
+    "candidates": "site/search review; prioritized recommendations; agreed implementation; progress reporting.",
+    "approach": "review site and goals; identify priorities; agree implementation; track changes; review evidence. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S022", "PUB-S024", "PUB-S025", "SOL-03"],
+    "faqs": [
+      {
+        "question": "How will progress be measured?",
+        "answer": "Progress is assessed using agreed measures and verified data, such as resolved issues or relevant search trends. Rankings and traffic are influenced by many factors and are not guaranteed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare website access arrangements, available search/analytics data, audience and content resources. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Prioritize search visibility work around your website’s technical and content needs. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-019",
+    "summary": "Manage an agreed Google Ads scope with clear budget and tracking responsibilities.",
+    "fit": "Campaign activity and spend need structured management and review. This service starts by defining the work around your situation. The engagement can address account access, campaign scope, tracking, management fee, setup and separate ad spend.",
+    "problem": "Campaign activity and spend need structured management and review.",
+    "benefit": "Make paid-search decisions easier to inspect against agreed objectives.",
+    "candidates": "account/campaign review; scoped setup/management; tracking coordination; reporting.",
+    "approach": "review goals/account; confirm budget/tracking; configure agreed campaigns; monitor; report and adjust. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S047", "PUB-S025", "PUB-S052", "SOL-03"],
+    "faqs": [
+      {
+        "question": "How much of the payment goes to advertising?",
+        "answer": "The management fee is separate from advertising spend. Setup is also separate in the source pricing; the proposal identifies each charge and who pays the platform."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare Google Ads access, approved budget, landing pages, conversion definitions and creative inputs. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Manage an agreed Google Ads scope with clear budget and tracking responsibilities. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-020",
+    "summary": "Organize social content and account work around an approved publishing plan.",
+    "fit": "Posting, approvals and audience responsibilities are inconsistent. This service starts by defining the work around your situation. The engagement can address platforms, content responsibilities, approval and community-management boundaries.",
+    "problem": "Posting, approvals and audience responsibilities are inconsistent.",
+    "benefit": "Make publishing responsibilities and brand consistency easier to manage.",
+    "candidates": "platform/content plan; agreed content preparation; approval workflow; scoped reporting/community tasks.",
+    "approach": "review platforms/audience; agree content scope; prepare calendar/assets; obtain approval; publish/report. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S022", "PUB-S046", "PUB-S050", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Who approves posts before publication?",
+        "answer": "The approval workflow must be agreed before publication. Identify who reviews posts, how approval is recorded and what happens when feedback is delayed; automatic approval is not assumed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare account access, brand voice, content sources, approval owner and response boundaries. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Organize social content and account work around an approved publishing plan. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-021",
+    "summary": "Manage an agreed Meta advertising scope with separate media and production costs.",
+    "fit": "Audience, creative and campaign decisions need coordinated review. This service starts by defining the work around your situation. The engagement can address campaign scope, audiences, creative responsibilities, tracking and separate ad spend.",
+    "problem": "Audience, creative and campaign decisions need coordinated review.",
+    "benefit": "Make advertising work and spending responsibilities clearer.",
+    "candidates": "campaign/audience plan; agreed management; tracking coordination; performance review.",
+    "approach": "review goal/account; define audiences/budget; confirm creative/tracking; manage campaigns; review results. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S046", "PUB-S047", "PUB-S052", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Is creative production included?",
+        "answer": "Creative production is included only if the proposal says so. Ad management, creative work and advertising spend must be distinguished, with approved assets and usage rights."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare Meta account access, budget, approved creative, landing pages and measurement definitions. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Manage an agreed Meta advertising scope with separate media and production costs. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-022",
+    "summary": "Plan and produce agreed content around the questions your audience needs answered.",
+    "fit": "Content lacks a clear audience, purpose or review process. This service starts by defining the work around your situation. The engagement can address audience, formats, research, writing, review and distribution boundaries.",
+    "problem": "Content lacks a clear audience, purpose or review process.",
+    "benefit": "Give content a clearer role in customer research and decision-making.",
+    "candidates": "audience/topic plan; scoped written/media content; review workflow; agreed distribution support.",
+    "approach": "define audience/goals; agree topics/formats; research and draft; review facts; deliver/distribute as scoped. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S018", "PUB-S023", "PUB-S020", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Which content formats are covered?",
+        "answer": "Formats are agreed in the proposal, such as articles, website copy or other specified assets. Quantities, research depth, revisions and distribution are not inferred from the service name."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare subject expertise, brand guidance, approved facts, source access and review owner. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Plan and produce agreed content around the questions your audience needs answered. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-023",
+    "summary": "Prepare email campaigns or workflows around approved audiences and messages.",
+    "fit": "Email activity lacks a defined purpose, permission basis or reliable testing process. This service starts by defining the work around your situation. The engagement can address campaign or workflow scope, subscriber data, templates, testing and platform costs.",
+    "problem": "Email activity lacks a defined purpose, permission basis or reliable testing process.",
+    "benefit": "Make email communication more consistent and reviewable.",
+    "candidates": "campaign/workflow specification; approved templates; platform configuration scope; test/report plan.",
+    "approach": "review audience/permissions; define purpose; prepare templates; test configuration; launch/report as approved. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S013", "PUB-S022", "PUB-S012", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Do you manage campaigns, automations, or both?",
+        "answer": "Campaigns, automations or both can be discussed, but only the selected work belongs in the scope. Platform charges, audience handling, message approvals and opt-out behavior must be agreed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare permitted subscriber data, email-platform access, brand assets and approval rules. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Prepare email campaigns or workflows around approved audiences and messages. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-024",
+    "summary": "Review a real business’s local search presence and Google Business Profile needs.",
+    "fit": "Business details or local content are inconsistent or incomplete. This service starts by defining the work around your situation. The engagement can address business/location details, profile work, local content and owner access.",
+    "problem": "Business details or local content are inconsistent or incomplete.",
+    "benefit": "Help customers find accurate business information where the business is eligible.",
+    "candidates": "profile review; approved information updates; local content priorities; ownership guidance.",
+    "approach": "verify business/account context; review listing/site; agree updates; implement permitted changes; verify. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S001", "PUB-S018", "PUB-S022", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Can you help with an existing business profile?",
+        "answer": "An existing profile can be reviewed with authorized owner access. Eligibility, verification and platform limitations must be respected; no fake location or guaranteed approval is offered."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare actual business/location details, owner access, services and profile evidence. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Review a real business’s local search presence and Google Business Profile needs. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-025",
+    "summary": "Review measurement and user journeys to identify testable conversion improvements.",
+    "fit": "Teams cannot clearly explain where users struggle or whether changes help. This service starts by defining the work around your situation. The engagement can address measurement review, journey friction, hypotheses, recommendations and testing dependencies.",
+    "problem": "Teams cannot clearly explain where users struggle or whether changes help.",
+    "benefit": "Make improvement decisions more informed and measurable.",
+    "candidates": "analytics/journey review; evidence-based hypotheses; prioritized recommendations; scoped test support.",
+    "approach": "check measurement; inspect journeys; form hypotheses; assess test feasibility; review results. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S048", "PUB-S047", "PUB-S019", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Is there enough traffic to run meaningful tests?",
+        "answer": "Meaningful experiments depend on traffic, effect size, measurement quality and duration. If data is insufficient, research and usability improvements may be more appropriate than claiming statistical proof."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare analytics permissions, conversion definitions, traffic context and relevant page access. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Review measurement and user journeys to identify testable conversion improvements. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-026",
+    "summary": "Review your digital marketing direction and turn findings into practical priorities.",
+    "fit": "Marketing activity lacks a coherent plan or clear decision criteria. This service starts by defining the work around your situation. The engagement can address goals, channel review, priorities, recommendations and engagement format.",
+    "problem": "Marketing activity lacks a coherent plan or clear decision criteria.",
+    "benefit": "Clarify which questions and activities deserve attention next.",
+    "candidates": "goal/channel review; prioritized recommendations; scoped consultation; action plan.",
+    "approach": "review goals/context; assess selected channels; identify gaps; discuss priorities; deliver recommendations. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S018", "PUB-S019", "PUB-S025", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Does consulting include implementation?",
+        "answer": "Consulting provides the agreed review and recommendations. Implementation is separate unless expressly included, with responsibilities and follow-up defined in the proposal."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare business goals, target audience, channel context, budget constraints and available data. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Review your digital marketing direction and turn findings into practical priorities. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-027",
+    "summary": "Set up cloud infrastructure around an application’s operational requirements.",
+    "fit": "Infrastructure needs a deliberate environment and access plan. This service starts by defining the work around your situation. The engagement can address environments, access, infrastructure scope, documentation and provider charges.",
+    "problem": "Infrastructure needs a deliberate environment and access plan.",
+    "benefit": "Create a clearer foundation for deployment and operations.",
+    "candidates": "environment/resource plan; agreed provisioning; access configuration; operational documentation.",
+    "approach": "review workload; agree architecture/account ownership; provision; verify access/operation; document. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S028", "PUB-S031", "PUB-S034", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Who owns the cloud account?",
+        "answer": "Cloud-account ownership and access must be agreed before setup. Prefer clear client control of client infrastructure; provider billing and account responsibilities are documented rather than assumed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare application workload, environment needs, budget, account ownership and security constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Set up cloud infrastructure around an application’s operational requirements. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-028",
+    "summary": "Deploy an application to an agreed environment with verified configuration and handoff.",
+    "fit": "A working application needs a controlled route into hosting. This service starts by defining the work around your situation. The engagement can address application readiness, target environment, configuration, deployment checks and handoff.",
+    "problem": "A working application needs a controlled route into hosting.",
+    "benefit": "Make release steps and operational responsibilities easier to follow.",
+    "candidates": "readiness review; environment/configuration setup; deployment verification; handoff notes.",
+    "approach": "review app and target; agree access/configuration; deploy; verify key behavior; document rollback/handoff. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S029", "PUB-S030", "PUB-S032", "SOL-04"],
+    "faqs": [
+      {
+        "question": "What access and application files are required?",
+        "answer": "Required access depends on the application and host. The review identifies source/build files, environment settings, domain configuration and least-privilege access; credentials should use a secure exchange process."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare repository/build instructions, environment requirements, secrets through secure channels and host access. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Deploy an application to an agreed environment with verified configuration and handoff. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-029",
+    "summary": "Create a CI/CD workflow with defined build, test, approval and release stages.",
+    "fit": "Manual releases are inconsistent or difficult to review. This service starts by defining the work around your situation. The engagement can address build/test/release stages, permissions, approvals and rollback responsibilities.",
+    "problem": "Manual releases are inconsistent or difficult to review.",
+    "benefit": "Make repeatable release checks and ownership explicit.",
+    "candidates": "pipeline specification; agreed repository/environment integration; approval controls; rollback guidance.",
+    "approach": "review release process; define stages/permissions; configure pipeline; test success/failure; document. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S028", "PUB-S031", "PUB-S032", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Which repositories and environments are covered?",
+        "answer": "Only repositories and environments named in the proposal are included. Their permissions, secrets, approvals and deployment targets must be confirmed separately."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare repository access, build/test commands, target environments and release policies. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Create a CI/CD workflow with defined build, test, approval and release stages. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-030",
+    "summary": "Package an application in containers with documented configuration and local operation.",
+    "fit": "Application behavior depends on inconsistent runtime setup. This service starts by defining the work around your situation. The engagement can address application packaging, configuration, local operation and documentation.",
+    "problem": "Application behavior depends on inconsistent runtime setup.",
+    "benefit": "Make the selected runtime environment easier to reproduce.",
+    "candidates": "container build definitions; configuration approach; agreed local orchestration; usage documentation.",
+    "approach": "inspect runtime; define build/configuration; package; verify operation; document. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S028", "PUB-S029", "PUB-S031", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Does containerization also include cloud deployment?",
+        "answer": "Containerization does not automatically include cloud deployment. Hosting, orchestration and production operations are separate unless explicitly included."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare application source, dependencies, runtime constraints and local workflow needs. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Package an application in containers with documented configuration and local operation. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-031",
+    "summary": "Manage agreed infrastructure through reviewed, repeatable definitions.",
+    "fit": "Infrastructure changes are difficult to track or reproduce. This service starts by defining the work around your situation. The engagement can address managed resources, ownership, state handling and change workflow.",
+    "problem": "Infrastructure changes are difficult to track or reproduce.",
+    "benefit": "Make infrastructure changes easier to inspect and repeat within scope.",
+    "candidates": "resource definitions; state/ownership plan; review workflow; operating documentation.",
+    "approach": "inventory resources; agree ownership/state; define or import; review plans; verify/document. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S027", "PUB-S029", "PUB-S034", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Can existing infrastructure be brought under management?",
+        "answer": "Existing resources may be brought under management after reviewing compatibility, ownership and state. Import and reconciliation risks must be planned; no automatic replacement of live infrastructure is assumed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare resource inventory, provider access, existing state and change controls. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Manage agreed infrastructure through reviewed, repeatable definitions. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-032",
+    "summary": "Define the logs, metrics, dashboards and alerts needed for an agreed system.",
+    "fit": "Operational issues are hard to detect or interpret. This service starts by defining the work around your situation. The engagement can address logs, metrics, alerts, dashboards and operational ownership.",
+    "problem": "Operational issues are hard to detect or interpret.",
+    "benefit": "Give the responsible team better visibility into selected system behavior.",
+    "candidates": "signal/alert plan; scoped collection and dashboards; notification routing; response ownership notes.",
+    "approach": "identify operational questions; select signals; configure collection/alerts; test; hand off. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S028", "PUB-S033", "PUB-S034", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Who responds when an alert fires?",
+        "answer": "Alert response belongs to the named operational owner under the agreement. Installing monitoring does not create round-the-clock incident response or a managed support contract."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare system architecture, access, incident concerns, retention constraints and responders. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Define the logs, metrics, dashboards and alerts needed for an agreed system. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-033",
+    "summary": "Review cloud access and backup needs within a defined protection and recovery scope.",
+    "fit": "Backup configuration and responsibility for recovery are unclear. This service starts by defining the work around your situation. The engagement can address access, configuration, backup scope, retention decisions and recovery verification.",
+    "problem": "Backup configuration and responsibility for recovery are unclear.",
+    "benefit": "Make protection and recovery responsibilities more explicit.",
+    "candidates": "access/configuration review; scoped backup setup; retention proposal; agreed restoration verification.",
+    "approach": "inventory data/resources; define controls/retention; configure; verify selected recovery scenario; document. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S032", "PUB-S038", "PUB-S034", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Is restoration testing included in the agreed scope?",
+        "answer": "Restoration testing is included only when specifically scoped. Agree the systems, test method, recovery targets and responsibilities; a configured backup alone is not proof of recovery."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare cloud/data inventory, ownership, retention requirements and recovery expectations. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Review cloud access and backup needs within a defined protection and recovery scope. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-034",
+    "summary": "Manage an agreed cloud environment with clear operating boundaries and reporting.",
+    "fit": "Routine cloud operations lack a defined scope and escalation owner. This service starts by defining the work around your situation. The engagement can address managed assets, routine operations, reporting, response arrangements and exclusions.",
+    "problem": "Routine cloud operations lack a defined scope and escalation owner.",
+    "benefit": "Make recurring infrastructure responsibilities visible.",
+    "candidates": "managed-resource inventory; scheduled operational tasks; scoped monitoring/reporting; escalation arrangements.",
+    "approach": "assess environment; agree coverage/hours; establish access; operate/report; review changes. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S027", "PUB-S032", "PUB-S037", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Are cloud-provider bills separate?",
+        "answer": "Cloud-provider bills are separate unless the agreement explicitly includes them. Management fees, provider usage and optional additional work must be shown separately."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare resource inventory, provider accounts, workload expectations and escalation contacts. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Manage an agreed cloud environment with clear operating boundaries and reporting. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-035",
+    "summary": "Assess an authorized web application and report prioritized security findings.",
+    "fit": "Application owners need a defined review of security risks and follow-up options. This service starts by defining the work around your situation. The engagement can address authorized application boundaries, review approach, findings and remediation options.",
+    "problem": "Application owners need a defined review of security risks and follow-up options.",
+    "benefit": "Support informed remediation decisions without promising complete security.",
+    "candidates": "authorized review plan; scoped assessment; findings with context; remediation recommendations.",
+    "approach": "confirm permission/targets; agree safe approach; assess; validate/report; discuss follow-up. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S036", "PUB-S038", "PUB-S042", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Does the engagement include fixing findings?",
+        "answer": "Fixing findings is included only when agreed. Assessment, remediation and retesting are distinct work that must be identified in the proposal; no blanket security guarantee applies."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare written authorization, application scope, safe access, test constraints and contacts. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Assess an authorized web application and report prioritized security findings. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-036",
+    "summary": "Scope an authorized vulnerability assessment or penetration test with clear boundaries.",
+    "fit": "Security testing needs explicit targets, permission and safe operating limits. This service starts by defining the work around your situation. The engagement can address written authorization, targets, testing boundaries, reporting and retest options.",
+    "problem": "Security testing needs explicit targets, permission and safe operating limits.",
+    "benefit": "Help owners understand scoped findings and remediation priorities.",
+    "candidates": "written test scope; authorized testing; findings/report; agreed retest option.",
+    "approach": "confirm authorization; define targets/rules; perform approved testing; validate/report; retest only as scoped. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S035", "PUB-S038", "PUB-S042", "SOL-04"],
+    "faqs": [
+      {
+        "question": "What permission is required before testing?",
+        "answer": "Written authorization from the appropriate asset owner is required before testing. Targets, techniques, exclusions, timing and emergency contacts must be agreed; third-party systems are not implicitly authorized."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare written asset-owner permission, exact targets, timing, exclusions and emergency contacts. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Scope an authorized vulnerability assessment or penetration test with clear boundaries. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-037",
+    "summary": "Review selected cloud environments against an agreed security assessment scope.",
+    "fit": "Cloud access and configuration risks need independent examination. This service starts by defining the work around your situation. The engagement can address accounts/services reviewed, access arrangements, findings and priorities.",
+    "problem": "Cloud access and configuration risks need independent examination.",
+    "benefit": "Help the owner decide which cloud risks to address.",
+    "candidates": "account/service inventory; scoped configuration review; prioritized findings; improvement guidance.",
+    "approach": "confirm ownership/scope; establish safe access; review configurations; report findings; discuss follow-up. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S027", "PUB-S038", "PUB-S042", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Which cloud environments are assessed?",
+        "answer": "Only named accounts, services and environments are included. Access, review depth and exclusions are agreed in advance; additional environments require explicit scope."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare cloud accounts/services, access policies, system context and written authorization. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Review selected cloud environments against an agreed security assessment scope. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-038",
+    "summary": "Apply agreed security configuration changes with compatibility and rollback planning.",
+    "fit": "Systems need stronger configuration while protecting existing operations. This service starts by defining the work around your situation. The engagement can address approved configuration changes, compatibility checks, rollback and handoff.",
+    "problem": "Systems need stronger configuration while protecting existing operations.",
+    "benefit": "Reduce identified configuration weaknesses within the agreed boundary.",
+    "candidates": "baseline review; approved changes; compatibility checks; rollback/handoff notes.",
+    "approach": "review baseline; assess change risk; approve plan; implement/check; document rollback. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S033", "PUB-S035", "PUB-S042", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Could changes affect existing applications?",
+        "answer": "Changes can affect compatibility or access. Risks, maintenance windows, checks and rollback should be agreed before implementation; uninterrupted operation is not guaranteed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare system inventory, maintenance windows, dependencies, access and recovery arrangements. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Apply agreed security configuration changes with compatibility and rollback planning. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-039",
+    "summary": "Improve selected identity and email controls through an agreed rollout.",
+    "fit": "Account access and email settings lack consistent controls. This service starts by defining the work around your situation. The engagement can address identity/email environment, account controls, policies and rollout boundaries.",
+    "problem": "Account access and email settings lack consistent controls.",
+    "benefit": "Clarify access and account-protection responsibilities.",
+    "candidates": "identity/email review; scoped policy configuration; rollout guidance; handoff.",
+    "approach": "review environment/users; agree controls; plan rollout/recovery; configure/verify; orient owners. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S040", "PUB-S038", "PUB-S042", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Which systems and user accounts are included?",
+        "answer": "The proposal lists included systems, user groups and controls. Additional platforms or accounts are not automatically covered, and rollout/recovery arrangements must be confirmed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare identity/email platforms, account groups, policies, recovery and administrator access. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Improve selected identity and email controls through an agreed rollout. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-040",
+    "summary": "Prepare security awareness training around the audience’s actual work.",
+    "fit": "Staff need practical guidance relevant to their roles. This service starts by defining the work around your situation. The engagement can address audience, topics, delivery format, materials and assessment options.",
+    "problem": "Staff need practical guidance relevant to their roles.",
+    "benefit": "Help staff recognize relevant issues and understand reporting expectations.",
+    "candidates": "audience/topic plan; agreed session/materials; practical examples; optional assessment.",
+    "approach": "review audience/risk; agree format/topics; prepare materials; deliver; gather feedback. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S039", "PUB-S041", "PUB-S042", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Can training reflect our team’s work?",
+        "answer": "Training can be adapted to agreed roles and scenarios. Custom content, delivery format, attendee limits and assessment are defined in scope; no certification is implied."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare staff roles, approved scenarios, reporting process and delivery constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Prepare security awareness training around the audience’s actual work. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-041",
+    "summary": "Review readiness for a selected framework and organize gaps and evidence needs.",
+    "fit": "An organization needs to understand preparation work before formal assessment. This service starts by defining the work around your situation. The engagement can address selected framework, readiness gaps, evidence preparation and responsibility boundaries.",
+    "problem": "An organization needs to understand preparation work before formal assessment.",
+    "benefit": "Clarify preparation priorities and limitations.",
+    "candidates": "framework/scope review; gap register; evidence plan; responsibility map.",
+    "approach": "select framework/scope; review current practices; identify gaps; agree evidence actions; document next steps. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S035", "PUB-S037", "PUB-S040", "SOL-04"],
+    "faqs": [
+      {
+        "question": "Is this certification or readiness assistance?",
+        "answer": "This is readiness assistance, not certification or legal assurance. Any formal assessment or certification depends on the relevant authorized body and actual requirements."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare selected framework, actual policies/processes, evidence owners and assessment goals. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Review readiness for a selected framework and organize gaps and evidence needs. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-042",
+    "summary": "Define recurring security work around specified systems and actual response coverage.",
+    "fit": "Security responsibilities need an explicit service boundary and escalation process. This service starts by defining the work around your situation. The engagement can address covered systems, monitoring responsibilities, escalation and service-hour boundaries.",
+    "problem": "Security responsibilities need an explicit service boundary and escalation process.",
+    "benefit": "Make recurring security work and limits understandable.",
+    "candidates": "covered-system inventory; scoped monitoring/review; escalation procedures; reporting.",
+    "approach": "assess needs/capability; agree scope/hours; establish access; operate/report; review. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S035", "PUB-S037", "PUB-S038", "SOL-04"],
+    "faqs": [
+      {
+        "question": "What response coverage is actually provided?",
+        "answer": "Only the response hours and responsibilities explicitly agreed are provided. Do not assume a 24/7 SOC, immediate response, incident remediation or complete protection from this service name."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare system inventory, risk priorities, operating hours, responders and authorization. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Define recurring security work around specified systems and actual response coverage. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-043",
+    "summary": "Design website pages and responsive states before implementation.",
+    "fit": "The website’s hierarchy, visual system and behavior need definition. This service starts by defining the work around your situation. The engagement can address page types, responsive states, prototype and handoff.",
+    "problem": "The website’s hierarchy, visual system and behavior need definition.",
+    "benefit": "Make website design decisions clearer before build work.",
+    "candidates": "page layouts; responsive/interface states; prototype; developer handoff.",
+    "approach": "review goals/content; structure pages; design responsive states; review prototype; hand off. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S001", "PUB-S004", "PUB-S048", "SOL-01"],
+    "faqs": [
+      {
+        "question": "Does this include a working website?",
+        "answer": "This design service does not automatically include a working website. Development and deployment are separate unless expressly included in the engagement."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare page inventory, brand assets, approved copy, audience and technical constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Design website pages and responsive states before implementation. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-044",
+    "summary": "Design a SaaS dashboard around roles, workflows and real interface states.",
+    "fit": "Complex tasks and permissions are difficult to represent clearly. This service starts by defining the work around your situation. The engagement can address roles, workflows, tables, forms and loading/empty/error states.",
+    "problem": "Complex tasks and permissions are difficult to represent clearly.",
+    "benefit": "Help users understand tasks and developers implement consistent behavior.",
+    "candidates": "role/task map; dashboard screens; table/form/state design; prototype/handoff.",
+    "approach": "review roles/workflows; map information; design screens/states; test/review prototype; hand off. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S003", "PUB-S009", "PUB-S048", "SOL-01"],
+    "faqs": [
+      {
+        "question": "How are complex user roles represented?",
+        "answer": "Roles are represented through approved task flows, visibility and action states. The design must reflect the actual permission model; visual hiding is not backend authorization."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare role matrix, workflow examples, realistic synthetic data and product constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Design a SaaS dashboard around roles, workflows and real interface states. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-045",
+    "summary": "Develop a visual identity and usage guidance around an agreed brand brief.",
+    "fit": "Brand assets are inconsistent or insufficient for digital use. This service starts by defining the work around your situation. The engagement can address brief, identity assets, review process, file formats and usage guidance.",
+    "problem": "Brand assets are inconsistent or insufficient for digital use.",
+    "benefit": "Give the business a more consistent visual starting point.",
+    "candidates": "identity concepts; agreed logo variants; color/type guidance; final export set.",
+    "approach": "review brief/audience; explore direction; review/refine; prepare variants; hand off. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S043", "PUB-S046", "PUB-S022", "SOL-01"],
+    "faqs": [
+      {
+        "question": "Which final files will we receive?",
+        "answer": "The agreed scope specifies final vector/raster formats, variants, editable files and usage guidance. Trademark/legal clearance is not automatically included."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare business positioning, references, usage needs, existing assets and rights constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Develop a visual identity and usage guidance around an agreed brand brief. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-046",
+    "summary": "Create agreed visual assets for business communication and marketing.",
+    "fit": "Specific communication needs require consistent graphics. This service starts by defining the work around your situation. The engagement can address asset types, formats, source material, reviews and delivery.",
+    "problem": "Specific communication needs require consistent graphics.",
+    "benefit": "Make selected messages easier to present consistently.",
+    "candidates": "named graphic formats; scoped design concepts; review rounds; final exports.",
+    "approach": "review brief/formats; collect content; design; review; export. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S020", "PUB-S021", "PUB-S045", "SOL-01"],
+    "faqs": [
+      {
+        "question": "Are editable source files included?",
+        "answer": "Editable source files are included only when agreed. Specify formats, linked assets, font/license restrictions and final deliverables in the proposal."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare approved text, brand files, dimensions, usage channels and licensed imagery. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Create agreed visual assets for business communication and marketing. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-047",
+    "summary": "Design a focused landing page around a campaign goal and clear next step.",
+    "fit": "A campaign page lacks a coherent message-to-action journey. This service starts by defining the work around your situation. The engagement can address campaign goal, content hierarchy, conversion flow and responsive design.",
+    "problem": "A campaign page lacks a coherent message-to-action journey.",
+    "benefit": "Clarify the visitor’s path from campaign message to action.",
+    "candidates": "content hierarchy; responsive design; CTA/form states; prototype/handoff.",
+    "approach": "review goal/audience; map content and CTA; design; review responsive states; hand off. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S019", "PUB-S025", "PUB-S022", "SOL-01"],
+    "faqs": [
+      {
+        "question": "Who supplies the copy and implements the page?",
+        "answer": "Copywriting and implementation responsibilities are agreed separately. Design does not automatically include writing, development, hosting or a guaranteed conversion result."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare campaign brief, approved claims/copy, traffic context, assets and implementation constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Design a focused landing page around a campaign goal and clear next step. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-048",
+    "summary": "Review selected user journeys and prioritize usability improvements.",
+    "fit": "Users encounter friction that the team needs to understand and address. This service starts by defining the work around your situation. The engagement can address journeys reviewed, evidence, findings, severity and recommendations.",
+    "problem": "Users encounter friction that the team needs to understand and address.",
+    "benefit": "Help the team choose which usability issues to investigate or fix.",
+    "candidates": "journey review; evidence-backed findings; severity/priorities; recommendations.",
+    "approach": "define journeys/users; review available evidence; inspect/test as scoped; prioritize; present findings. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S043", "PUB-S044", "PUB-S025", "SOL-01"],
+    "faqs": [
+      {
+        "question": "Does the audit include redesign work?",
+        "answer": "The audit includes only the agreed assessment and recommendations. Redesign or implementation is separate unless explicitly added; research methods and sample limits must be stated."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare product access, selected journeys, user context, existing research and constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Review selected user journeys and prioritize usability improvements. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-049",
+    "summary": "Provide recurring design support through an agreed request and review process.",
+    "fit": "Design requests arrive without clear capacity or priority rules. This service starts by defining the work around your situation. The engagement can address request workflow, agreed capacity, priorities, reviews and exclusions.",
+    "problem": "Design requests arrive without clear capacity or priority rules.",
+    "benefit": "Make ongoing design work easier to prioritize.",
+    "candidates": "request intake; agreed capacity/asset types; review process; delivery tracking.",
+    "approach": "review needs; agree capacity/queue rules; intake requests; design/review; report. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S043", "PUB-S046", "PUB-S047", "SOL-01"],
+    "faqs": [
+      {
+        "question": "How are simultaneous requests handled?",
+        "answer": "Simultaneous work and queue rules must be defined in the plan. A monthly fee does not imply unlimited requests, unlimited revisions or immediate turnaround."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare brand system, expected request types, priority owner and review availability. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Provide recurring design support through an agreed request and review process. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-050",
+    "summary": "Edit supplied footage into short-form videos for agreed channels and formats.",
+    "fit": "Raw footage needs a clear story, pacing and channel-ready presentation. This service starts by defining the work around your situation. The engagement can address supplied footage, target format, pacing, captions and exports.",
+    "problem": "Raw footage needs a clear story, pacing and channel-ready presentation.",
+    "benefit": "Make selected footage easier to watch in its intended format.",
+    "candidates": "scoped short edits; agreed captions/graphics; audio treatment; specified exports.",
+    "approach": "review brief/footage; select structure; edit; review; export. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S020", "PUB-S021", "PUB-S056", "SOL-03"],
+    "faqs": [
+      {
+        "question": "What footage should we provide?",
+        "answer": "Provide the footage, brand assets, message and reference style needed for the brief. Source length/quality, rights, captions and required outputs affect scope; filming is not automatic."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare original footage, message, references, brand assets, rights and output specifications. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Edit supplied footage into short-form videos for agreed channels and formats. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-051",
+    "summary": "Edit long-form channel videos with agreed structure, audio and graphics.",
+    "fit": "Recorded material needs coherent pacing and presentation. This service starts by defining the work around your situation. The engagement can address source footage, style, audio, graphics and agreed output length.",
+    "problem": "Recorded material needs coherent pacing and presentation.",
+    "benefit": "Help the final video communicate its subject more clearly.",
+    "candidates": "episode/video edit; scoped audio/graphics; review; agreed output files.",
+    "approach": "review footage/style; structure content; edit sound/visuals; review; export. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S055", "PUB-S054", "PUB-S056", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Are thumbnails or publishing included?",
+        "answer": "Thumbnails and publishing are separate unless the proposal includes them. Editing scope identifies outputs, source limits, graphics, revisions and any additional channel work."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare source footage/audio, target length, references, brand files and usage rights. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Edit long-form channel videos with agreed structure, audio and graphics. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-052",
+    "summary": "Produce an agreed promotional video scope around a clear message and audience.",
+    "fit": "A campaign needs a concise visual story and approved creative assets. This service starts by defining the work around your situation. The engagement can address campaign brief, message, supplied/produced assets, variants and usage rights.",
+    "problem": "A campaign needs a concise visual story and approved creative assets.",
+    "benefit": "Give the campaign a clear, reviewable video message.",
+    "candidates": "script/structure as scoped; edit or production tasks; agreed variants; delivery files.",
+    "approach": "review objective/rights; agree production boundary; prepare story/assets; edit/produce; review/export. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S021", "PUB-S047", "PUB-S054", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Does the quote include filming or only editing?",
+        "answer": "The quote must distinguish filming, asset creation and editing. None is automatically included merely because the video is promotional; travel, talent, stock and usage costs may be separate."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare approved campaign claims, script/brief, footage/assets, formats and rights. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Produce an agreed promotional video scope around a clear message and audience. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-053",
+    "summary": "Plan a corporate video with explicit production, location and editing responsibilities.",
+    "fit": "A business story requires organized filming and post-production. This service starts by defining the work around your situation. The engagement can address pre-production, filming arrangements, location responsibilities, editing and expenses.",
+    "problem": "A business story requires organized filming and post-production.",
+    "benefit": "Clarify the work and logistics needed to produce the video.",
+    "candidates": "pre-production plan; agreed filming arrangements; scoped edit; final outputs.",
+    "approach": "review story/audience; confirm location/resources; plan filming; edit/review; deliver. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S022", "PUB-S052", "PUB-S056", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Where can production take place?",
+        "answer": "Production location depends on actual resources, permissions and the agreed arrangement. Do not assume local crews or worldwide filming coverage; travel and production expenses must be specified."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare story brief, location/access permissions, participants, schedule and budget constraints. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Plan a corporate video with explicit production, location and editing responsibilities. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-054",
+    "summary": "Create motion graphics from an agreed story, visual direction and animation scope.",
+    "fit": "A concept needs a clear animated explanation or presentation. This service starts by defining the work around your situation. The engagement can address script/storyboard, visual assets, animation scope, reviews and exports.",
+    "problem": "A concept needs a clear animated explanation or presentation.",
+    "benefit": "Make the selected message easier to explain visually.",
+    "candidates": "script/storyboard work as scoped; graphic assets; animation; agreed exports.",
+    "approach": "review message; agree script/storyboard; prepare graphics; animate/review; export. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S052", "PUB-S051", "PUB-S046", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Do we need to supply a storyboard?",
+        "answer": "A storyboard may be supplied by you or developed as part of an agreed scope. Script, illustration, voiceover, music and revisions must each be specified rather than assumed."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare message/script, brand assets, references, duration and output needs. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Create motion graphics from an agreed story, visual direction and animation scope. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-055",
+    "summary": "Edit podcast source material into agreed audio or video episode outputs.",
+    "fit": "Recorded episodes need cleanup, structure and consistent delivery. This service starts by defining the work around your situation. The engagement can address audio/video source, cleanup, episode structure and output formats.",
+    "problem": "Recorded episodes need cleanup, structure and consistent delivery.",
+    "benefit": "Make episodes more consistent and easier to consume.",
+    "candidates": "scoped audio/video edit; episode assembly; agreed exports; review.",
+    "approach": "review sources/style; clean and structure; add agreed elements; review; export. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S022", "PUB-S050", "PUB-S056", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Are clips and distribution included?",
+        "answer": "Short clips, show notes, distribution and publishing are separate unless included. The proposal defines episode/source limits, outputs, revisions and any additional work."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare audio/video files, episode brief, intro/outro assets, rights and format needs. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Edit podcast source material into agreed audio or video episode outputs. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-056",
+    "summary": "Prepare timed captions or subtitles in the agreed language and delivery format.",
+    "fit": "Video content needs readable timed text for its intended audience. This service starts by defining the work around your situation. The engagement can address source language, transcription/translation boundaries, timing, review and format.",
+    "problem": "Video content needs readable timed text for its intended audience.",
+    "benefit": "Improve access to spoken content within the reviewed language and format.",
+    "candidates": "transcription/translation boundary; timed text; review corrections; agreed subtitle files or burned-in output.",
+    "approach": "confirm language/source; transcribe or use supplied text; time captions; review; export. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S050", "PUB-S051", "PUB-S055", "SOL-03"],
+    "faqs": [
+      {
+        "question": "Is translation included?",
+        "answer": "Translation is separate unless specifically included. Confirm source/target languages, transcription responsibilities, specialist terminology and review ownership before work begins."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare source media, language, transcript if available, terminology and required formats. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Prepare timed captions or subtitles in the agreed language and delivery format. Review scope, requirements and quote options with ARADUN."
+  },
+  {
+    "serviceId": "SVC-057",
+    "summary": "Organize recurring video editing around an agreed workload and request process.",
+    "fit": "Regular editing needs clear output, priority and revision limits. This service starts by defining the work around your situation. The engagement can address workload, source-footage limits, output formats, priorities and revisions.",
+    "problem": "Regular editing needs clear output, priority and revision limits.",
+    "benefit": "Make recurring video work easier to plan and prioritize.",
+    "candidates": "specified recurring deliverables; source-footage allowance; agreed formats; review workflow.",
+    "approach": "review expected workload; confirm billing unit/capacity; queue briefs; edit/review; report. Technology references must reflect the selected engagement; the ARADUN website stack does not dictate client technology.",
+    "relatedPageIds": ["PUB-S050", "PUB-S051", "PUB-S055", "SOL-03"],
+    "faqs": [
+      {
+        "question": "How many deliverables does the agreed plan cover?",
+        "answer": "The plan must specify deliverable counts, source/output lengths, formats, revisions and priority rules. The source billing period still needs explicit confirmation; do not infer unlimited or monthly capacity from the name."
+      },
+      {
+        "question": "What should we provide for this engagement?",
+        "answer": "Prepare expected video types, source lengths, output formats, brand assets and approval capacity. The review confirms what is necessary and how access or sensitive material should be exchanged."
+      },
+      {
+        "question": "What is included in the price?",
+        "answer": "The proposal identifies which candidate deliverables are included, their quantities, revisions, exclusions and any separate provider or ongoing costs. The starting price alone does not define the package."
+      },
+      {
+        "question": "How are timing and ongoing support agreed?",
+        "answer": "Timing depends on the agreed scope, inputs and reviews. Ongoing support is included only where explicitly stated; no fixed duration or coverage is promised here."
+      }
+    ],
+    "description": "Organize recurring video editing around an agreed workload and request process. Review scope, requirements and quote options with ARADUN."
+  }
+]

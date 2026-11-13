@@ -1,0 +1,288 @@
+[
+  {
+    "categoryId": "CAT-01",
+    "headline": "Build a clearer digital presence and useful business software.",
+    "intro": "Explore web & software development around a defined business goal. Build a clearer digital presence and useful business software. The selected work, inputs, costs and responsibilities are agreed before delivery.",
+    "audience": "Business owners and product teams planning a website, online store or custom workflow.",
+    "problem": "An unclear website, disconnected operations, or a system that no longer fits.",
+    "guide": "Use Business Website Development for a company/service website; E-commerce Website Development for a store; Custom Web Application for bespoke workflows; Website Redesign for an existing-site change; Website Maintenance for agreed recurring upkeep.",
+    "process": "review goals and existing systems; agree structure and scope; design/build; verify key journeys; hand off.",
+    "faqs": [
+      {
+        "question": "Do I need a website or a custom application?",
+        "answer": "A content-led business presence and a workflow application solve different needs. Start with users and tasks, then compare Business Website Development and Custom Web Application."
+      },
+      {
+        "question": "Can you maintain an existing website?",
+        "answer": "Existing-site support depends on its technology, access and condition. Assessment and the agreed maintenance boundary determine what can be covered."
+      },
+      {
+        "question": "How do I choose a starting point?",
+        "answer": "Use Business Website Development for a company/service website; E-commerce Website Development for a store; Custom Web Application for bespoke workflows; Website Redesign for an existing-site change; Website Maintenance for agreed recurring upkeep."
+      },
+      {
+        "question": "What should I prepare?",
+        "answer": "Share your goal, existing setup, constraints and available materials. The selected service page identifies more specific inputs; sensitive access is exchanged only through an agreed secure process."
+      }
+    ],
+    "serviceIds": ["SVC-001", "SVC-002", "SVC-003", "SVC-004", "SVC-005"],
+    "relatedSolutionIds": ["SOL-001", "SOL-005"]
+  },
+  {
+    "categoryId": "CAT-02",
+    "headline": "Plan, design and develop mobile experiences around real tasks.",
+    "intro": "Explore mobile app development around a defined business goal. Plan, design and develop mobile experiences around real tasks. The selected work, inputs, costs and responsibilities are agreed before delivery.",
+    "audience": "Founders and teams planning a business or commerce application.",
+    "problem": "An untested app idea, unclear mobile journey, or ongoing application upkeep.",
+    "guide": "Compare Business Mobile App for a defined business use, E-commerce Mobile App for connected shopping, Custom Mobile App for specialized behavior, Mobile App UI/UX Design for design/handoff, and Mobile App Maintenance for scoped upkeep.",
+    "process": "clarify users/platforms; validate backend/device needs; design flows; build/test as scoped; prepare release.",
+    "faqs": [
+      {
+        "question": "Does design include app development?",
+        "answer": "No. Mobile App UI/UX Design is a distinct service; development is included only in an explicitly combined scope."
+      },
+      {
+        "question": "Who handles app-store release?",
+        "answer": "Account ownership, release assistance, policy requirements and ongoing responsibilities must be agreed for the project. Approval by a platform is not guaranteed."
+      },
+      {
+        "question": "How do I choose a starting point?",
+        "answer": "Compare Business Mobile App for a defined business use, E-commerce Mobile App for connected shopping, Custom Mobile App for specialized behavior, Mobile App UI/UX Design for design/handoff, and Mobile App Maintenance for scoped upkeep."
+      },
+      {
+        "question": "What should I prepare?",
+        "answer": "Share your goal, existing setup, constraints and available materials. The selected service page identifies more specific inputs; sensitive access is exchanged only through an agreed secure process."
+      }
+    ],
+    "serviceIds": ["SVC-006", "SVC-007", "SVC-008", "SVC-009", "SVC-010"],
+    "relatedSolutionIds": ["SOL-001", "SOL-005"]
+  },
+  {
+    "categoryId": "CAT-03",
+    "headline": "Connect systems and reduce repetitive work with clear operating rules.",
+    "intro": "Explore ai automation & crm around a defined business goal. Connect systems and reduce repetitive work with clear operating rules. The selected work, inputs, costs and responsibilities are agreed before delivery.",
+    "audience": "Owners, sales teams and operations leads.",
+    "problem": "Manual handoffs, scattered customer information, or repetitive tasks that need reviewable automation.",
+    "guide": "Workflow Automation connects processes; CRM Setup & Customization organizes customer work; Lead Follow-up Automation manages approved follow-up; AI Chatbot, AI Integrations and AI Voice Agent address distinct reviewed AI tasks; Automation Maintenance covers agreed existing workflows.",
+    "process": "map the process; confirm data/permissions; define exceptions and handoff; configure/test; document operations.",
+    "faqs": [
+      {
+        "question": "Will automation remove all manual work?",
+        "answer": "No. Suitable tasks depend on clear rules, data and integration support. Exceptions and human review remain part of the design."
+      },
+      {
+        "question": "Are AI/provider usage costs included?",
+        "answer": "Provider, telephony, messaging and API costs must be identified separately unless expressly included in the proposal."
+      },
+      {
+        "question": "How do I choose a starting point?",
+        "answer": "Workflow Automation connects processes; CRM Setup & Customization organizes customer work; Lead Follow-up Automation manages approved follow-up; AI Chatbot, AI Integrations and AI Voice Agent address distinct reviewed AI tasks; Automation Maintenance covers agreed existing workflows."
+      },
+      {
+        "question": "What should I prepare?",
+        "answer": "Share your goal, existing setup, constraints and available materials. The selected service page identifies more specific inputs; sensitive access is exchanged only through an agreed secure process."
+      }
+    ],
+    "serviceIds": [
+      "SVC-011",
+      "SVC-012",
+      "SVC-013",
+      "SVC-014",
+      "SVC-015",
+      "SVC-016",
+      "SVC-017"
+    ],
+    "relatedSolutionIds": ["SOL-002", "SOL-005"]
+  },
+  {
+    "categoryId": "CAT-04",
+    "headline": "Give your marketing activity clearer priorities and measurement.",
+    "intro": "Explore digital marketing around a defined business goal. Give your marketing activity clearer priorities and measurement. The selected work, inputs, costs and responsibilities are agreed before delivery.",
+    "audience": "Owners and marketing teams evaluating acquisition, content or conversion work.",
+    "problem": "Disconnected channels, unclear content priorities, or measurement that does not support decisions.",
+    "guide": "SEO and Local SEO address distinct search needs; Google Ads and Meta Ads manage different paid channels; Social Media, Content and Email Marketing cover agreed publishing/communication; CRO & Analytics evaluates journeys; Consulting supports planning.",
+    "process": "review goals/audience; assess channels and measurement; agree scope/budget; deliver approved work; review evidence.",
+    "faqs": [
+      {
+        "question": "Can you guarantee leads or rankings?",
+        "answer": "No. The engagement defines work and assessment methods, while results depend on market, platform and business factors."
+      },
+      {
+        "question": "Are ad spend and management fees separate?",
+        "answer": "Yes unless a proposal expressly states otherwise; the source ad-management offers distinguish media spend and applicable setup costs."
+      },
+      {
+        "question": "How do I choose a starting point?",
+        "answer": "SEO and Local SEO address distinct search needs; Google Ads and Meta Ads manage different paid channels; Social Media, Content and Email Marketing cover agreed publishing/communication; CRO & Analytics evaluates journeys; Consulting supports planning."
+      },
+      {
+        "question": "What should I prepare?",
+        "answer": "Share your goal, existing setup, constraints and available materials. The selected service page identifies more specific inputs; sensitive access is exchanged only through an agreed secure process."
+      }
+    ],
+    "serviceIds": [
+      "SVC-018",
+      "SVC-019",
+      "SVC-020",
+      "SVC-021",
+      "SVC-022",
+      "SVC-023",
+      "SVC-024",
+      "SVC-025",
+      "SVC-026"
+    ],
+    "relatedSolutionIds": ["SOL-003", "SOL-005"]
+  },
+  {
+    "categoryId": "CAT-05",
+    "headline": "Plan deployment and infrastructure with clear operational ownership.",
+    "intro": "Explore cloud & devops around a defined business goal. Plan deployment and infrastructure with clear operational ownership. The selected work, inputs, costs and responsibilities are agreed before delivery.",
+    "audience": "Technical founders and engineering/operations leads.",
+    "problem": "Inconsistent releases, unclear hosting setup, limited visibility or untested recovery assumptions.",
+    "guide": "Cloud Infrastructure Setup establishes environments; Application Deployment handles a defined release; CI/CD, Docker and Infrastructure as Code address different delivery controls; Monitoring & Observability, Cloud Security & Backup and Managed Cloud Services address scoped operations.",
+    "process": "review workload; define environment/access; implement agreed setup; verify deployment/recovery as scoped; document ownership.",
+    "faqs": [
+      {
+        "question": "Does deployment include ongoing management?",
+        "answer": "Not automatically. Deployment and managed operation are separate scopes with distinct responsibilities and fees."
+      },
+      {
+        "question": "Who pays provider bills?",
+        "answer": "Account ownership and provider billing must be agreed. Management/setup fees do not automatically include cloud consumption."
+      },
+      {
+        "question": "How do I choose a starting point?",
+        "answer": "Cloud Infrastructure Setup establishes environments; Application Deployment handles a defined release; CI/CD, Docker and Infrastructure as Code address different delivery controls; Monitoring & Observability, Cloud Security & Backup and Managed Cloud Services address scoped operations."
+      },
+      {
+        "question": "What should I prepare?",
+        "answer": "Share your goal, existing setup, constraints and available materials. The selected service page identifies more specific inputs; sensitive access is exchanged only through an agreed secure process."
+      }
+    ],
+    "serviceIds": [
+      "SVC-027",
+      "SVC-028",
+      "SVC-029",
+      "SVC-030",
+      "SVC-031",
+      "SVC-032",
+      "SVC-033",
+      "SVC-034"
+    ],
+    "relatedSolutionIds": ["SOL-004", "SOL-005"]
+  },
+  {
+    "categoryId": "CAT-06",
+    "headline": "Understand and address security needs within an authorized scope.",
+    "intro": "Explore cybersecurity around a defined business goal. Understand and address security needs within an authorized scope. The selected work, inputs, costs and responsibilities are agreed before delivery.",
+    "audience": "Technical owners and stakeholders responsible for security risk.",
+    "problem": "Unreviewed configuration, unclear access controls, or a need to prepare for an assessment.",
+    "guide": "Assessment services identify scoped findings; Hardening addresses approved changes; Identity & Access / Email Security focuses on selected controls; Training supports staff awareness; Compliance Readiness prepares for an actual framework; Managed Security defines recurring coverage.",
+    "process": "confirm authorization/capability; define boundaries; assess or implement; report/verify; agree follow-up.",
+    "faqs": [
+      {
+        "question": "Is a security assessment a guarantee of protection?",
+        "answer": "No. Findings are bounded by the agreed scope, methods and time; security work cannot guarantee complete protection."
+      },
+      {
+        "question": "Does readiness support include certification?",
+        "answer": "No. Compliance Readiness assists preparation. Formal certification or legal assurance is not implied."
+      },
+      {
+        "question": "How do I choose a starting point?",
+        "answer": "Assessment services identify scoped findings; Hardening addresses approved changes; Identity & Access / Email Security focuses on selected controls; Training supports staff awareness; Compliance Readiness prepares for an actual framework; Managed Security defines recurring coverage."
+      },
+      {
+        "question": "What should I prepare?",
+        "answer": "Share your goal, existing setup, constraints and available materials. The selected service page identifies more specific inputs; sensitive access is exchanged only through an agreed secure process."
+      }
+    ],
+    "serviceIds": [
+      "SVC-035",
+      "SVC-036",
+      "SVC-037",
+      "SVC-038",
+      "SVC-039",
+      "SVC-040",
+      "SVC-041",
+      "SVC-042"
+    ],
+    "relatedSolutionIds": ["SOL-004", "SOL-005"]
+  },
+  {
+    "categoryId": "CAT-07",
+    "headline": "Make interfaces and brand communication easier to understand.",
+    "intro": "Explore ui/ux, graphic design & branding around a defined business goal. Make interfaces and brand communication easier to understand. The selected work, inputs, costs and responsibilities are agreed before delivery.",
+    "audience": "Founders, product teams and marketing teams.",
+    "problem": "Unclear user journeys, inconsistent identity, or recurring design needs.",
+    "guide": "Website and Mobile App UI/UX Design address different platforms; SaaS Dashboard UI/UX handles complex product workflows; Logo & Brand Identity establishes visual identity; Graphic and Landing Page Design address specific communication; UX Audit reviews usability; Monthly Design Support defines recurring capacity.",
+    "process": "review brief/users; map content or flows; develop direction; review states/variants; prepare handoff.",
+    "faqs": [
+      {
+        "question": "Is Mobile App UI/UX Design a second service here?",
+        "answer": "No. It is the same Mobile App UI/UX Design offered through Mobile and Design, with one canonical page and no duplicate selection or billing."
+      },
+      {
+        "question": "Does design include development or source files?",
+        "answer": "Only deliverables explicitly included in scope are provided. Development, editable files, fonts and third-party licenses must be specified."
+      },
+      {
+        "question": "How do I choose a starting point?",
+        "answer": "Website and Mobile App UI/UX Design address different platforms; SaaS Dashboard UI/UX handles complex product workflows; Logo & Brand Identity establishes visual identity; Graphic and Landing Page Design address specific communication; UX Audit reviews usability; Monthly Design Support defines recurring capacity."
+      },
+      {
+        "question": "What should I prepare?",
+        "answer": "Share your goal, existing setup, constraints and available materials. The selected service page identifies more specific inputs; sensitive access is exchanged only through an agreed secure process."
+      }
+    ],
+    "serviceIds": [
+      "SVC-043",
+      "SVC-009",
+      "SVC-044",
+      "SVC-045",
+      "SVC-046",
+      "SVC-047",
+      "SVC-048",
+      "SVC-049"
+    ],
+    "relatedSolutionIds": ["SOL-001", "SOL-003", "SOL-005"]
+  },
+  {
+    "categoryId": "CAT-08",
+    "headline": "Turn approved footage and messages into purposeful video content.",
+    "intro": "Explore video editing & production around a defined business goal. Turn approved footage and messages into purposeful video content. The selected work, inputs, costs and responsibilities are agreed before delivery.",
+    "audience": "Businesses, marketing teams and creators.",
+    "problem": "Unstructured source material, inconsistent recurring edits, or unclear production responsibilities.",
+    "guide": "Short-form and YouTube Editing serve different formats; Promotional / Ad Video and Corporate Production require explicit production boundaries; Motion Graphics creates animation; Podcast Editing handles episodes; Captions / Subtitles handles timed text; Monthly Video Editing needs confirmed capacity and billing units.",
+    "process": "review brief/rights; confirm source and outputs; plan/edit/produce as scoped; review; deliver exports.",
+    "faqs": [
+      {
+        "question": "Does editing include filming?",
+        "answer": "No. Filming, stock, talent, travel and asset creation are separate unless specifically included."
+      },
+      {
+        "question": "Is there a fixed number of monthly videos?",
+        "answer": "Not yet established by the source prices. Workload, source/output lengths, formats and revisions must be approved for each plan."
+      },
+      {
+        "question": "How do I choose a starting point?",
+        "answer": "Short-form and YouTube Editing serve different formats; Promotional / Ad Video and Corporate Production require explicit production boundaries; Motion Graphics creates animation; Podcast Editing handles episodes; Captions / Subtitles handles timed text; Monthly Video Editing needs confirmed capacity and billing units."
+      },
+      {
+        "question": "What should I prepare?",
+        "answer": "Share your goal, existing setup, constraints and available materials. The selected service page identifies more specific inputs; sensitive access is exchanged only through an agreed secure process."
+      }
+    ],
+    "serviceIds": [
+      "SVC-050",
+      "SVC-051",
+      "SVC-052",
+      "SVC-053",
+      "SVC-054",
+      "SVC-055",
+      "SVC-056",
+      "SVC-057"
+    ],
+    "relatedSolutionIds": ["SOL-001", "SOL-003", "SOL-005"]
+  }
+]

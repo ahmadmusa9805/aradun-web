@@ -1,0 +1,333 @@
+{
+  "preparedOn": "2026-11-13",
+  "scope": "M06-06 Atlas development foundation preparation only",
+  "targetDatabase": "aradun_development",
+  "replicaSetConfirmed": true,
+  "fingerprint": "18699558e10e3d1e83fe9cff0efeb0d62a8912ae91297ca9d5a616416d362d79",
+  "executionAuthorized": false,
+  "recoveryEvidence": "not yet verified",
+  "results": [
+    {
+      "collection": "auditEvents",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "eventKey": 1
+          },
+          "name": "eventKey_1",
+          "unique": true
+        },
+        {
+          "key": {
+            "targetType": 1,
+            "targetId": 1,
+            "occurredAt": -1,
+            "_id": -1
+          },
+          "name": "targetType_1_targetId_1_occurredAt_-1__id_-1"
+        },
+        {
+          "key": {
+            "actor.staffUserId": 1,
+            "occurredAt": -1
+          },
+          "name": "actor.staffUserId_1_occurredAt_-1"
+        },
+        {
+          "key": {
+            "correlationId": 1
+          },
+          "name": "correlationId_1"
+        },
+        {
+          "key": {
+            "occurredAt": -1,
+            "_id": -1
+          },
+          "name": "occurredAt_-1__id_-1"
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "inquiries",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "reference": 1
+          },
+          "name": "reference_1",
+          "unique": true
+        },
+        {
+          "key": {
+            "submissionKeyHash": 1
+          },
+          "name": "submissionKeyHash_1",
+          "unique": true
+        },
+        {
+          "key": {
+            "assignedTo": 1,
+            "handlingStatus": 1,
+            "createdAt": -1,
+            "_id": -1
+          },
+          "name": "assignedTo_1_handlingStatus_1_createdAt_-1__id_-1"
+        },
+        {
+          "key": {
+            "contactId": 1,
+            "createdAt": -1,
+            "_id": -1
+          },
+          "name": "contactId_1_createdAt_-1__id_-1"
+        },
+        {
+          "key": {
+            "opportunityId": 1,
+            "createdAt": -1
+          },
+          "name": "opportunityId_1_createdAt_-1"
+        },
+        {
+          "key": {
+            "type": 1,
+            "createdAt": -1,
+            "_id": -1
+          },
+          "name": "type_1_createdAt_-1__id_-1"
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "outboxEvents",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "dedupeKey": 1
+          },
+          "name": "dedupeKey_1",
+          "unique": true
+        },
+        {
+          "key": {
+            "status": 1,
+            "nextAttemptAt": 1,
+            "_id": 1
+          },
+          "name": "status_1_nextAttemptAt_1__id_1"
+        },
+        {
+          "key": {
+            "status": 1,
+            "leaseUntil": 1
+          },
+          "name": "status_1_leaseUntil_1"
+        },
+        {
+          "key": {
+            "aggregateType": 1,
+            "aggregateId": 1
+          },
+          "name": "aggregateType_1_aggregateId_1"
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "rateLimitBuckets",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "scope": 1,
+            "subjectHash": 1,
+            "windowStart": 1
+          },
+          "name": "scope_1_subjectHash_1_windowStart_1",
+          "unique": true
+        },
+        {
+          "key": {
+            "expiresAt": 1
+          },
+          "name": "expiresAt_1",
+          "expireAfterSeconds": 0
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "staffUsers",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "provider": 1,
+            "providerSubject": 1
+          },
+          "name": "provider_1_providerSubject_1",
+          "unique": true,
+          "partialFilterExpression": {
+            "provider": {
+              "$type": "string"
+            },
+            "providerSubject": {
+              "$type": "string"
+            }
+          }
+        },
+        {
+          "key": {
+            "emailNormalized": 1
+          },
+          "name": "emailNormalized_1",
+          "unique": true
+        },
+        {
+          "key": {
+            "status": 1,
+            "roles": 1
+          },
+          "name": "status_1_roles_1"
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "staffSessions",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "tokenHash": 1
+          },
+          "name": "tokenHash_1",
+          "unique": true
+        },
+        {
+          "key": {
+            "staffUserId": 1,
+            "revokedAt": 1
+          },
+          "name": "staffUserId_1_revokedAt_1"
+        },
+        {
+          "key": {
+            "expiresAt": 1
+          },
+          "name": "expiresAt_1",
+          "expireAfterSeconds": 0
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "authCredentials",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "email": 1
+          },
+          "name": "email_1",
+          "unique": true
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "identityFactors",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "staffUserId": 1
+          },
+          "name": "staffUserId_1",
+          "unique": true
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "identityChallenges",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "tokenHash": 1
+          },
+          "name": "tokenHash_1",
+          "unique": true
+        },
+        {
+          "key": {
+            "staffUserId": 1,
+            "purpose": 1
+          },
+          "name": "staffUserId_1_purpose_1"
+        },
+        {
+          "key": {
+            "expiresAt": 1
+          },
+          "name": "expiresAt_1",
+          "expireAfterSeconds": 0
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "identityRecoveryPacks",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "staffUserId": 1
+          },
+          "name": "staffUserId_1",
+          "unique": true
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "identitySecurityEvents",
+      "missingCollection": true,
+      "missing": [
+        {
+          "key": {
+            "staffUserId": 1,
+            "occurredAt": -1
+          },
+          "name": "staffUserId_1_occurredAt_-1"
+        }
+      ],
+      "drift": [],
+      "extra": []
+    },
+    {
+      "collection": "identityLifecycleControl",
+      "missingCollection": true,
+      "missing": [],
+      "drift": [],
+      "extra": []
+    }
+  ]
+}

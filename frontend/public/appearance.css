@@ -1,0 +1,29 @@
+/* Theme-dependent tokens: the only source of accent values. Never set data-appearance in React. */
+:root,
+:root[data-appearance="terracotta"] {
+  --color-brand: #af432d;
+  --color-brand-hover: #963823;
+  --color-brand-active: #7b2e1d;
+  --color-brand-soft: #f5e7e1;
+  --color-focus: #af432d;
+  --color-link-inverse: #f2c3b6;
+  --color-selection-bg: #f5e7e1;
+}
+:root[data-appearance="slate-blue"] {
+  --color-brand: #3f617b;
+  --color-brand-hover: #344f65;
+  --color-brand-active: #293f51;
+  --color-brand-soft: #e7edf2;
+  --color-focus: #3f617b;
+  --color-link-inverse: #c4daeb;
+  --color-selection-bg: #e7edf2;
+}
+:root[data-appearance="vivid-blue"] {
+  --color-brand: #0066ff;
+  --color-brand-hover: #0057db;
+  --color-brand-active: #0047b3;
+  --color-brand-soft: #eaf1ff;
+  --color-focus: #0066ff;
+  --color-link-inverse: #bfd7ff;
+  --color-selection-bg: #eaf1ff;
+}

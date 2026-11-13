@@ -1,0 +1,71 @@
+{
+  "categories": [
+    {
+      "id": "CAT-01",
+      "label": "Web & Software Development",
+      "href": "/services/web-software-development"
+    },
+    {
+      "id": "CAT-02",
+      "label": "Mobile App Development",
+      "href": "/services/mobile-app-development"
+    },
+    {
+      "id": "CAT-03",
+      "label": "AI Automation & CRM",
+      "href": "/services/ai-automation-crm"
+    },
+    {
+      "id": "CAT-04",
+      "label": "Digital Marketing",
+      "href": "/services/digital-marketing"
+    },
+    {
+      "id": "CAT-05",
+      "label": "Cloud & DevOps",
+      "href": "/services/cloud-devops"
+    },
+    {
+      "id": "CAT-06",
+      "label": "Cybersecurity",
+      "href": "/services/cybersecurity"
+    },
+    {
+      "id": "CAT-07",
+      "label": "UI/UX, Graphic Design & Branding",
+      "href": "/services/design-branding"
+    },
+    {
+      "id": "CAT-08",
+      "label": "Video Editing & Production",
+      "href": "/services/video-editing-production"
+    }
+  ],
+  "solutions": [
+    {
+      "id": "SOL-001",
+      "label": "Digital Presence",
+      "href": "/solutions/digital-presence"
+    },
+    {
+      "id": "SOL-002",
+      "label": "Business Automation",
+      "href": "/solutions/business-automation"
+    },
+    {
+      "id": "SOL-003",
+      "label": "Business Growth",
+      "href": "/solutions/business-growth"
+    },
+    {
+      "id": "SOL-004",
+      "label": "Cloud & Technology",
+      "href": "/solutions/cloud-technology"
+    },
+    {
+      "id": "SOL-005",
+      "label": "Complete Digital Business",
+      "href": "/solutions/complete-digital-business"
+    }
+  ]
+}

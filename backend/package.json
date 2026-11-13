@@ -1,0 +1,35 @@
+{
+  "name": "@aradun/backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:indexes": "node --env-file-if-exists=.env.operations --import tsx scripts/db/indexes.ts",
+    "dev": "node --env-file-if-exists=.env --import tsx --watch src/server.ts",
+    "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json --resolve-full-paths --resolve-full-extension .js",
+    "start": "node --env-file-if-exists=.env dist/server.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "staff:access": "node --env-file-if-exists=.env.operations --import tsx scripts/staff/access.ts",
+    "email:check": "node --env-file-if-exists=.env --import tsx scripts/email/check.ts --check",
+    "email:test": "node --env-file-if-exists=.env --import tsx scripts/email/check.ts --send-test"
+  },
+  "dependencies": {
+    "@hapi/iron": "7.0.1",
+    "express": "5.3.0",
+    "express-session": "1.19.0",
+    "mongodb-connection-string-url": "7.0.2",
+    "mongoose": "9.12.0",
+    "otplib": "13.6.0",
+    "passport": "0.7.0",
+    "passport-local-mongoose": "9.2.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@better-auth/mongo-adapter": "1.7.19",
+    "@types/express": "5.0.6",
+    "@types/express-session": "1.19.0",
+    "@types/passport": "1.0.17",
+    "better-auth": "1.7.19",
+    "tsc-alias": "1.9.10",
+    "tsx": "4.23.15"
+  }
+}
