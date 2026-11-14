@@ -1,6 +1,13 @@
 import { expect, it } from "vitest";
 import { loadBackendEnv } from "../src/config/env.server.js";
 import { publicSettings } from "../src/config/env.public.js";
+it("validates release identity without treating it as a publication grant", () => {
+  expect(
+    loadBackendEnv({ PUBLIC_RELEASE_ID: "SAMPLE-release" }).publicReleaseId,
+  ).toBe("SAMPLE-release");
+  for (const id of ["", "../invalid", "SAMPLE?token=x"])
+    expect(() => loadBackendEnv({ PUBLIC_RELEASE_ID: id })).toThrow();
+});
 
 const stage = {
   APP_ENV: "staging",
@@ -91,4 +98,33 @@ it("never includes URI credentials in validation errors or public projection", (
     "appUrl",
   ]);
   expect(JSON.stringify(publicSettings(config))).not.toContain(secret);
+});
+
+it("allows reviewed fixed-inbox intake without staff/account configuration and rejects recipient mixing", () => {
+  const input = {
+    PUBLIC_INTAKE_ENABLED: "true",
+    INTAKE_NOTIFICATION_MODE: "inbox",
+    PRIVACY_NOTICE_VERSION: "SAMPLE-policy",
+    RATE_LIMIT_HASH_SECRET: "x".repeat(48),
+    JOB_TRIGGER_SECRET: "y".repeat(48),
+    EMAIL_PROVIDER: "resend",
+    OUTBOX_MODE: "resend",
+    RESEND_API_KEY: "re_SYNTHETIC_NOT_A_REAL_KEY",
+    EMAIL_FROM: "sender@example.invalid",
+    EMAIL_REPLY_TO: "reply@example.invalid",
+    CONTACT_NOTIFICATION_EMAIL: "owner@example.invalid",
+  };
+  expect(loadBackendEnv(input).intake).toMatchObject({
+    fixedInbox: true,
+    staffRecipientIds: [],
+  });
+  expect(() =>
+    loadBackendEnv({ ...input, INTAKE_STAFF_RECIPIENT_IDS: "a".repeat(24) }),
+  ).toThrow();
+  expect(() =>
+    loadBackendEnv({ ...input, EMAIL_PROVIDER: "disabled" }),
+  ).toThrow();
+  expect(() =>
+    loadBackendEnv({ ...input, INTAKE_NOTIFICATION_MODE: "user-email" }),
+  ).toThrow();
 });

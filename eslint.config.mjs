@@ -13,6 +13,7 @@ export default [
     ignores: [
       "**/node_modules/**",
       "**/.next/**",
+      "**/.next-local/**",
       "**/dist/**",
       ".tools/**",
       "**/next-env.d.ts",

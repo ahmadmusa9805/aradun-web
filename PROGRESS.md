@@ -1,10 +1,80 @@
 # ARADUN progress
 
+## Contact / blue logo / demo showcase correction - 2026-11-14
+
+Owner requested Contact repair, blue branding, three feedback examples with images, three project examples and a moving company showcase. Implemented public-intake-only development localhost/127.0.0.1 aliases at the same port (staff/hosted restrictions retained), original blue emblem/wordmark for Vivid and slate lockup for Slate, development-only labelled demo projects, fictional feedback/synthetic portraits and six placeholder company wordmarks. Motion has pause/play, hover/focus/offscreen pause and static reduced-motion behavior. Genuine proof remains pending; no publication authorization.
+
+40 backend tests PASS; initial browser batch36/38 PASS, two test-only quote-path expectations corrected and all four affected demo checks PASS. Build, lint/boundaries, types and 90-artifact secret scan PASS. Actual localhost Contact SAMPLE saved in Atlas; acknowledgement and inbox alert both provider-accepted, inbox arrival not independently confirmed. [Evidence](docs/verification/contact-demo-showcase.md). Implementation complete for review, owner acceptance pending. Dashboard/deployment remain postponed.
+
+
+## Current full homepage / navigation repair - 2026-11-14
+
+Owner explicitly requests blue-theme correction, reliable logo/menu/detail navigation, partial-world mouse interaction and all11 visible homepage sections. Owner confirms original blue lockup in blue themes. Implemented all11 source-ordered visible regions, honest Work/Feedback empty states and existing help links under Insights, clearer Why/How/Pricing labels, neutral partial artwork, bounded pointer tilt and static/image-error fallback. Blue/warm originals selected correctly; versioned theme stylesheet avoids stale logo CSS.
+
+Local preview repair: hung frontend and absent backend observed. Isolated Next dev output under ignored .next-local so verification .next builds cannot overwrite dev artifacts; normal build/start paths unchanged. Restarted verified repo frontend process only; attempted detached frontend found existing listener already healthy and exited without replacing it. Detached local backend started with hidden window and ignored logs. Actual logo/menu clicks and service/solution H1s PASS,70/70 real catalog APIs PASS; live Home remains200 after another verification build. **40/40 interaction/theme/navigation checks +14/14 service/performance checks PASS**, types/build/lint/secret scan PASS. [Evidence](docs/verification/homepage-complete-navigation.md). Owner visual acceptance pending, no deployment/staff/production configuration or data changes.
+
+
+## Current world-view/design audit and catalog recovery - 2026-11-14
+
+Owner requests softer gradients, world-view banner, fixed original logo, homepage service priority (Mobile fourth) and audit of design/grid/motion/sections, plus repair of unavailable services/solutions. Implemented neutral generated globe, near-neutral canvas, fixed Terracotta lockup, home-only Software/Automation/Marketing/Mobile order and one optional source04 3+2 solution-card arrangement. All existing main sections retained; eleven approved regions still accounted for, three evidence-dependent absent per source09. [Status audit](docs/verification/homepage-design-audit.md).
+
+Actual outage: Express not listening because Atlas secure connections timed out. Owner confirms VPN off/IP allowed; subsequent read-only DB connection/ping PASS. Restarted only agent-owned failed backend; now4000 listening. **70/70 actual catalog detail APIs verify canonical names** (8+57+5); real browser Services/Solutions and representative details show correct H1s. No credentials, DB target/data/access rules, TLS or production changes. Initial browser batch44/46 PASS; two outdated pricing selectors corrected, affected8/8 PASS; final fixed-logo/globe/order/motion4/4 PASS. Build/types/lint/86-artifact secret scan PASS. Owner visual acceptance pending; keep backend/frontend running for review.
+
+
+## Current homepage reference correction - 2026-11-14
+
+Owner requests closer fidelity to supplied original design, actual logo, reduced height, neutral compact categories, source-defined homepage sections and motion. Scoped correction to M04-03/M09-01/M12-01/02 public presentation, not full task acceptance. Implemented original owner PNG lockups, compact header without descriptor, search icon, two ruled category rows with neutral icons and accessible descriptions, shorter hero and selected CSS motion/static reduced-motion fallback.
+
+**42/42 desktop/mobile checks PASS**, build/types/lint/import boundaries and84-artifact secret scan PASS. Actual local preview repaired by backing up only generated dev cache under ignored .tools; Home HTTP200, original logo/eight categories, zero fresh-browser client errors. Backend/private envs, data/mail, dependencies, source documents and deployment unchanged. Source09 explicitly permits three evidence-dependent homepage regions to remain absent; all11 are mapped in [audit/report](docs/verification/home-reference-correction.md). Owner visual acceptance pending; no claim of full-platform or pixel-identical hero imagery.
+
+
+## Current visual correction checkpoint - 2026-11-14
+
+Owner rejects the previous visual quality and explicitly authorizes public visual improvements. Prior functional completion did not establish design fidelity or owner visual acceptance. Implemented coordinated full light-theme surfaces, compact editorial header, icon category menus/grid, category/service hierarchy, architectural CSS hero and structured theme-aware footer. Preserved content/routes/prices and working inquiries. No dashboard, deployment or production configuration changes.
+
+Initial **44/44 browser checks PASS**; final expanded **46-test run recorded passed with no failed tests** in Playwright last-run output. Frontend build/type compilation and lint/boundaries PASS. Final screenshots inspected for footer/mobile/service; corrected punctuation, mobile wrap and footer height. Local port3000 last returned500 from the stale dev process; automated frontend restart was NOT executed because automatic approval review failed on the usage limit. User must restart existing frontend terminal (Ctrl+C, then npm run frontend with Node24 active / scripts launcher). Compiled fixture version verified; actual local dev recovery and owner visual acceptance pending. [Evidence](docs/verification/public-visual-refresh.md).
+
+
+## Current status - public development ready for owner review (2026-11-14)
+
+Owner authorizes finishing remaining public/client development and explicitly postpones ALL deployment work and production configuration until separately requested. Dashboard/staff remains postponed. This is a consolidated M06-07/M09-10/M12-04 **public development checkpoint**, not full-platform/milestone or deployment acceptance.
+
+**Development implementation and automated verification complete for the current public review version; owner review pending.** All 66 desktop/mobile public regression checks PASS in one run. Existing local Home/service/Quote/Contact/Consultation HTTP200 and inquiry status available=true/emailDeliveryEnabled=true. Public pages, all 57 services/eight categories/five solutions, search/help, pricing, context-aware quote, saved contact/consultation requests and automatic inbox/client acknowledgement code are ready to review. Development mail remains sandboxed to configured inbox.
+
+Finished readable inbox brief formatting: actual canonical service/package names, complete long message/details and consultation timezone; no truncated JSON, new account or dashboard dependency. 53 backend regression checks PASS plus affected seven-test mail rerun PASS. Types/lint/boundaries/backend build/secret scan PASS. [Final development review report](docs/verification/public-development-review.md); [page/function review packet](docs/public-review.md). No known failing automated check or unresolved coding blocker in this reviewed public-development scope. Design/business/content/asset decisions and human visual/accessibility review remain owner review items, not fabricated approvals. Do not claim M12 production-asset gates, full roadmap acceptance or publication completed. No further implementation starts automatically.
+
+
+## Current public inquiry update - 2026-11-14
+
+Owner explicitly corrects the previous deferral: complete all client-facing form submission/database/automatic response and inbox delivery now; only dashboard/staff development stays postponed. This supersedes the earlier intake/email deferral without authorizing publication or claiming full-platform acceptance. M06-06/M06-07 public portion implemented and verified; owner acceptance pending.
+
+Contact/Quote/Consultation now save transactionally, return a reference and queue client acknowledgement plus fixed configured-inbox notification without a staff account. Automatic bounded worker runs every five seconds. Existing private development settings enabled with sandbox recipient isolation; secrets preserved. Live browser Contact -> Atlas -> receipt -> **two Resend-accepted automatic test emails PASS**. All three types/idempotency/recipient injection covered in disposable MongoDB tests. See [verification](docs/verification/public-inquiry-completion.md). Do not describe public forms/mail as deferred; historical statements below are superseded for that subject. Dashboard/staff/MFA expansion remains postponed.
+
+
+## Current update - 2026-11-14
+
+Owner **Approve and next.** accepts the verified local public/manual-email checkpoint, not content/commercial publication or full-platform acceptance. Authorized continuation: closed-by-default hosted public release/discovery support, the limited public release portion of M09-10/M10-02. Implementation verified; owner acceptance pending. Historical current-checkpoint statements below describe earlier checkpoints.
+
+Added explicit source approval validation and matching frontend/backend PUBLIC_RELEASE_ID, safe release DTO, hosted layout/catalog gates, qualified availability labels and request-time robots/sitemap withdrawal. Actual catalog remains draft; no real approval, env change, account, email, database operation or deployment. M10-02 dependencies/full acceptance and production gates remain open. See [verification](docs/verification/public-release-support.md). Next: consolidated owner public content/theme/availability review and production-readiness decisions; no deployment or next implementation automatically authorized.
+
+
 Updated: 2026-11-13 (Asia/Dhaka).
 
-Current milestone: **Client-facing public launch first**. Current checkpoint: **M06-06 Atlas-compatible private owner setup command**. Status: **implemented and verified; owner acceptance/private execution pending; actual owner/recipient, intake/mail and hosted release remain separate**.
+Current milestone: **Client-facing public launch first**. Current checkpoint: **Public browsing/manual-email launch-preparation batch (M09-10/M12-04 public portion)**. Status: **implemented and verified; consolidated owner public review pending; owner/intake/mail deferred, hosted publication not enabled**.
 
 ## Current checkpoint
+
+2026-11-13 owner explicitly skips owner account setup for now and approves the proposed public launch-preparation batch. Owner/recipient/staff/dashboard/real intake/automatic mail remain deferred; do not resume owner prompting. Added manual email brief copy/open-mail handoff and clipboard fallback to client inquiry pages without network save or private fields in URLs/storage; stabilized availability layout and prepared provider-neutral deployment templates/offline checks. Shared configured MongoDB limiter now wired in hosted tiers too, without relaxing existing limits/index guards. Rebuilt the [complete public review packet](docs/public-review.md). [Implementation, exact tests and release limitations](docs/verification/public-email-launch-candidate.md); [deployment preparation](deployment/README.md).
+
+Initial public batch 48/50 PASS; corrected new consultation-label assertion and measured layout shift. Affected final four-file run 36/36 PASS; all original 50 distinct public cases covered successfully across runs, not a single all-green 50-case run. Final post-visual-adjustment affected check **8/8 PASS**, live Contact handoff after form confirmed; local median CLS 0 and LCP 52–64ms (not field CWV). 27 backend configuration/abuse tests PASS; build/types/lint/format/catalog and offline deployment safety checks PASS. Secret scan 81 artifacts, all 13 source hashes and review links PASS. No actual environment/inquiry/account/provider or publication changes. Next required gate: owner page/function/theme/content review before separately proposed hosted public release-enablement. Full Phase 1 functionality/release gates remain; manual email is not relabeled live durable intake.
+
+2026-11-13 owner requests continuation of the proposed client-inquiry batch after service recovery; prepared owner-command code accepted to its verified extent only, not actual account/custody. Atlas read-only check still confirms owner absent. Delivered `npm run intake:check` to consolidate indexes/account/recipient/runtime/privacy-version/email-format inspection, with boolean/name-only output and no activation. Actual configuration report: indexes, identity, limiter, job key, privacy revision and mail syntax present; owner and recipient missing. **2/2 disposable tests**, final script/test typecheck, lint/boundaries, formatting, 81-artifact public-secret scan and all 13 source hashes PASS. [Evidence and scope](docs/verification/m06-06-intake-readiness-command.md).
+
+Private owner command requested asynchronously; no account/password invented, recipient set, env/provider change, actual email/queue or publication. Continue the same authorized readiness scope after owner reports success, without repeating routine approval; mandatory privacy/commercial/security/actual-send/release gates still apply. No unrelated roadmap task started.
+
+2026-11-13 service-page interruption resolved after owner disabled VPN: Atlas ping succeeds, agent-owned backend restarted/listening on 4000, live service API HTTP 200 and actual browser displays Business Website Development with no runtime errors. Both local servers left running. No application/env/security/business-data changes. [Recovery evidence](docs/verification/service-page-connectivity.md). No acceptance of pending owner setup or authorization of another task inferred.
+
+2026-11-13 service-page repair interruption: owner reports unavailable service pages and authorizes diagnosis. Both development servers were stopped on resume; restarted existing frontend/backend commands. Frontend works but shows service unavailable because Express fails at Atlas connection, before identity readiness. Approved URI/DB and DNS valid; three nodes reachable by TCP but TLS handshakes time out. No confirmed authentication error or root-cause attribution. Isolated full service browser suite **6/6 PASS**, including all 57 services on desktop/mobile and theme/accessibility/quote/canonical regressions. [Actual diagnostics and recovery steps](docs/verification/service-page-connectivity.md). Owner current-IP/VPN confirmation requested; live recovery pending. No code/env/source/business-data change or automatic intake/owner task acceptance. Current owner-command checkpoint below remains pending private execution; continue this repair before another task.
 
 2026-11-13 owner **Approve and next.** accepts verified Atlas initialization and authorizes its named one-time owner-command preparation. Added `npm run staff:setup:atlas`, hidden prompt/cancellation, bounded private stdin, exact approved target/owner guards and bootstrap-only remote mode reusing existing maintained/audited lifecycle. Other remote staff operations denied; local command and production/MFA rules preserved. No actual owner/password/data write/email/intake activation performed. [Implementation/evidence](docs/verification/m06-06-atlas-owner-command.md); [one-command owner instructions](docs/runbooks/first-owner-atlas.md).
 

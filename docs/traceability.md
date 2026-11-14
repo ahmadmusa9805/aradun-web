@@ -1,5 +1,32 @@
 # ARADUN requirement traceability and coverage
 
+2026-11-14 owner correction: M06 public intake loopback-origin compatibility and M04/M09/M12 blue branding/development-only demo showcase verified in [Contact/showcase report](verification/contact-demo-showcase.md). Fictional examples are explicitly labelled, never genuine business proof; existing full requirement statuses and source register remain unchanged. Owner visual acceptance pending.
+
+2026-11-14 M09-01/M12 public homepage correction and M01 local-preview regression repair: all11 main regions now visible per latest owner amendment, truthful proof empty states; original per-theme logos, interactive partial world and asset fallback.54 checks across two passing browser runs, actual70 catalog APIs and real logo/menu clicks verified. Dev cache separated from .next builds. [Evidence](verification/homepage-complete-navigation.md); no full-platform/owner visual acceptance inferred.
+
+
+2026-11-14 scoped M09-01/M12 public design delta: generated neutral globe, restrained gradients, fixed original logo and home-only priority order, optional source04 five-solution3+2 layout. Preserve all11 homepage regions/evidence gates. Source04 attachment v1.0 does not replace approvedv1.1. Actual70 catalog APIs and representative live pages recovered after Atlas connectivity returned; no business data/config mutation. [Audit](verification/homepage-design-audit.md).
+
+
+2026-11-14 M04-03/M09-01/M12-01/02 scoped homepage correction: original supplied logos, compact neutral-icon categories, reference header spacing and source04 selected CSS motion implemented.42 browser checks PASS; actual local preview recovered. Approved11 home regions mapped, three evidence-dependent regions intentionally absent per source09. [Evidence](verification/home-reference-correction.md); owner visual acceptance pending.
+
+
+2026-11-14 M04-03/M12-01/M12-04 public visual correction: owner requests reference-based editorial layouts and full coordinated light-theme surfaces. 44 initial tests PASS, final46 run status passed. Owner visual acceptance and local dev restart remain pending; no full roadmap/release acceptance inferred. [Evidence](verification/public-visual-refresh.md).
+
+
+2026-11-14 consolidated public development checkpoint (M06-07/M09-10/M12-04 public portions): all 66 public browser checks PASS in one run; current implementation ready for owner review. Readable full inquiry emails and canonical selection labels verified with long-input regression. No full-platform/production/human-review acceptance inferred. Deployment/configuration explicitly postponed. [Final evidence](verification/public-development-review.md).
+
+
+2026-11-14 M06-06/M06-07 public portion: owner restores full client form/database/automatic email scope while deferring dashboard only. Fixed-inbox recipient and automatic worker remove staff-account dependency; requests preserve immutable requested-only selection where commercial terms are unapproved. Actual development browser/Atlas/two Resend API acceptance verified; full roadmap task/staff/hosted acceptance not inferred. [Evidence](verification/public-inquiry-completion.md).
+
+
+2026-11-14 M09-10/M10-02 limited public-release support delta: accountable source approval validation, matching release identity, hosted public/layout/catalog gates, availability labels, safe 70-path catalog projection, request-time production robots and 89-URL sitemap with immediate release withdrawal. Actual source records remain draft; no release/dependency/full-task acceptance inferred. [Verification and limits](verification/public-release-support.md).
+
+
+2026-11-13 public launch-preparation delta: owner defers owner/recipient/actual intake/mail. Added explicit manual email handoff for Contact/Quote/Consultation, without server-save/booking claims or private data in URLs/storage. Supports public M09-10/M12-04 review and contact alternatives, not full M06 durable-intake acceptance. Offline hosted configuration templates/checks do not authorize publication or bypass draft routes/indexing/recovery gates. [Evidence and exact test runs](verification/public-email-launch-candidate.md), [full public review packet](public-review.md).
+
+2026-11-13 M06-06/M06-07 readiness delta: consolidated read-only operational prerequisite command implemented; two disposable safety/state tests and final script typecheck pass. Actual Atlas owner/recipient absent; intake/mail remain off. No full conversion-flow, custody, staging delivery or deployment acceptance. [Evidence](verification/m06-06-intake-readiness-command.md).
+
 2026-11-13 M06-06 owner prerequisite delta: target-bound Atlas private owner-command preparation delivered, not actual provisioning. 22 unit/integration/fake-prompt lifecycle checks PASS and actual read-only Atlas preflight confirms bootstrap readiness/account absence. Existing role/MFA policy and production gates retained; no full M03/M06 or owner-custody acceptance. [Evidence](verification/m06-06-atlas-owner-command.md), [owner private execution](runbooks/first-owner-atlas.md).
 
 2026-11-13 M06-06 actual Atlas foundation delta: explicit owner one-time existing-credential exception allowed reviewed additive initialization. Exact empty target/fingerprint verified, 12 collections/30 application indexes created and independently verified; zero records. Backend starts against Atlas, root HTTP 200, intake/email remain disabled. No source/application/owner-account/local data changes or production acceptance. [Actual execution evidence](verification/atlas-development-initialization-result.json), [verification scope](verification/m06-06-atlas-initialization.md). Historical missing-credential blocker below is superseded only for this completed operation.

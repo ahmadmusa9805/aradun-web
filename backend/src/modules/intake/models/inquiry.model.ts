@@ -172,6 +172,7 @@ const schema = new Schema(
     message: short(10000),
     selection: { type: selection, default: undefined },
     offerSnapshot: { type: snapshot, default: undefined },
+    requestedOffersOnly: { type: Boolean, default: false },
     projectContext: { type: project, default: undefined },
     consultation: { type: consultation, default: undefined },
     attribution: { type: attribution, required: true, default: () => ({}) },
@@ -237,6 +238,7 @@ const immutable = [
   "message",
   "selection",
   "offerSnapshot",
+  "requestedOffersOnly",
   "projectContext",
   "consultation.preferredTimeText",
   "consultation.timezone",
@@ -281,7 +283,12 @@ schema.pre("validate", async function () {
         !this.selection.customRequested)
     )
       this.invalidate("selection", "Offer or custom choice required");
-    if (this.selection && this.offerSnapshot) {
+    if (this.requestedOffersOnly && this.offerSnapshot?.offers.length !== 0)
+      this.invalidate(
+        "offerSnapshot",
+        "Request-only inquiries cannot assert commercial terms",
+      );
+    if (this.selection && this.offerSnapshot && !this.requestedOffersOnly) {
       const selected = [
         ...this.selection.serviceIds,
         ...this.selection.solutionIds,
@@ -305,7 +312,12 @@ schema.pre("validate", async function () {
           "Snapshot must match canonical selection",
         );
     }
-  } else if (this.selection || this.offerSnapshot || this.projectContext)
+  } else if (
+    this.selection ||
+    this.offerSnapshot ||
+    this.projectContext ||
+    this.requestedOffersOnly
+  )
     this.invalidate("selection", "Quote fields are not allowed for this type");
   if (this.projectContext)
     validate("projectContext", projectContextSchema, this.projectContext);

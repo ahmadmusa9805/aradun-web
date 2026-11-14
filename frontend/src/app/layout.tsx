@@ -25,11 +25,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html
+      lang="en"
+      className={inter.variable}
+      data-public-release={
+        frontendEnv.appEnv !== "development" && frontendEnv.publicReleaseId
+          ? "enabled"
+          : undefined
+      }
+    >
       <head>
         {/* CSSOM-selectable tokens remain same-origin and outside bundled stylesheet rewriting. */}
         {/* eslint-disable-next-line @next/next/no-css-tags */}
-        <link id="appearance-tokens" rel="stylesheet" href="/appearance.css" />
+        <link
+          id="appearance-tokens"
+          rel="stylesheet"
+          href="/appearance.css?v=20261114d"
+        />
         {/* A same-origin parser-blocking script intentionally selects tokens before first paint. */}
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script src="/appearance.js" />

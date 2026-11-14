@@ -10,6 +10,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "staff:access": "node --env-file-if-exists=.env.operations --import tsx scripts/staff/access.ts",
     "email:check": "node --env-file-if-exists=.env --import tsx scripts/email/check.ts --check",
+    "intake:check": "node --env-file-if-exists=.env --import tsx scripts/intake/check.ts",
     "email:test": "node --env-file-if-exists=.env --import tsx scripts/email/check.ts --send-test"
   },
   "dependencies": {

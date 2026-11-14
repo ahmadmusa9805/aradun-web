@@ -45,9 +45,9 @@ export function PublicSection({
     </section>
   );
 }
-export function ProjectInvitation() {
+export function ProjectInvitation({ id }: { id?: string } = {}) {
   return (
-    <section className="public-invitation">
+    <section className="public-invitation" id={id}>
       <p className="public-eyebrow">Your next step</p>
       <h2>Tell us what you want to build, improve, or automate.</h2>
       <p>

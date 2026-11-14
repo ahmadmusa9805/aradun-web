@@ -15,6 +15,7 @@ export const outboxInputSchema = z
         prospectEmail: z.email().max(254),
       }),
       z.strictObject({ kind: z.literal("staff"), staffUserId: id }),
+      z.strictObject({ kind: z.literal("inbox") }),
     ]),
     templateKey: z.enum(["inquiry-acknowledgement", "staff-intake-alert"]),
     templateVersion: z.literal(1),

@@ -1,3 +1,5 @@
+import { CategoryIcon } from "@/components/ui/category-icon";
+import { BrandLockup } from "./brand-lockup";
 import Link from "next/link";
 import { AppearanceSelector } from "@/components/theme/appearance-selector";
 import { NavigationDisclosure } from "./navigation-disclosure";
@@ -11,9 +13,10 @@ import {
 function NavigationLinks({ items }: { items: readonly NavigationItem[] }) {
   return (
     <ul>
-      {items.map((item) => (
+      {items.map((item, index) => (
         <li key={item.href}>
           <Link prefetch={false} href={item.href}>
+            {items === serviceCategories && <CategoryIcon index={index} />}
             {item.label}
           </Link>
         </li>
@@ -31,7 +34,7 @@ function CategoryMenus({ mobile = false }: { mobile?: boolean }) {
       >
         <div className="category-panel">
           <Link prefetch={false} href="/services" className="menu-overview">
-            All Services
+            All Services <span aria-hidden="true">&rarr;</span>
           </Link>
           <NavigationLinks items={serviceCategories} />
         </div>
@@ -43,7 +46,7 @@ function CategoryMenus({ mobile = false }: { mobile?: boolean }) {
       >
         <div className="category-panel">
           <Link prefetch={false} href="/solutions" className="menu-overview">
-            All Solutions
+            All Solutions <span aria-hidden="true">&rarr;</span>
           </Link>
           <NavigationLinks items={businessSolutions} />
         </div>
@@ -54,6 +57,16 @@ function CategoryMenus({ mobile = false }: { mobile?: boolean }) {
 export function SiteHeader() {
   return (
     <header className="site-header">
+      <div className="studio-strip">
+        <div className="container-marketing">
+          <p>
+            ARADUN <span>/ Build. Automate. Grow.</span>
+          </p>
+          <div className="appearance-utility">
+            <AppearanceSelector />
+          </div>
+        </div>
+      </div>
       <div className="container-marketing">
         <div className="header-top">
           <Link
@@ -62,14 +75,34 @@ export function SiteHeader() {
             aria-label="ARADUN home"
             prefetch={false}
           >
-            ARADUN<span>Technology &amp; Digital Solutions</span>
+            <BrandLockup />
           </Link>
+          <nav className="desktop-navigation" aria-label="Main navigation">
+            <CategoryMenus />
+            <NavigationLinks items={mainLinks} />
+          </nav>
           <div className="header-actions">
             <Link prefetch={false} href="/contact" className="compact-contact">
               Contact
             </Link>
-            <Link prefetch={false} href="/search" className="search-link">
-              Search
+            <Link
+              prefetch={false}
+              href="/search"
+              className="search-link"
+              aria-label="Search"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.4"
+                aria-hidden="true"
+              >
+                <circle cx="10.5" cy="10.5" r="7" />
+                <path d="m16 16 5 5" />
+              </svg>
             </Link>
             <Link
               prefetch={false}
@@ -80,10 +113,7 @@ export function SiteHeader() {
             </Link>
           </div>
         </div>
-        <nav className="desktop-navigation" aria-label="Main navigation">
-          <CategoryMenus />
-          <NavigationLinks items={mainLinks} />
-        </nav>
+
         <NavigationDisclosure
           label="Menu"
           className="mobile-navigation"
@@ -110,9 +140,6 @@ export function SiteHeader() {
             </Link>
           </nav>
         </NavigationDisclosure>
-        <div className="appearance-utility">
-          <AppearanceSelector />
-        </div>
       </div>
     </header>
   );

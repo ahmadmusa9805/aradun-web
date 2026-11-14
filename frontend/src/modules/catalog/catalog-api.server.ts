@@ -2,6 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { frontendEnv } from "@/config/env.server";
 import type { PricePresentationDto } from "./components/price-presentation";
+import type { ServiceAvailability } from "./components/availability";
 
 export type CategorySummary = {
   id: string;
@@ -23,11 +24,13 @@ export type CategoryDetail = CategorySummary & {
     id: string;
     name: string;
     summary?: string;
+    availability?: ServiceAvailability;
     href: string;
     price: PricePresentationDto;
   }[];
 };
 export type ServiceDetail = {
+  availability?: ServiceAvailability;
   id: string;
   name: string;
   sourcePriceLabel: string;
@@ -56,6 +59,9 @@ const object = (value: unknown): value is Record<string, unknown> =>
   Boolean(value) && typeof value === "object" && !Array.isArray(value);
 const text = (value: unknown): value is string =>
   typeof value === "string" && value.length > 0 && value.length <= 8000;
+const validAvailability = (value: unknown) =>
+  value === undefined ||
+  ["available", "specialist-led", "coming-soon"].includes(String(value));
 function validService(value: unknown) {
   if (!object(value) || !object(value.service)) return false;
   const service = value.service;
@@ -79,6 +85,7 @@ function validService(value: unknown) {
       "sourcePriceLabel",
     ].every((key) => text(service[key])) &&
     /^SVC-\d{3}$/.test(String(service.id)) &&
+    validAvailability(service.availability) &&
     /^\/services\/[a-z0-9-]+$/.test(String(service.href)) &&
     ["project", "recurring", "custom", "assessment", "design-media"].includes(
       String(service.variant),
@@ -178,6 +185,7 @@ function validDetail(value: unknown) {
         /^SVC-\d{3}$/.test(service.id) &&
         text(service.name) &&
         (service.summary === undefined || text(service.summary)) &&
+        validAvailability(service.availability) &&
         text(service.href) &&
         /^\/services\/[a-z0-9-]+$/.test(service.href) &&
         object(service.price) &&
@@ -207,7 +215,11 @@ async function request<T>(
     if (response.status === 404) return { state: "missing" };
     if (!response.ok) return { state: "unavailable" };
     const json = await response.json();
-    if (!object(json) || json.preview !== true || !validate(json))
+    if (
+      !object(json) ||
+      json.preview !== (frontendEnv.appEnv === "development") ||
+      !validate(json)
+    )
       return { state: "unavailable" };
     return { state: "ready", data: json as T };
   } catch {
@@ -215,20 +227,20 @@ async function request<T>(
   }
 }
 export const getCategories = () =>
-  request<{ preview: true; categories: CategorySummary[] }>(
+  request<{ preview: boolean; categories: CategorySummary[] }>(
     "categories",
     validIndex,
   );
 export const getCategory = (slug: string) =>
   /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) && slug.length <= 150
-    ? request<{ preview: true; category: CategoryDetail }>(
+    ? request<{ preview: boolean; category: CategoryDetail }>(
         `categories/${slug}`,
         validDetail,
       )
     : Promise.resolve({ state: "missing" } as const);
 export const getService = cache((slug: string) =>
   /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) && slug.length <= 150
-    ? request<{ preview: true; service: ServiceDetail }>(
+    ? request<{ preview: boolean; service: ServiceDetail }>(
         `services/${slug}`,
         validService,
       )
@@ -262,7 +274,7 @@ export type SolutionDetail = {
   related: { name: string; href: string }[];
 };
 export type PricingDetail = {
-  preview: true;
+  preview: boolean;
   solutions: SolutionDetail[];
   groups: {
     id: string;
@@ -330,7 +342,7 @@ function validSolution(item: unknown): boolean {
   );
 }
 export const getSolutions = () =>
-  request<{ preview: true; solutions: SolutionDetail[] }>(
+  request<{ preview: boolean; solutions: SolutionDetail[] }>(
     "solutions",
     (value) =>
       object(value) &&
@@ -340,7 +352,7 @@ export const getSolutions = () =>
   );
 export const getSolution = cache((slug: string) =>
   /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) && slug.length <= 150
-    ? request<{ preview: true; solution: SolutionDetail }>(
+    ? request<{ preview: boolean; solution: SolutionDetail }>(
         `solutions/${slug}`,
         (value) => object(value) && validSolution(value.solution),
       )

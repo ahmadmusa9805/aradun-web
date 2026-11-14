@@ -1,8 +1,10 @@
 import { Router } from "express";
 import { z } from "zod";
 import contentSource from "./data/category-content.json" with { type: "json" };
+import { catalogSchema } from "./validation/input.schema.js";
 import { catalogRelease } from "./data/catalog-release.js";
 import { servicePreview } from "./server/service-preview.server.js";
+import { publishedCatalog } from "./server/publication.server.js";
 import {
   solutionPreviews,
   pricingPreview,
@@ -55,22 +57,36 @@ for (const item of content) {
 }
 
 /** Safe local preview only: no publishing pending copy, prices or availability in hosted environments. */
-export function createCatalogRouter(development: boolean) {
+export function createCatalogRouter(
+  development: boolean,
+  releaseId?: string,
+  source = catalogRelease,
+) {
+  const catalog = catalogSchema.parse(source);
+  const publication = development ? null : publishedCatalog(releaseId, catalog);
+  const preview = !publication;
   const router = Router();
   router.use((_request, response, next) => {
     response.setHeader("Cache-Control", "no-store");
-    if (!development) {
+    if (!development && !publication) {
       response.sendStatus(404);
       return;
     }
     next();
   });
-  const categories = catalogRelease.categories.map((category) => ({
+  router.get("/publication", (_request, response) => {
+    if (!publication) {
+      response.sendStatus(404);
+      return;
+    }
+    response.json(publication);
+  });
+  const categories = catalog.categories.map((category) => ({
     id: category.categoryId,
     name: category.name,
     slug: category.slug,
     href: category.route,
-    representatives: catalogRelease.services
+    representatives: catalog.services
       .filter((service) => service.categoryIds.includes(category.categoryId))
       .slice(0, 3)
       .map((service) => ({ name: service.name, href: service.route })),
@@ -78,7 +94,7 @@ export function createCatalogRouter(development: boolean) {
       .headline,
   }));
   router.get("/solutions", (_request, response) =>
-    response.json({ preview: true, solutions: solutionPreviews() }),
+    response.json({ preview, solutions: solutionPreviews() }),
   );
   router.get("/solutions/:slug", (request, response) => {
     const solution = solutionPreviews().find(
@@ -88,10 +104,10 @@ export function createCatalogRouter(development: boolean) {
       response.sendStatus(404);
       return;
     }
-    response.json({ preview: true, solution });
+    response.json({ preview, solution });
   });
   router.get("/pricing", (_request, response) =>
-    response.json({ preview: true, ...pricingPreview() }),
+    response.json({ preview, ...pricingPreview() }),
   );
   router.get("/services/:slug", (request, response) => {
     const service = servicePreview(request.params.slug);
@@ -99,10 +115,22 @@ export function createCatalogRouter(development: boolean) {
       response.sendStatus(404);
       return;
     }
-    response.json({ preview: true, service });
+    response.json({
+      preview,
+      service: {
+        ...service,
+        ...(publication
+          ? {
+              availability: catalog.services.find(
+                (item) => item.serviceId === service.id,
+              )!.availability,
+            }
+          : {}),
+      },
+    });
   });
   router.get("/categories", (_request, response) => {
-    response.json({ preview: true, categories });
+    response.json({ preview, categories });
   });
   router.get("/categories/:slug", (request, response) => {
     const category = categories.find(
@@ -114,14 +142,13 @@ export function createCatalogRouter(development: boolean) {
     }
     const copy = content.find((item) => item.categoryId === category.id)!;
     const services = copy.serviceIds
-      .map((id) =>
-        catalogRelease.services.find((item) => item.serviceId === id)!,
-      )
+      .map((id) => catalog.services.find((item) => item.serviceId === id)!)
       .map((item) => ({
         id: item.serviceId,
         name: item.name,
         summary: servicePreview(item.slug)!.summary,
         href: item.route,
+        ...(publication ? { availability: item.availability } : {}),
         price: {
           label: item.sourcePriceLabel,
           currency: "USD" as const,
@@ -135,13 +162,13 @@ export function createCatalogRouter(development: boolean) {
         },
       }));
     response.json({
-      preview: true,
+      preview,
       category: {
         ...category,
         ...copy,
         services,
         relatedSolutions: copy.relatedSolutionIds.map((id) => {
-          const solution = catalogRelease.solutions.find(
+          const solution = catalog.solutions.find(
             (item) => item.solutionId === id,
           )!;
           return { name: solution.name, href: solution.route };

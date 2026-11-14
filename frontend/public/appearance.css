@@ -1,6 +1,14 @@
 /* Theme-dependent tokens: the only source of accent values. Never set data-appearance in React. */
 :root,
 :root[data-appearance="terracotta"] {
+  --brand-vivid-parts: none;
+  --brand-lockup: url("/_next/image?url=%2Fbrand%2Faradun-terracotta.png&w=640&q=75");
+  --color-page: #f8f6f2;
+  --color-border-subtle: #d8d2c8;
+  --color-surface-subtle: #efe6dc;
+  --color-editorial: #eee8df;
+  --color-footer: #29211e;
+  --color-art-stone: #dfd1be;
   --color-brand: #af432d;
   --color-brand-hover: #963823;
   --color-brand-active: #7b2e1d;
@@ -10,6 +18,13 @@
   --color-selection-bg: #f5e7e1;
 }
 :root[data-appearance="slate-blue"] {
+  --brand-lockup: url("/_next/image?url=%2Fbrand%2Faradun-slate-blue.png&w=640&q=75");
+  --color-page: #f6f7f8;
+  --color-border-subtle: #ccd6dc;
+  --color-surface-subtle: #e4edf2;
+  --color-editorial: #e9eef0;
+  --color-footer: #192b37;
+  --color-art-stone: #d5dfe5;
   --color-brand: #3f617b;
   --color-brand-hover: #344f65;
   --color-brand-active: #293f51;
@@ -19,6 +34,14 @@
   --color-selection-bg: #e7edf2;
 }
 :root[data-appearance="vivid-blue"] {
+  --brand-vivid-parts: flex;
+  --brand-lockup: none;
+  --color-page: #f7f8fb;
+  --color-border-subtle: #d0d9ec;
+  --color-surface-subtle: #eff1f6;
+  --color-editorial: #eceff5;
+  --color-footer: #111e3a;
+  --color-art-stone: #dce1ed;
   --color-brand: #0066ff;
   --color-brand-hover: #0057db;
   --color-brand-active: #0047b3;

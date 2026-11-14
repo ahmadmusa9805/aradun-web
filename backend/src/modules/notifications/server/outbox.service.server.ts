@@ -65,7 +65,13 @@ type Event = Awaited<
 type Eligibility = (
   event: NonNullable<Event>,
 ) => Promise<
-  { eligible: false } | { eligible: true; email: string; inquiryUrl?: string }
+  | { eligible: false }
+  | {
+      eligible: true;
+      email: string;
+      inquiryUrl?: string;
+      inboxDetails?: string;
+    }
 >;
 export type JobSummary = {
   disabled: boolean;
@@ -303,6 +309,9 @@ async function createOutboxWorker(
                           event.payload.inquiryType,
                           event.kind === "staff-intake-alert"
                             ? policy.inquiryUrl
+                            : undefined,
+                          event.kind === "staff-intake-alert"
+                            ? policy.inboxDetails
                             : undefined,
                         )
                       : {

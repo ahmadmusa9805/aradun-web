@@ -29,7 +29,7 @@ for (const enabled of [false, true]) {
       });
     });
     await page.goto("/contact");
-    await expect(page.locator(".form-note")).toContainText(
+    await expect(page.locator(".intake-availability")).toContainText(
       enabled
         ? "Email notifications are enabled, but delivery is not guaranteed"
         : "Email notifications are currently off",

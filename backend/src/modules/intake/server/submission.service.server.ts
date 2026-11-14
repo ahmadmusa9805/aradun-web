@@ -26,6 +26,7 @@ export type IntakeOptions = {
   policy: ConsentPolicy;
   capture?: typeof captureSelectedOffers;
   staffRecipientIds: string[];
+  fixedInbox?: boolean;
 };
 function canonical(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(canonical).join(",")}]`;
@@ -58,8 +59,8 @@ export async function createSubmissionService(
     throw new ServiceError("unavailable");
   const recipients = z
     .array(z.string().regex(/^[a-f0-9]{24}$/))
-    .min(1)
-    .max(10)
+    .min(options.fixedInbox ? 0 : 1)
+    .max(options.fixedInbox ? 0 : 10)
     .parse(options.staffRecipientIds);
   const model = inquiryModel(connection);
   const digest = (value: string) =>
@@ -111,6 +112,7 @@ export async function createSubmissionService(
       throw new ServiceError("unavailable");
     const now = new Date().toISOString(),
       parsed = parseInquiryInput(input, options.policy, now);
+    let requestedOffersOnly = false;
     let offerSnapshot: ReturnType<typeof captureOfferSnapshot> | undefined;
     if (parsed.type === "quote") {
       const selection = parsed.selection;
@@ -133,9 +135,16 @@ export async function createSubmissionService(
             now,
           );
         } catch (error) {
-          if (error instanceof ServiceError && error.code === "not_found")
-            throw new ServiceError("unavailable");
-          throw error;
+          if (error instanceof ServiceError && error.code === "not_found") {
+            if (!options.fixedInbox) throw new ServiceError("unavailable");
+            requestedOffersOnly = true;
+            // Save requested IDs only; no draft offer, price, availability or package commitment is asserted.
+            offerSnapshot = captureOfferSnapshot({
+              catalogVersion: catalogRelease.version,
+              capturedAt: now,
+              offers: [],
+            });
+          } else throw error;
         }
       }
     }
@@ -154,6 +163,7 @@ export async function createSubmissionService(
             submissionKeyHash,
             payloadHash,
             ...(offerSnapshot ? { offerSnapshot } : {}),
+            requestedOffersOnly,
           });
           await document.save({ session });
           await enqueueOutbox(
@@ -176,6 +186,24 @@ export async function createSubmissionService(
             },
             session,
           );
+          if (options.fixedInbox)
+            await enqueueOutbox(
+              connection,
+              {
+                kind: "staff-intake-alert",
+                aggregateType: "inquiry",
+                aggregateId: String(document._id),
+                recipient: { kind: "inbox" },
+                templateKey: "staff-intake-alert",
+                templateVersion: 1,
+                payload: {
+                  reference: document.reference,
+                  inquiryType: parsed.type,
+                  locale: "en",
+                },
+              },
+              session,
+            );
           for (const recipient of staff)
             await enqueueOutbox(
               connection,

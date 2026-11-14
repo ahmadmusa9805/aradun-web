@@ -1,4 +1,6 @@
 import { publicMetadata } from "@/modules/discovery/metadata.server";
+import { frontendEnv } from "@/config/env.server";
+import { DemoProjects } from "@/modules/content/components/demo-projects";
 import {
   PublicPage,
   PublicSection,
@@ -16,6 +18,7 @@ export default function WorkPage() {
       intro="Understand the problem, the contribution and the evidence behind a project."
     >
       <PublicSection title="Project collection">
+        {frontendEnv.appEnv === "development" && <DemoProjects />}
         <p className="public-empty">
           No approved project case studies are published yet.
         </p>

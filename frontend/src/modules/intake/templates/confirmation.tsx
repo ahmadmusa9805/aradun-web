@@ -53,7 +53,7 @@ export function Confirmation({ apiBaseUrl }: { apiBaseUrl: string }) {
     };
   }, [apiBaseUrl]);
   return (
-    <section className="public-section">
+    <section className="public-section inquiry-confirmation">
       {loading ? (
         <p role="status">Checking your receipt...</p>
       ) : receipt ? (

@@ -3,6 +3,7 @@ import {
   type SubmitInquiry,
 } from "./modules/intake/intake.routes.js";
 import { identityMutationPaths } from "./modules/identity/identity.paths.js";
+import { publicIntakeOrigins } from "./modules/intake/server/origins.server.js";
 import type { Limiter } from "./modules/operations/server/rate-limit.server.js";
 import { limitRequests } from "./modules/operations/server/request-controls.server.js";
 import express, { type Router } from "express";
@@ -28,6 +29,7 @@ export function createApp(
   } = {},
 ) {
   const app = express();
+  const intakeOrigins = publicIntakeOrigins(config);
   app.disable("x-powered-by");
   app.set("trust proxy", false);
   app.use((request, response, next) => {
@@ -53,7 +55,11 @@ export function createApp(
   );
   app.use((request, response, next) => {
     const requestOrigin = request.get("Origin");
-    if (requestOrigin && !config.allowedOrigins.includes(requestOrigin)) {
+    const origins =
+      request.path === "/api/intake" || request.path.startsWith("/api/intake/")
+        ? intakeOrigins
+        : config.allowedOrigins;
+    if (requestOrigin && !origins.includes(requestOrigin)) {
       response.status(403).json({ error: "Origin not allowed" });
       return;
     }
@@ -126,7 +132,7 @@ export function createApp(
   app.use(
     "/api/intake",
     createIntakeRouter(
-      config.allowedOrigins,
+      intakeOrigins,
       services.limiter,
       services.intake,
       Boolean(
@@ -140,7 +146,10 @@ export function createApp(
   app.use(
     "/api/catalog",
     limitRequests(services.limiter, "catalog-read"),
-    createCatalogRouter(config.appEnv === "development"),
+    createCatalogRouter(
+      config.appEnv === "development",
+      config.publicReleaseId,
+    ),
   );
   app.use(
     "/api/content",

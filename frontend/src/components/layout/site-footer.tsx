@@ -31,10 +31,28 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="container-marketing">
+        <div className="footer-invitation">
+          <div>
+            <p className="public-eyebrow">YOUR NEXT CHAPTER</p>
+            <h2>Let’s build what’s next.</h2>
+          </div>
+          <Link
+            prefetch={false}
+            href="/get-a-quote"
+            className="ui-button ui-button-primary"
+          >
+            Start a conversation <span aria-hidden="true">&rarr;</span>
+          </Link>
+        </div>
         <div className="footer-identity">
           <p className="brand-name">ARADUN</p>
           <p>Technology &amp; Digital Solutions</p>
           <p>Build. Automate. Grow.</p>
+          <p className="footer-intro">
+            Technology, design and digital thinking.
+            <br />
+            Connected around your business.
+          </p>
           <Link prefetch={false} href="/contact">
             Contact Us
           </Link>
@@ -85,6 +103,16 @@ export function SiteFooter() {
             ]}
           />
         </nav>
+        <div className="footer-bottom">
+          <p>ARADUN / Technology &amp; Digital Solutions</p>
+          <p>Based in Bangladesh. Working worldwide.</p>
+          <Link prefetch={false} href="/privacy">
+            Privacy
+          </Link>
+          <Link prefetch={false} href="/terms">
+            Terms
+          </Link>
+        </div>
       </div>
     </footer>
   );

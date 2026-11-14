@@ -1,5 +1,53 @@
 # ARADUN decision index
 
+## Owner public-preview demo amendment - 2026-11-14
+
+Owner requests three feedback/project examples and a moving company-logo showcase. Examples remain visibly SAMPLE/DEMO with fictional identities and synthetic portraits; they assert no genuine endorsements or delivered results. Render in development only, replacing with permitted genuine records before publication. One controlled logo-strip loop has pause/play, hover/focus/offscreen pause and reduced-motion fallback. Vivid uses original owner-supplied bright-blue emblem and original wordmark; Slate retains original slate lockup. Contact aliases apply only to public intake at the configured development loopback port. No provider, spending, deployment or dashboard authorization is implied.
+
+
+## All regions visible; blue originals and partial world - 2026-11-14
+
+Owner supersedes previous omission/fixed-Terracotta choices: render all11 home regions; display honest missing-content states and existing source help rather than fabricated projects/quotes/articles. Explicit answer selects original blue logo in blue themes, warm original in Terracotta. Partial-world graphic and bounded fine-pointer tilt authorized; static reduced/touch and image failure fallbacks retained. Local cache isolation is startup repair, not a new framework/deployment. [Implementation and checks](docs/verification/homepage-complete-navigation.md).
+
+
+## Globe, restrained canvas, fixed brand and home priorities - 2026-11-14
+
+Owner explicitly requests a world view, softer gradient surfaces, original logo unchanged by theme, and homepage order Software/Automation/Digital Marketing/Mobile. Homepage display order only; canonical CAT identifiers/service associations/navigation sources unchanged. Replaced block art with generated neutral decorative globe (not business proof or office map), original Terracotta logo on all3 themes, and a single optional3+2 solution bento presentation. Attached design v1.0 is an older reference; approved source04 v1.1/three themes remain authoritative except explicit subject amendments. No extra homepage section inferred from optional bento/motion. [Audit/evidence](docs/verification/homepage-design-audit.md).
+
+
+## Original logo, compact reference and motion - 2026-11-14
+
+Owner explicitly requests actual logo with no descriptor beneath it, reference-like compact category layout and neutral icons, and implementation of existing source04 motion direction. Imported original Terracotta/Slate Blue transparent lockups unchanged from owner's Downloads/aradun assets. Blue themes use the supplied Slate lockup rather than inventing a Vivid recolour. Screenshot is a visual reference only; it does not approve unsupported claims, assets/people/proof, prices or routes. Source09 section4 still allows homepage work/testimonials/articles absent without genuine content. CSS handles small documented effects; no GSAP/Motion dependency or complex timeline added where unnecessary. [Audit and verification](docs/verification/home-reference-correction.md).
+
+
+## Owner visual and theme amendment - 2026-11-14
+
+Owner explicitly requests editorial design improvements across header, menus, categories/services and footer, plus coordinated full-page theme background treatment. Source04 originally specified shared neutral backgrounds; the owner instruction supersedes that restriction for page/subtle-section/editorial/border/artwork/footer surface roles. Keep original brand accent families, Inter, light-only themes, stable semantic states and data. Sources remain immutable. Functional tests are not visual acceptance. [Implemented scope and evidence](docs/verification/public-visual-refresh.md).
+
+
+## Public development completion boundary - 2026-11-14
+
+Owner explicitly postpones deployment AND production configuration until requested, and authorizes completing the public/client development version before consolidated review. Do not schedule production settings/security/infrastructure work as the next automatic step. Dashboard/staff remains postponed. Current public implementation/automated regression complete for owner review; owner acceptance, final design/content/asset decisions and retained release gates not inferred. No actual env changes, production/provider operations or live emails in this final pass. [Evidence](docs/verification/public-development-review.md).
+
+
+## Client inquiry completion supersedes deferral - 2026-11-14
+
+Owner explicitly directs completion of client-facing forms, stored requests, automatic acknowledgement and inbox notifications now; dashboard/staff only remains postponed. Approved implementation: server-configured inbox recipient, no owner account prerequisite, minimal durable outbox plus plain-text client details resolved from saved inquiry for the configured operator inbox. No client-controlled notification recipient and no public/private dashboard access expansion. Requested draft services are saved as nonbinding requested IDs with an immutable requestedOffersOnly marker and no invented commercial snapshot/availability/price approval. Original selection and catalog version retained. Production email targets real submitter; development/staging redirect every message to configured inbox. Source approval/publication and deployment gates unchanged. [Evidence](docs/verification/public-inquiry-completion.md).
+
+
+## Public release capability, not publication approval - 2026-11-14
+
+Owner **Approve and next.** accepts the prior verified local manual-email checkpoint and authorizes its named hosted release/indexing preparation. This does not approve factual copy, commercial availability, provider/region/recovery choices or publication. PUBLIC_RELEASE_ID must match an accountable approved source record; ID alone grants nothing. Actual source catalog stays draft. Authentication/staff/real intake/automated mail remain deferred. No source, private env, provider, spending or cloud-data changes. [Scope and evidence](docs/verification/public-release-support.md).
+
+
+## Owner setup/intake deferred; public manual-email review batch — 2026-11-13
+
+Owner explicitly defers owner-account setup, then **Approve and next.** authorizes the named public launch-preparation batch. Stop owner/staff/MFA/recipient prompting and development; real website intake/transactional mail stay off. Prepared explicit client email-brief copy/open-mail handoff, preserving manual consultation/no saved-success and private-data boundaries. This does not accept full M06, remove approved Phase 1 scope or approve production publication of an email-only subset. Provider-neutral templates and offline configuration checker prepared; no provider/tier/cost/region selection, production secret or deployment. Catalog draft/public-hosted/indexing/content/security/recovery gates retained for owner consolidated review. [Actual implementation/evidence](docs/verification/public-email-launch-candidate.md), [review packet](docs/public-review.md).
+
+## Controlled client-inquiry readiness continuation — 2026-11-13
+
+Owner asks `Approve and next.` after restored service availability to continue the proposed client-inquiry work. This accepts prepared owner-command code to its verified extent, not actual owner creation/security custody. Read-only Atlas confirms no owner yet; private execution remains necessary. Added consolidated `intake:check`, with no public endpoint or automated activation. Configuration readiness alone never resolves privacy/commercial/security/delivery gates. [Actual results](docs/verification/m06-06-intake-readiness-command.md). No fake recipient, cloud account/write, actual send or deployment; full internal platform remains deferred.
+
 ## Atlas initialization accepted; private owner command prepared — 2026-11-13
 
 Owner **Approve and next.** accepts the verified 12-collection/30-index Atlas initialization and authorizes preparation of its named target-bound private owner command. New `staff:setup:atlas` is a deliberate per-run development bootstrap using backend/.env; executing its literal owner confirmation is private owner action, not agent account creation or a permanent operational fallback. It reuses the audited maintained-library lifecycle, exact target/identity, first-owner fence and existing MFA policy; denies all other remote lifecycle operations. No public registration, generalized hosted bootstrap, staff-management expansion, actual account or provider action. [Evidence](docs/verification/m06-06-atlas-owner-command.md). Actual owner readiness remains unconfirmed until private execution; intake/email/release gates retained.

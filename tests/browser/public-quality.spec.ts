@@ -161,6 +161,9 @@ test("production-build local payload and initial paint samples", async ({
     }
     const median = (key: keyof (typeof samples)[number]) =>
       samples.map((item) => item[key]).sort((a, b) => a - b)[1]!;
+    // Repeatable local lab proxies only, not a field CWV claim.
+    expect(median("cls"), `${path} local median CLS`).toBeLessThanOrEqual(0.1);
+    expect(median("lcp"), `${path} local median LCP`).toBeLessThanOrEqual(2500);
     report.push({
       path,
       median: {

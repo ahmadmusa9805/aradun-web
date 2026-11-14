@@ -239,3 +239,133 @@ it("suppresses a disabled staff recipient and never sends an orphaned acknowledg
   expect(result.accepted).toBe(1);
   expect(fetcher).toHaveBeenCalledTimes(1);
 });
+
+it("fixed inbox accepts all public inquiry types without staff and sends durable client/inbox work exactly once", async () => {
+  const publicSubmit = await createSubmissionService(fixture.connection, {
+    secret: randomBytes(48).toString("base64url"),
+    fixedInbox: true,
+    staffRecipientIds: [],
+    policy: {
+      privacyAcknowledgementRequired: true,
+      privacyNoticeVersion: "SAMPLE-policy",
+    },
+  });
+  const inputs = [
+    contact(),
+    {
+      type: "quote",
+      identity: contact().identity,
+      consent: contact().consent,
+      message:
+        "SAMPLE requested service " +
+        '"\\\n'.repeat(2400) +
+        " END_OF_LONG_BRIEF",
+      projectContext: {
+        additionalDetails: "SAMPLE ".repeat(600) + " END_OF_DETAILS",
+      },
+      selection: {
+        serviceIds: ["SVC-001"],
+        solutionIds: [],
+        packageIds: [],
+        customRequested: false,
+      },
+    },
+    {
+      type: "consultation",
+      identity: contact().identity,
+      consent: contact().consent,
+      subject: "SAMPLE appointment",
+      message: "SAMPLE consultation",
+      consultation: {
+        preferredTimeText: "Next Tuesday",
+        timezone: "Asia/Dhaka",
+      },
+    },
+  ];
+  for (const input of inputs) {
+    const key = randomUUID();
+    const receipt = await publicSubmit(input, key);
+    expect((await publicSubmit(input, key)).reference).toBe(receipt.reference);
+    expect(receipt.bookingConfirmed).toBe(false);
+  }
+  const fetcher = vi
+    .fn<typeof fetch>()
+    .mockImplementation(
+      async () => new Response(JSON.stringify({ id: randomUUID() })),
+    );
+  const worker = await createInquiryMailWorker(
+    fixture.connection,
+    config,
+    "development",
+    [],
+    "http://127.0.0.1:3000",
+    fetcher,
+    true,
+  );
+  await worker.run();
+  await worker.run();
+  await worker.run();
+  expect(fetcher).toHaveBeenCalledTimes(6);
+  const bodies = fetcher.mock.calls.map(([, init]) =>
+    JSON.parse(String(init?.body)),
+  );
+  expect(bodies.every((body) => body.to[0] === config.notificationEmail)).toBe(
+    true,
+  );
+  expect(
+    bodies.filter((body) => body.subject.includes("received your")),
+  ).toHaveLength(3);
+  const alerts = bodies.filter((body) => body.subject.includes("New ARADUN"));
+  expect(alerts).toHaveLength(3);
+  expect(
+    alerts.some((body) => body.text.includes("PRIVATE SYNTHETIC MESSAGE")),
+  ).toBe(true);
+  expect(alerts.every((body) => !body.text.includes("/dashboard/"))).toBe(true);
+  const quoteAlert = alerts.find((body) => body.subject.includes("quote"));
+  expect(quoteAlert.text).toContain("END_OF_LONG_BRIEF");
+  expect(quoteAlert.text).toContain("END_OF_DETAILS");
+  expect(quoteAlert.text).toContain("Requested services:");
+  expect(quoteAlert.text).toContain("(SVC-001)");
+  expect(
+    alerts.find((body) => body.subject.includes("consultation")).text,
+  ).toContain("Timezone: Asia/Dhaka");
+  expect(
+    await outboxEventModel(fixture.connection).countDocuments({
+      "recipient.kind": "inbox",
+      status: "sent",
+    }),
+  ).toBe(3);
+  await expect(
+    publicSubmit(
+      { ...contact(), recipient: "attacker@example.invalid" },
+      randomUUID(),
+    ),
+  ).rejects.toBeDefined();
+  await expect(
+    publicSubmit(
+      {
+        ...inputs[1],
+        selection: { serviceIds: ["SVC-999"], customRequested: false },
+      },
+      randomUUID(),
+    ),
+  ).rejects.toBeDefined();
+});
+
+it("public clients cannot request unapproved snapshot bypasses or select a notification recipient", async () => {
+  const submit = await createSubmissionService(fixture.connection, {
+    secret: randomBytes(48).toString("base64url"),
+    fixedInbox: true,
+    staffRecipientIds: [],
+    policy: {
+      privacyAcknowledgementRequired: true,
+      privacyNoticeVersion: "SAMPLE",
+    },
+  });
+  await expect(
+    submit({ ...contact(), requestedOffersOnly: true }, randomUUID()),
+  ).rejects.toBeDefined();
+  await expect(
+    submit({ ...contact(), staffRecipientIds: [staffId] }, randomUUID()),
+  ).rejects.toBeDefined();
+});

@@ -28,6 +28,8 @@
     "test:unit": "vitest run --project backend --exclude backend/tests/mongo.test.ts --exclude backend/tests/audit.test.ts --exclude backend/tests/database.test.ts",
     "test:db": "vitest run --project backend backend/tests/mongo.test.ts backend/tests/audit.test.ts backend/tests/database.test.ts",
     "db:indexes": "npm run db:indexes --workspace @aradun/backend --",
+    "intake:check": "npm run intake:check --workspace @aradun/backend",
+    "deploy:check": "node --import tsx scripts/check-deployment.mjs",
     "test:browser": "playwright test",
     "test:install-browser": "node scripts/install-test-browser.mjs",
     "check:boundaries": "node scripts/check-boundaries.mjs",

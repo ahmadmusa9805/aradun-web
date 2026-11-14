@@ -33,7 +33,7 @@ const service = z.strictObject({
   relatedServiceIds: z.array(serviceId).max(56),
   solutionIds: z.array(solutionId).max(5),
   contentVersion: text,
-  publication: z.literal("draft"),
+  publication: z.enum(["draft", "published"]),
 });
 const solution = z.strictObject({
   solutionId,
@@ -53,14 +53,23 @@ const solution = z.strictObject({
     )
     .length(3),
   version: text,
-  publication: z.literal("draft"),
+  publication: z.enum(["draft", "published"]),
 });
 
 /** This task validates draft source identities. Full price/scope/body contracts belong to M05-02/04/05. */
 export const catalogSchema = z
   .strictObject({
     version: text,
-    releaseStatus: z.literal("draft"),
+    releaseStatus: z.enum(["draft", "approved"]),
+    publicationApproval: z
+      .strictObject({
+        releaseId: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/),
+        approvedAt: z.iso.datetime(),
+        approvedBy: text,
+        contentApprovalReference: text,
+        commercialApprovalReference: text,
+      })
+      .optional(),
     sourceHashes: z.record(text, z.string().regex(/^[a-f0-9]{64}$/)),
     categories: z.array(category).length(8),
     services: z.array(service).length(57),
@@ -72,6 +81,34 @@ export const catalogSchema = z
     const unique = (values: readonly string[], message: string) => {
       if (new Set(values).size !== values.length) fail(message);
     };
+    if (catalog.releaseStatus === "approved") {
+      if (
+        !catalog.publicationApproval ||
+        Date.parse(catalog.publicationApproval.approvedAt) > Date.now()
+      )
+        fail("Approved publication requires accountable completed review");
+      if (
+        catalog.services.some(
+          (item) =>
+            item.publication !== "published" ||
+            !item.availability ||
+            !item.availabilityApprovedAt ||
+            !item.availabilityApprovedBy ||
+            Date.parse(item.availabilityApprovedAt) >
+              Date.parse(catalog.publicationApproval?.approvedAt ?? ""),
+        ) ||
+        catalog.solutions.some((item) => item.publication !== "published")
+      )
+        fail(
+          "Full public catalog requires published records and reviewed service availability",
+        );
+    } else if (
+      catalog.publicationApproval ||
+      catalog.services.some((item) => item.publication !== "draft") ||
+      catalog.solutions.some((item) => item.publication !== "draft")
+    ) {
+      fail("Draft catalog cannot carry publication or approval grants");
+    }
     unique(
       catalog.categories.map((item) => item.categoryId),
       "Duplicate category ID",

@@ -1,3 +1,9 @@
+import { CategoryIcon } from "@/components/ui/category-icon";
+import { WorldView } from "../components/world-view";
+import { DemoProjects } from "../components/demo-projects";
+import { DemoFeedback } from "../components/demo-feedback";
+import { DemoPartners } from "../components/demo-partners";
+import { frontendEnv } from "@/config/env.server";
 import Link from "next/link";
 import {
   serviceCategories,
@@ -14,14 +20,18 @@ import { PublicSection, ProjectInvitation } from "./public-page";
 import type { SolutionDetail } from "@/modules/catalog/catalog-api.server";
 import { PricePresentation } from "@/modules/catalog/components/price-presentation";
 import { EngagementModels } from "@/modules/catalog/components/engagement-models";
+const homeCategoryOrder = [0, 2, 3, 1, 4, 5, 6, 7] as const;
+
 export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
+  const showDemos = frontendEnv.appEnv === "development";
   return (
     <main id="main-content" tabIndex={-1} className="public-home">
       <div className="container-marketing">
-        <p className="public-preview">
-          Development preview / Content and launch readiness await review.
-        </p>
-        <section className="home-hero" aria-labelledby="home-title">
+        <section
+          id="home-hero"
+          className="home-hero"
+          aria-labelledby="home-title"
+        >
           <div>
             <p className="public-eyebrow">
               ARADUN / Technology &amp; Digital Solutions
@@ -37,7 +47,7 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
               Technology and digital services to build, automate, and grow your
               business.
             </p>
-            <p className="home-support">
+            <p className="home-support reference-description">
               From websites and software to automation, design, cloud, security,
               and marketing - connect your digital needs around a clear plan.
             </p>
@@ -57,53 +67,44 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
                 Explore Services
               </Link>
             </div>
-            <p className="home-guidance">
-              Not sure where to start?{" "}
-              <Link prefetch={false} href="/consultation">
-                Discuss your goals in a consultation request.
-              </Link>
-            </p>
           </div>
-          <div className="home-diagram" aria-hidden="true">
-            <span>A connected approach</span>
-            <div className="diagram-orbit">
-              <span>
-                Business
-                <br />
-                needs
-              </span>
-            </div>
-            <div className="diagram-steps">
-              <span>01 / Build</span>
-              <span>02 / Automate</span>
-              <span>03 / Grow</span>
-            </div>
-            <p>Clear scope. Connected capabilities.</p>
-          </div>
+          <WorldView />
         </section>
-        <PublicSection
-          title="Find the expertise your next project needs."
-          id="expertise"
-        >
-          <p className="section-intro">
+        <PublicSection title="Expertise for your next move" id="expertise">
+          <p className="section-intro reference-description">
             Explore eight areas of technology and digital work. Start with a
             specific need or see how the pieces connect.
           </p>
           <div className="public-grid">
-            {serviceCategories.map((item, index) => (
-              <article className="public-card" key={item.href}>
-                <span className="public-eyebrow">0{index + 1} / Expertise</span>
-                <h3>
-                  <Link prefetch={false} href={item.href}>
-                    {item.label}
-                  </Link>
-                </h3>
-                <p>{categoryDescriptions[index]}</p>
-                <Link prefetch={false} href={item.href}>
-                  Explore category &rarr;
-                </Link>
-              </article>
-            ))}
+            {homeCategoryOrder.map((categoryIndex, index) => {
+              const item = serviceCategories[categoryIndex]!;
+              return (
+                <article className="public-card" key={item.href}>
+                  <span className="expertise-number" aria-hidden="true">
+                    0{index + 1}
+                  </span>
+                  <CategoryIcon index={categoryIndex} />
+                  <h3>
+                    <Link
+                      prefetch={false}
+                      href={item.href}
+                      aria-describedby={`expertise-description-${index}`}
+                    >
+                      {item.label}
+                    </Link>
+                  </h3>
+                  <span className="expertise-arrow" aria-hidden="true">
+                    &rarr;
+                  </span>
+                  <p
+                    className="reference-description"
+                    id={`expertise-description-${index}`}
+                  >
+                    {categoryDescriptions[categoryIndex]}
+                  </p>
+                </article>
+              );
+            })}
           </div>
           <p className="section-link">
             <Link prefetch={false} href="/services">
@@ -134,11 +135,50 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
             ))}
           </div>
         </PublicSection>
-        {/* T-HOME 4/8/9: omit unavailable genuine work, testimonials and published articles; never fabricate proof. */}
         <PublicSection
-          title="A clear approach to complex digital work."
-          id="approach"
+          title="Selected work and case studies"
+          id="selected-work"
         >
+          {showDemos ? (
+            <>
+              <DemoPartners />
+              <DemoProjects />
+            </>
+          ) : (
+            <div className="home-evidence-layout">
+              <div>
+                <p className="public-eyebrow">
+                  The challenge. The thinking. The outcome.
+                </p>
+                <p className="section-intro">
+                  Explore the context behind a project, the contribution made
+                  and the outcome. Client work, internal products and concept
+                  work are identified separately.
+                </p>
+                <Link
+                  prefetch={false}
+                  href="/our-work"
+                  className="editorial-text-link"
+                >
+                  Explore our work &rarr;
+                </Link>
+              </div>
+              <div className="home-evidence-empty">
+                <span className="public-eyebrow">Project stories</span>
+                <h3>Good work deserves context.</h3>
+                <p>There are no published case studies to show yet.</p>
+                <p>Have a project in mind? Tell us what you want to achieve.</p>
+                <Link prefetch={false} href="/contact">
+                  Discuss your project &rarr;
+                </Link>
+              </div>
+            </div>
+          )}
+        </PublicSection>
+        <PublicSection title="Why work with ARADUN" id="approach">
+          <p className="section-intro">
+            A clear approach to complex digital work.
+          </p>
           <div className="public-grid principles">
             {principles.map(([title, copy]) => (
               <article key={title}>
@@ -153,10 +193,10 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
             </Link>
           </p>
         </PublicSection>
-        <PublicSection
-          title="From your first idea to delivery and handoff."
-          id="process"
-        >
+        <PublicSection title="How we work" id="process">
+          <p className="section-intro">
+            From your first idea to delivery and handoff.
+          </p>
           <ol className="delivery-steps">
             {deliverySteps.map(([title, copy]) => (
               <li key={title}>
@@ -172,7 +212,7 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
           </p>
         </PublicSection>
         <PublicSection
-          title="Starting points for your next investment."
+          title="Starting prices and engagement options"
           id="starting-prices"
         >
           <p className="section-intro">
@@ -206,6 +246,56 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
           </p>
           <EngagementModels />
         </PublicSection>
+        <PublicSection title="Client feedback" id="client-feedback">
+          {showDemos ? (
+            <DemoFeedback />
+          ) : (
+            <div className="feedback-empty">
+              <p className="public-eyebrow">
+                Working relationships, in their own words.
+              </p>
+              <h3>Real experiences. Shared with permission.</h3>
+              <p>No client testimonials are published here yet.</p>
+              <p>Feedback will appear here when it is available to share.</p>
+              <Link prefetch={false} href="/contact">
+                Start a conversation &rarr;
+              </Link>
+            </div>
+          )}
+        </PublicSection>
+        <PublicSection title="Insights and resources" id="insights">
+          <p className="section-intro">
+            Practical guidance for your next digital decision. No articles are
+            published yet; these help guides are available now.
+          </p>
+          <div className="home-resource-grid">
+            {publicFaqs
+              .filter((faq) =>
+                ["not-sure", "starting-prices", "timelines"].includes(faq.id),
+              )
+              .map((faq) => (
+                <article className="home-resource-card" key={faq.id}>
+                  <p className="public-eyebrow">Help guide</p>
+                  <h3>
+                    <Link prefetch={false} href={`/faq/${faq.id}`}>
+                      {faq.question}
+                    </Link>
+                  </h3>
+                  <p>{faq.answer}</p>
+                  <Link prefetch={false} href={`/faq/${faq.id}`}>
+                    Read the guide &rarr;
+                  </Link>
+                </article>
+              ))}
+          </div>
+          <Link
+            prefetch={false}
+            href="/insights"
+            className="editorial-text-link"
+          >
+            Explore insights &rarr;
+          </Link>
+        </PublicSection>
         <PublicSection title="Before you start." id="questions">
           {publicFaqs.map((faq) => (
             <details className="catalog-faq" key={faq.id}>
@@ -224,7 +314,10 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
             </Link>
           </p>
         </PublicSection>
-        <ProjectInvitation />
+        <ProjectInvitation id="next-step" />
+        <p className="public-preview">
+          Development preview / Content and launch readiness await review.
+        </p>
       </div>
     </main>
   );

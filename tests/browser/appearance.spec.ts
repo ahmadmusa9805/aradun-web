@@ -26,7 +26,6 @@ test("all six theme transitions preserve content, input, URL and control focus",
   const originalUrl = page.url();
   const stable = await page.evaluate(() =>
     [
-      "--color-page",
       "--color-text",
       "--color-success",
       "--color-warning",
@@ -65,7 +64,6 @@ test("all six theme transitions preserve content, input, URL and control focus",
       expect(
         await page.evaluate(() =>
           [
-            "--color-page",
             "--color-text",
             "--color-success",
             "--color-warning",
@@ -297,4 +295,30 @@ test("bootstrap works with strict self-only script/style CSP and reduced motion"
         .toUpperCase(),
     ),
   ).toBe("#3F617B");
+});
+
+// Owner amendment: theme backgrounds now change alongside accents; content/state remain stable.
+test("light themes coordinate page, section, selection and footer surfaces", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const palettes: string[][] = [];
+  for (const theme of themes) {
+    await page.getByRole("radio", { name: theme[1], exact: true }).check();
+    palettes.push(
+      await page.evaluate(() => [
+        getComputedStyle(document.body).backgroundColor,
+        getComputedStyle(document.querySelector(".site-footer")!)
+          .backgroundColor,
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--color-editorial",
+        ),
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--color-brand-soft",
+        ),
+      ]),
+    );
+  }
+  for (let role = 0; role < 4; role++)
+    expect(new Set(palettes.map((p) => p[role])).size).toBe(3);
 });

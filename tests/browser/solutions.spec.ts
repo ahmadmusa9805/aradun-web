@@ -58,7 +58,7 @@ test("seven source solution/pricing routes, exact tier cells and nonbinding cont
   await expect(
     page.getByRole("main").getByRole("link", { name: /^Discuss / }),
   ).toHaveCount(15);
-  await expect(page.locator("input[name=serviceIds]")).toHaveCount(57);
+  await expect(page.locator("input[name=serviceId]")).toHaveCount(57);
   await expect(page.locator('input[value="SVC-009"]')).toHaveCount(1);
   await page
     .locator("details")
@@ -73,7 +73,7 @@ test("seven source solution/pricing routes, exact tier cells and nonbinding cont
     .getByRole("button", { name: "Request a Custom Quote", exact: true })
     .click();
   await page.waitForURL(/\/get-a-quote\?/);
-  expect(new URL(page.url()).searchParams.getAll("serviceIds")).toEqual([
+  expect(new URL(page.url()).searchParams.getAll("serviceId")).toEqual([
     "SVC-001",
     "SVC-009",
   ]);
