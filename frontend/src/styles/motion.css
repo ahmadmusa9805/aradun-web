@@ -1,0 +1,94 @@
+/* Source 04 §7: CSS owns feedback and these isolated, optional decorative effects. */
+:root {
+  --motion-fast: 180ms;
+  --motion-ui: 220ms;
+  --motion-enter: 480ms;
+  --motion-feature: 650ms;
+  --motion-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-ease-ui: cubic-bezier(0.2, 0, 0, 1);
+}
+@keyframes menu-settle {
+  from {
+    opacity: 0.9;
+    translate: 0 -6px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes art-settle {
+  from {
+    translate: 0 24px;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+@keyframes heading-settle {
+  from {
+    translate: 0 16px;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+@keyframes answer-settle {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .site-header .category-menu[open] > .category-panel,
+  .mobile-navigation[open] > nav {
+    animation: menu-settle var(--motion-ui) var(--motion-ease-ui);
+  }
+  .public-home .ui-button,
+  .public-page .ui-button,
+  .catalog-page .ui-button {
+    transition:
+      background-color var(--motion-fast),
+      border-color var(--motion-fast);
+  }
+  .catalog-faq[open] > p {
+    animation: answer-settle var(--motion-fast) var(--motion-ease-ui);
+  }
+  .expertise-arrow {
+    transition: translate var(--motion-fast) var(--motion-ease-ui);
+  }
+  @supports (animation-timeline: view()) {
+    #approach > h2,
+    #process > h2 {
+      animation: heading-settle var(--motion-enter) var(--motion-ease-out) both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+  }
+}
+@media (min-width: 75rem) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .editorial-art {
+    animation: art-settle var(--motion-feature) var(--motion-ease-out);
+  }
+  #expertise .public-card:hover .expertise-arrow {
+    translate: 2px 0;
+  }
+}
+/* Nothing is initially hidden. Compact/coarse/reduced layouts use static artwork. */
+@media (prefers-reduced-motion: reduce) {
+  .site-header .category-panel,
+  .mobile-navigation > nav,
+  .editorial-art,
+  #approach > h2,
+  #process > h2,
+  .catalog-faq > p {
+    animation: none;
+    translate: none;
+  }
+  .expertise-arrow {
+    transition: none;
+    translate: none;
+  }
+}

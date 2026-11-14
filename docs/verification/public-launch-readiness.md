@@ -1,5 +1,12 @@
 # Public launch-readiness checkpoint
 
+## Superseding current development status - 2026-11-14
+
+The historical findings below describe an earlier checkpoint. Atlas foundation and public form/email development are now verified; owner-account setup is not required for public inbox delivery. The current public development version is ready for consolidated review, with all 66 public browser tests passing. Deployment AND production configuration are explicitly postponed until requested. See [current verification](public-development-review.md) and [review packet](../public-review.md); do not treat historical missing collections/disabled intake/owner setup statements below as current blockers.
+
+
+Superseding status 2026-11-13: Atlas application foundation was subsequently initialized/verified. Owner now defers owner setup, real intake/mail and internal work; [public manual-email launch preparation](public-email-launch-candidate.md) and [current review packet](../public-review.md) govern the current checkpoint. Historical empty-target/workflow observations below are earlier evidence, not current readiness claims.
+
 2026-11-13. Scope: M09-10 public inventory/publication audit, public portion of M12-04, and existing M06 inquiry-readiness checks. Owner explicitly requests the client-facing launch version first, then review of every page, function and theme before publication. Personal dashboard/CRM/staff development remains deferred. No automatic production release, account creation, database migration or email send.
 
 ## Implementation and actual verification

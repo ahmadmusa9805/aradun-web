@@ -1,4 +1,14 @@
-import { expect, it } from "vitest";
+import { expect, it, vi } from "vitest";
+vi.mock("@/config/env.server", () => ({
+  frontendEnv: {
+    appEnv: "development",
+    appUrl: "http://127.0.0.1:3000",
+    indexingEnabled: false,
+  },
+}));
+vi.mock("@/modules/discovery/publication.server", () => ({
+  getPublicRelease: async () => null,
+}));
 import {
   canonicalUrl,
   pageMetadata,
@@ -49,7 +59,7 @@ it("escapes script-breaking content without changing parsed breadcrumb names", (
   expect(JSON.parse(serialized).itemListElement[1].name).toBe(name);
   expect(data.itemListElement.map((item) => item.position)).toEqual([1, 2]);
 });
-it("does not expose draft, utility or private routes through discovery files", () => {
-  expect(sitemap()).toEqual([]);
-  expect(robots()).toEqual({ rules: { userAgent: "*", disallow: "/" } });
+it("does not expose draft, utility or private routes through discovery files", async () => {
+  expect(await sitemap()).toEqual([]);
+  expect(await robots()).toEqual({ rules: { userAgent: "*", disallow: "/" } });
 });

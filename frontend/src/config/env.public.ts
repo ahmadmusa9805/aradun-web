@@ -12,6 +12,12 @@ export function loadFrontendEnv(input: Environment) {
   const appEnv = input.APP_ENV ?? "development";
   if (!["development", "staging", "production"].includes(appEnv))
     throw new Error("Invalid configuration: APP_ENV");
+  const publicReleaseId = input.PUBLIC_RELEASE_ID;
+  if (
+    publicReleaseId !== undefined &&
+    !/^[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(publicReleaseId)
+  )
+    throw new Error("Invalid configuration: PUBLIC_RELEASE_ID");
   function origin(value: string | undefined, name: string) {
     try {
       const url = new URL(value ?? "");
@@ -67,7 +73,8 @@ export function loadFrontendEnv(input: Environment) {
     apiBaseUrl,
     canonicalSiteUrl,
     analyticsEnabled: false as const,
-    indexingEnabled: appEnv === "production",
+    publicReleaseId,
+    indexingEnabled: appEnv === "production" && !!publicReleaseId,
   });
 }
 

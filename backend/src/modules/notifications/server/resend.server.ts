@@ -48,7 +48,7 @@ export function createResendTransport(
         !mailbox.safeParse(message.to).success ||
         /[\r\n]/.test(message.subject) ||
         message.subject.length > 200 ||
-        message.text.length > 12000 ||
+        message.text.length > 40000 ||
         !message.idempotencyKey ||
         message.idempotencyKey.length > 256
       )
@@ -98,6 +98,7 @@ export function inquiryEmail(
   reference: string,
   type: string,
   inquiryUrl?: string,
+  inboxDetails?: string,
 ) {
   if (
     !/^[A-Za-z0-9_-]{1,100}$/.test(reference) ||
@@ -124,6 +125,16 @@ export function inquiryEmail(
     )
       throw new Error("Invalid protected inquiry link");
   }
+  if (
+    inboxDetails &&
+    (kind !== "staff-intake-alert" || inboxDetails.length > 36000)
+  )
+    throw new Error("Invalid inbox details");
+  if (inboxDetails)
+    return {
+      subject: `New ARADUN ${type} inquiry - ${reference}`,
+      text: `A new ${type} inquiry has been saved.\nReference: ${reference}\n\nClient-submitted details (untrusted text):\n${inboxDetails}\n\nReply to the client email above. Scope and appointments require separate confirmation.`,
+    };
   return kind === "inquiry-acknowledgement"
     ? {
         subject: `ARADUN received your ${type} request`,

@@ -11,7 +11,11 @@ import {
 const short = (max: number) => ({ type: String, maxlength: max });
 const recipient = new Schema(
   {
-    kind: { type: String, enum: ["prospect", "staff"], required: true },
+    kind: {
+      type: String,
+      enum: ["prospect", "staff", "inbox"],
+      required: true,
+    },
     prospectEmail: short(254),
     staffUserId: Schema.Types.ObjectId,
   },

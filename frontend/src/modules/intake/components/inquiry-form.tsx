@@ -1,5 +1,6 @@
 "use client";
 import { publicContactEmail } from "@/modules/content/data/business-identity";
+import { EmailBrief } from "./email-brief";
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 export type OfferChoice = { id: string; name: string };
@@ -72,6 +73,41 @@ export function InquiryForm({
   const selectedServices = services.filter((item) =>
     serviceIds.includes(item.id),
   );
+  const emailBrief = [
+    `ARADUN ${type} inquiry`,
+    ...[
+      ["Name", fields.name],
+      ["Email", fields.email],
+      ["Company", fields.company],
+      ["Website", fields.website],
+      ["Subject / topic", fields.subject],
+      ["Project brief / message", fields.message],
+      ["Budget", type === "quote" ? fields.budget : ""],
+      ["Timeline", type === "quote" ? fields.timeline : ""],
+      ["Preferred time", type === "consultation" ? fields.preferred : ""],
+      ["Timezone", type === "consultation" ? fields.timezone : ""],
+    ]
+      .filter(([, value]) => value?.trim())
+      .map(([label, value]) => `${label}: ${value}`),
+    ...(type === "quote"
+      ? [
+          `Selected services: ${selectedServices.map((item) => `${item.name} (${item.id})`).join(", ") || "None selected"}`,
+          `Selected solutions: ${
+            solutions
+              .filter((item) => solutionIds.includes(item.id))
+              .map((item) => `${item.name} (${item.id})`)
+              .join(", ") || "None selected"
+          }`,
+          ...(packageId
+            ? [
+                `Package: ${packageId === initialPackageId && initialPackageLabel ? initialPackageLabel : packageId}`,
+              ]
+            : []),
+          ...(custom ? ["Custom scope requested."] : []),
+        ]
+      : []),
+    "Scope, availability, pricing and any appointment require separate confirmation.",
+  ].join("\n\n");
   const retry = useRef<{ key: string; payload: string } | null>(null),
     feedback = useRef<HTMLParagraphElement>(null),
     heading = useRef<HTMLHeadingElement>(null),
@@ -318,46 +354,43 @@ export function InquiryForm({
   );
   return (
     <div>
-      <p className="form-note" role="status">
+      <p className="form-note intake-availability" role="status">
         {available === null
           ? "Checking submission availability..."
           : available
             ? emailDeliveryEnabled
               ? "You can submit this form. Email notifications are enabled, but delivery is not guaranteed. Keep your reference after submitting."
               : "You can submit this form. Email notifications are currently off. Keep your reference after submitting."
-            : "Preview: online submissions are not enabled. You can prepare your brief, but no request will be saved."}
+            : "Online submissions are currently unavailable. You can prepare your brief below and send it by email; nothing is saved through this website."}
       </p>
-      {(available === false || availabilityRetry > 0) && (
-        <aside
-          className="intake-alternative"
-          aria-label="Other ways to contact ARADUN"
+      <aside
+        className="intake-alternative"
+        aria-label="Other ways to contact ARADUN"
+      >
+        <p>
+          Prefer email? Send your question or project brief directly to{" "}
+          <a href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>.{" "}
+          {available === null
+            ? "Checking online submission availability..."
+            : available
+              ? "Online submission is available."
+              : "Online submission is currently unavailable."}
+        </p>
+        <button
+          type="button"
+          className="ui-button ui-button-secondary"
+          aria-disabled={available === null}
+          onClick={() => {
+            if (available !== null) setAvailabilityRetry((value) => value + 1);
+          }}
         >
-          <p>
-            Prefer email? Send your question or project brief directly to{" "}
-            <a href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>.
-            {available === null
-              ? "Checking online submission availability..."
-              : available
-                ? "Online submission is available."
-                : "Online submission is currently unavailable."}
-          </p>
-          <button
-            type="button"
-            className="ui-button ui-button-secondary"
-            aria-disabled={available === null}
-            onClick={() => {
-              if (available !== null)
-                setAvailabilityRetry((value) => value + 1);
-            }}
-          >
-            Check online submission again
-          </button>
-          <p className="form-note">
-            Checking again keeps your entries. Please do not email passwords or
-            access credentials.
-          </p>
-        </aside>
-      )}
+          Check online submission again
+        </button>
+        <p className="form-note">
+          Checking again keeps your entries. Please do not email passwords or
+          access credentials.
+        </p>
+      </aside>
       {type === "quote" && (
         <ol className="quote-progress" aria-label="Quote request steps">
           {["Service", "Project", "Contact", "Review"].map((label, index) => (
@@ -657,6 +690,7 @@ export function InquiryForm({
           directly. No information is submitted by opening this page.
         </noscript>
       </form>
+      <EmailBrief brief={emailBrief} type={type} interactive={interactive} />
     </div>
   );
 }

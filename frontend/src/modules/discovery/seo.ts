@@ -23,6 +23,7 @@ export function pageMetadata(
   path: string,
   title: string,
   description: string,
+  index = false,
 ): Metadata {
   const url = canonicalUrl(origin, path),
     fullTitle = path === "/" ? title : `${title} | ARADUN`;
@@ -30,7 +31,7 @@ export function pageMetadata(
     title: fullTitle,
     description,
     alternates: { canonical: url },
-    robots: { index: false, follow: false },
+    robots: { index, follow: index },
     openGraph: {
       type: "website",
       siteName: "ARADUN",

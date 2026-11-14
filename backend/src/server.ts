@@ -24,10 +24,9 @@ async function main() {
     await database.close();
     throw new Error("Database startup failed");
   }
-  const limiter =
-    config.rateLimitSecret && config.appEnv === "development"
-      ? createSharedLimiter(await database.connect(), config.rateLimitSecret)
-      : undefined;
+  const limiter = config.rateLimitSecret
+    ? createSharedLimiter(await database.connect(), config.rateLimitSecret)
+    : undefined;
   const identity = config.identity
     ? await createIdentityRouter(await database.connect(), {
         ...config.identity,
@@ -39,6 +38,7 @@ async function main() {
     ? await createSubmissionService(await database.connect(), {
         secret: config.rateLimitSecret!,
         staffRecipientIds: config.intake.staffRecipientIds,
+        fixedInbox: config.intake.fixedInbox,
         policy: {
           privacyAcknowledgementRequired: true,
           privacyNoticeVersion: config.intake.privacyNoticeVersion,
@@ -53,6 +53,8 @@ async function main() {
           config.appEnv,
           config.intake.staffRecipientIds,
           config.appUrl,
+          undefined,
+          config.intake.fixedInbox,
         )
       : undefined;
   const app = createApp(config, {
@@ -64,10 +66,33 @@ async function main() {
   const server = app.listen(config.port, "127.0.0.1", () => {
     console.info(`ARADUN API listening at http://127.0.0.1:${config.port}`);
   });
+  // Durable leases and the worker busy fence prevent overlapping delivery across ticks/processes.
   let stopping = false;
+  const mailTimer = outbox
+    ? setInterval(() => {
+        if (!stopping)
+          void outbox
+            .run()
+            .then((result) => {
+              if (result.failed || result.uncertain)
+                logOperationalFailure({
+                  code: "operation_failed",
+                  correlationId: randomUUID(),
+                });
+            })
+            .catch(() =>
+              logOperationalFailure({
+                code: "operation_failed",
+                correlationId: randomUUID(),
+              }),
+            );
+      }, 5000)
+    : undefined;
+  mailTimer?.unref();
   async function shutdown(failed = false) {
     if (stopping) return;
     stopping = true;
+    clearInterval(mailTimer);
     const deadline = setTimeout(() => process.exit(1), 10_000);
     deadline.unref();
     server.close(async () => {

@@ -44,10 +44,21 @@ test("all public source entries and linked addresses/fragments are accounted for
     documents.set(path, parsed);
     for (const href of parsed.links) {
       if (href.startsWith("mailto:")) {
+        const mail = new URL(href);
         expect([
           "mailto:hello@aradun.com",
           "mailto:ahmadmusa@aradun.com",
-        ]).toContain(href);
+        ]).toContain(`mailto:${mail.pathname}`);
+        if (mail.search) {
+          expect(mail.pathname).toBe("hello@aradun.com");
+          expect([...mail.searchParams.keys()]).toEqual(["subject"]);
+          expect([
+            "ARADUN contact inquiry",
+            "ARADUN quote inquiry",
+            "ARADUN consultation inquiry",
+          ]).toContain(mail.searchParams.get("subject"));
+        }
+        expect(mail.hash).toBe("");
         continue;
       }
       const url = new URL(href, `${baseURL}${path}`);

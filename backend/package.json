@@ -4,12 +4,13 @@
   "type": "module",
   "scripts": {
     "db:indexes": "node --env-file-if-exists=.env.operations --import tsx scripts/db/indexes.ts",
-    "dev": "node --env-file-if-exists=.env --import tsx --watch src/server.ts",
-    "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json --resolve-full-paths --resolve-full-extension .js",
-    "start": "node --env-file-if-exists=.env dist/server.js",
+    "dev": "node init && node --env-file-if-exists=.env --import tsx --watch src/server.ts",
+    "build": "node init && tsc -p tsconfig.json && tsc-alias -p tsconfig.json --resolve-full-paths --resolve-full-extension .js",
+    "start": "node init && node --env-file-if-exists=.env dist/server.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "staff:access": "node --env-file-if-exists=.env.operations --import tsx scripts/staff/access.ts",
     "email:check": "node --env-file-if-exists=.env --import tsx scripts/email/check.ts --check",
+    "intake:check": "node --env-file-if-exists=.env --import tsx scripts/intake/check.ts",
     "email:test": "node --env-file-if-exists=.env --import tsx scripts/email/check.ts --send-test"
   },
   "dependencies": {

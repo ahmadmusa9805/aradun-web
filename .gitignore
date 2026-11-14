@@ -1,6 +1,7 @@
 node_modules/
 .tools/
 .next/
+.next-local/
 out/
 dist/
 coverage/
@@ -8,11 +9,10 @@ test-results/
 playwright-report/
 *.tsbuildinfo
 *.log
-.env
-.env.*
 !.env.example
 !.env.*.example
 __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+config.bat

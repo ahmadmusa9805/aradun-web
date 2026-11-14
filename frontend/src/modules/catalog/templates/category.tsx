@@ -3,6 +3,8 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ButtonLink } from "@/components/ui/button";
 import { PricePresentation } from "../components/price-presentation";
 import Link from "next/link";
+import { Availability } from "../components/availability";
+import { CategoryIcon } from "@/components/ui/category-icon";
 
 export function CategoryTemplate({ category }: { category: CategoryDetail }) {
   const quote = `/get-a-quote?categoryId=${encodeURIComponent(category.id)}`;
@@ -16,7 +18,10 @@ export function CategoryTemplate({ category }: { category: CategoryDetail }) {
         current={category.name}
       />
       <section className="catalog-hero" aria-labelledby="category-title">
-        <p className="catalog-eyebrow">{category.headline}</p>
+        <p className="catalog-eyebrow">
+          <CategoryIcon index={Number(category.id.slice(-2)) - 1} />
+          {category.headline}
+        </p>
         <h1 id="category-title">{category.name}</h1>
         <p className="lead">{category.intro}</p>
         <div className="ui-actions">
@@ -45,6 +50,7 @@ export function CategoryTemplate({ category }: { category: CategoryDetail }) {
                 </Link>
               </h3>
               {service.summary && <p>{service.summary}</p>}
+              <Availability value={service.availability} />
               <PricePresentation price={service.price} />
               <Link
                 prefetch={false}

@@ -10,12 +10,17 @@ test("Home preserves approved section order and both entry pages explain engagem
       .locator("main section[id]")
       .evaluateAll((nodes) => nodes.map((node) => node.id)),
   ).toEqual([
+    "home-hero",
     "expertise",
     "solutions",
+    "selected-work",
     "approach",
     "process",
     "starting-prices",
+    "client-feedback",
+    "insights",
     "questions",
+    "next-step",
   ]);
   await expect(page.locator("#expertise .public-card")).toHaveCount(8);
   await expect(page.locator("#solutions article")).toHaveCount(5);

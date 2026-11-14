@@ -1,38 +1,69 @@
 # Public website review packet
 
-2026-11-13. Client-facing launch first; personal dashboard/CRM/staff work deferred. Local preview and automated checks do not mean production publication. Review each page and client function below before launch.
+Latest correction2026-11-14: Contact now accepts localhost and127.0.0.1 on the configured development port; actual SAMPLE saved and both notification events provider-accepted. Blue themes use supplied blue artwork. Home/Our Work show three labelled demo projects, Home shows three fictional feedback cards with synthetic portraits and a controlled demo-company strip. These examples are development-only and must be replaced with permitted genuine content before publication. See [verification](verification/contact-demo-showcase.md); visual/content review remains pending. Dashboard/deployment remain postponed.
 
-## Start the preview
+## Current all-section homepage and local navigation - 2026-11-14
 
-With Node 24 active, use two terminals at the repository root:
+All11 home regions are now visible: Hero, Categories, Solutions, Selected Work, Why ARADUN, How We Work, Pricing, Client Feedback, Insights, FAQ and final invitation. Work/Feedback use honest empty states; Insights points to existing help guides without inventing articles. Original blue logo in blue themes, warm logo in Terracotta; new partial-world art responds gently to desktop mouse and stays static for touch/reduced motion. Image failure has a reserved-layout fallback.
+
+Actual localhost logo/menu clicks and service/solution details now verified. Dev output isolated under .next-local, normal build output remains .next. Existing frontend3000 and detached backend4000 are running; do not start duplicate servers on occupied ports. Backend local logs under ignored .tools/local-preview. [Final checks and limitations](verification/homepage-complete-navigation.md). Deployment remains postponed.
+
+
+## Current world-view design and restored catalog - 2026-11-14
+
+Home has a neutral world-globe illustration, softer near-neutral gradients, original Terracotta logo unchanged across themes, and requested Software/Automation/Marketing/Mobile-first category order. Five solutions use a source-permitted3+2 arrangement; existing content retained. Services/solutions recovered: all70 live catalog API records verified after Atlas connection returned and backend restarted. Keep npm run backend and npm run frontend active, with Atlas reachable. Hard refresh old tabs. [Implemented/partial/optional design audit](verification/homepage-design-audit.md).
+
+
+## Homepage reference correction - 2026-11-14
+
+Home now uses the supplied original logo, no descriptor beneath it, a compact header, neutral-icon ruled category rows and documented restrained motion/static reduced-motion behaviour. Actual http://127.0.0.1:3000 now returns200 with zero fresh-browser client errors. If an existing tab retains an old error/style, hard-refresh with Ctrl+Shift+R. There are11 approved main homepage regions; selected work, client feedback and insights are evidence-dependent and may be absent under source09. [Full11-region mapping and checks](verification/home-reference-correction.md).
+
+
+## Visual refresh to review - 2026-11-14
+
+New editorial header/category menus, full light-theme backgrounds and section/card treatments, service/category hierarchy, CSS architectural hero and structured footer are implemented. Owner visual acceptance is pending. The compiled version passed browser checks. Existing local dev process needs restart after stale CSS/build error: stop frontend terminal with Ctrl+C and rerun npm run frontend (Node24), or .\scripts\npm.cmd run frontend in PowerShell / ./scripts/npm.cmd run frontend in Git Bash. Backend need not be restarted. Deployment remains postponed. [Visual evidence](verification/public-visual-refresh.md).
+
+
+## Current inquiry behavior - 2026-11-14
+
+Public forms and automatic email are now enabled in development; earlier manual-only/deferred statements below are superseded for intake/email. No owner setup required. Contact, Quote and Consultation save a request and show its reference; acknowledgement and configured-inbox notification run automatically. Development/staging mail goes ONLY to the configured inbox, not arbitrary entered addresses. Production uses the actual submitting client address after deployment review. Dashboard/staff remains postponed. Manual email copy/open-mail stays an optional fallback. [Live verification](verification/public-inquiry-completion.md).
+
+
+2026-11-14. **Public/client development version complete for consolidated owner review.** Contact, Quote and Consultation save requests and queue automatic acknowledgements/inbox notifications. Dashboard/staff and deployment/production configuration are postponed. This is development-review readiness, not owner or full-platform acceptance.
+
+## Open the website
+
+With Node 24 active, run in two repository-root terminals:
 
 ```sh
 npm run frontend
 npm run backend
 ```
 
-Open http://127.0.0.1:3000. Atlas connects, but its selected development database still needs reviewed application collections/indexes before the configured backend can start. Do not reset or drop any database. See [actual readiness and remaining work](verification/public-launch-readiness.md).
+Open http://127.0.0.1:3000. Atlas development foundation is initialized (12 collections/30 application indexes); no owner setup is needed for browsing or the manual-email handoff. VPN/network access must permit the Atlas TLS connection. Do not reset or migrate data. If startup fails, report the sanitized error; do not disable TLS or reuse the development target for production.
 
-## Client functions to review
+## What to review now
 
-Update 2026-11-13: staff notification links and truthful saved-request/email-off/unconfirmed receipt messaging are [implemented and tested](verification/m06-06-email-handoff.md). Actual sending/queue/intake and Atlas foundation remain off/unprepared; this does not claim live form operation.
-
-Update 2026-11-13: the minimum protected inquiry list/detail and safe manual reply controls are [implemented and fixture-verified](verification/m06-06-inquiry-reader.md). This is the owner response path needed for client inquiries, not full dashboard/CRM work. Actual Atlas setup, authorized owner session and intake/email activation remain outstanding; current password-only self-account mode cannot access private inquiries.
-
-| Function | What to try | Actual status |
+| Area | Present behavior | Owner review |
 | --- | --- | --- |
-| Navigation | Desktop/mobile menus, keyboard and footer destinations | Automated PASS |
-| Catalog | Eight categories, 57 unique services, 58 memberships | Implemented; local route/identity checks PASS |
-| Solutions/pricing | Five solutions, indicative prices, units and scope | Local preview; commercial review pending |
-| Search | Search services/help, empty results and unavailable states | Automated PASS |
-| FAQ/help | Six detailed guides and related links | Implemented and locally checked |
-| Contact | Valid/invalid input, consent, retry, receipt | Disposable-fixture PASS; actual intake disabled |
-| Quote | Category/service/package context, editable selections, Back, custom scope | Disposable-fixture PASS; actual intake disabled |
-| Consultation | Optional notes, receipt; no false booking confirmation | Disposable-fixture PASS; actual intake disabled |
-| Email alternatives | Direct email links including without JavaScript | Implemented; website does not send through mailto |
-| Automated email | Acknowledgement, owner alert, retries, receiving full inquiry | Mocked integration PASS; actual operation disabled/incomplete |
-| Themes/accessibility | Terracotta, Slate Blue, Vivid Blue; keyboard, mobile and enlarged text | Automated checks PASS; human review pending |
-| SEO/privacy | Titles, canonicals, operator/policy wording, indexing | Metadata checked; indexing intentionally closed pending release |
+| Home/navigation | Responsive header/footer, keyboard menus and public links | Messaging, business positioning, navigation order |
+| Categories/services | Eight categories, 57 unique service pages, 58 memberships | Names, scope, current availability, indicative prices/units |
+| Solutions/pricing | Five solutions, package/context links and pricing explanation | Actual offers, overlaps, scope and exclusions |
+| About/Contact | Actual operator/contact facts and direct mailbox links | Business/policy wording and contact channels |
+| Quote/Contact/Consultation | Submit details, receive saved reference; automatic acknowledgement/inbox email; optional manual fallback | Copy a synthetic brief and inspect selections/timing; no automatic save/send or booking |
+| FAQ/search | Searchable source-managed help plus six detailed guides | Practical answers, empty/error states and reading flow |
+| Work/Insights | Genuine empty states; no fabricated records | Provide approved genuine content later if desired |
+| Privacy/Terms | Existing source-managed copy and operator details | Actual practices/claims before publication |
+| Three light themes | Editorial Terracotta default, Muted Slate Blue, Vivid Blue | Colors, focus/contrast, mobile and enlarged text |
+| Accessibility/performance | Automated keyboard/theme/narrow-layout checks and local performance samples | Human screen-reader/device/reduced-motion/design review before release |
+| SEO | Titles/canonicals/sharing metadata; indexing intentionally blocked | Final domain and eligible indexing after approved publication |
+| Deferred internal/automated features | Owner/staff/dashboard/CRM postponed; public save/receipt/mail enabled | Do not run owner setup now; revisit after public review |
+
+Optional manual handoff is explicit: **Copy inquiry brief** copies only entered details and selected public offer names/IDs. **Open email app** contains a static inquiry subject, never private message/email/body or an access token in its URL. Paste the copied brief into your email and send it yourself. Clipboard denial reveals selectable text. The manual handoff itself does not save anything; using the form submit button saves the request and returns its reference. No booking confirmation or binding automatic quote is claimed. Basic direct email links remain usable without JavaScript.
+
+## Deployment preparation
+
+See [provider-neutral templates and release steps](../deployment/README.md). Deployment and production configuration are postponed by owner instruction. The review candidate is not published: catalog publication remains draft, hosted public routes remain gated, and robots/sitemap/indexing remain closed pending owner review and separately authorized publication. Closed-by-default release support is now implemented; no actual approval or PUBLIC_RELEASE_ID has been set. No providers, subscriptions, production database or costs selected. Do not interpret a successful build as public publication approval.
 
 ## Complete public source inventory
 
@@ -146,8 +177,8 @@ Update 2026-11-13: the minimum protected inquiry list/detail and safe manual rep
 - Confirm service/solution descriptions, prices, units and what you currently offer.
 - Check navigation, all template variants, mobile layouts and all three colors/themes.
 - Confirm operator, contact and policy facts reflect your actual business operations.
-- Check Contact, Quote and Consultation first with synthetic review data after explicit activation.
-- Confirm full inquiry reaches an authorized owner workflow and you can reply; a reference-only alert is insufficient by itself.
+- Check Contact, Quote and Consultation with synthetic text using their submit buttons; keep the saved reference and inspect development test emails in your configured inbox.
+- Confirm the automatic inbox notification contains enough client information to respond. Dashboard management stays postponed.
 - Review real screenshots/assets and permissions; no invented clients, testimonials or certifications.
 - Complete human keyboard/screen-reader/device review before release.
 - Approve publication separately after remaining runtime/inquiry/deployment gates pass.

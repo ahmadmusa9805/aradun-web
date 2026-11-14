@@ -43,6 +43,12 @@ export function loadBackendEnv(
   if (!tier.success) fail("APP_ENV");
   if (hostedRuntime && tier.data === "development") fail("APP_ENV");
   const hosted = tier.data !== "development";
+  const publicReleaseId = input.PUBLIC_RELEASE_ID;
+  if (
+    publicReleaseId !== undefined &&
+    !/^[A-Za-z0-9][A-Za-z0-9._-]{0,99}$/.test(publicReleaseId)
+  )
+    fail("PUBLIC_RELEASE_ID");
   const appUrl = origin(
     input.APP_URL ?? (hosted ? undefined : "http://127.0.0.1:3000"),
     "APP_URL",
@@ -258,23 +264,29 @@ export function loadBackendEnv(
     !["true", "false"].includes(input.PUBLIC_INTAKE_ENABLED)
   )
     fail("PUBLIC_INTAKE_ENABLED");
+  if (
+    input.INTAKE_NOTIFICATION_MODE &&
+    !["staff", "inbox"].includes(input.INTAKE_NOTIFICATION_MODE)
+  )
+    fail("INTAKE_NOTIFICATION_MODE");
   const intake =
     input.PUBLIC_INTAKE_ENABLED === "true"
       ? {
+          fixedInbox: input.INTAKE_NOTIFICATION_MODE === "inbox",
           privacyNoticeVersion: input.PRIVACY_NOTICE_VERSION ?? "",
           staffRecipientIds: (input.INTAKE_STAFF_RECIPIENT_IDS ?? "")
             .split(",")
-            .map((value) => value.trim()),
+            .map((value) => value.trim())
+            .filter(Boolean),
         }
       : undefined;
   if (
     intake &&
-    (tier.data !== "development" ||
-      !rateLimitSecret ||
+    (!rateLimitSecret ||
       !z
         .array(z.string().regex(/^[a-f0-9]{24}$/))
-        .min(1)
-        .max(10)
+        .min(intake.fixedInbox ? 0 : 1)
+        .max(intake.fixedInbox ? 0 : 10)
         .safeParse(intake.staffRecipientIds).success ||
       !/^[A-Za-z0-9._-]{1,100}$/.test(intake.privacyNoticeVersion))
   )
@@ -283,10 +295,13 @@ export function loadBackendEnv(
     );
   if (
     outboxMode === "resend" &&
-    (!intake || intake.staffRecipientIds.length !== 1)
+    (!intake || (!intake.fixedInbox && intake.staffRecipientIds.length !== 1))
   )
     fail("Resend requires active intake and one reviewed staff recipient");
+  if (intake?.fixedInbox && (!email || outboxMode !== "resend"))
+    fail("Inbox intake requires configured Resend delivery");
   return Object.freeze({
+    publicReleaseId,
     email,
     intake,
     identity,

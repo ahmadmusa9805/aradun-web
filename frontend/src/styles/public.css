@@ -31,6 +31,10 @@
   color: var(--color-text-muted);
   margin-bottom: var(--space-6);
 }
+[data-public-release="enabled"] .public-preview,
+[data-public-release="enabled"] .catalog-preview {
+  display: none;
+}
 .public-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.09em;
@@ -465,6 +469,19 @@
 }
 .intake-alternative p {
   margin-block: var(--space-3);
+}
+.intake-alternative h2 {
+  font-size: var(--type-h4);
+  font-weight: 700;
+  margin-block: 0 var(--space-3);
+}
+.intake-availability {
+  min-block-size: 4.5em;
+}
+@media (max-width: 40rem) {
+  .intake-availability {
+    min-block-size: 7.5em;
+  }
 }
 
 .public-reading {

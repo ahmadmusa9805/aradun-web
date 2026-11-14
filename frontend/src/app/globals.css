@@ -6,6 +6,8 @@
 @import "../styles/identity.css";
 @import "../styles/shells.css";
 @import "../styles/public.css";
+@import "../styles/editorial.css";
+@import "../styles/motion.css";
 
 @theme inline {
   --font-sans: var(--font-inter);

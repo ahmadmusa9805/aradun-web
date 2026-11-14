@@ -3,6 +3,7 @@ import type { CategorySummary } from "../catalog-api.server";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ButtonLink } from "@/components/ui/button";
 import { EngagementModels } from "../components/engagement-models";
+import { CategoryIcon } from "@/components/ui/category-icon";
 const needs: Record<string, string> = {
   "CAT-01": "Build or improve a website or software system",
   "CAT-02": "Launch or improve a mobile app",
@@ -51,6 +52,7 @@ export function ServicesOverview({
             <li key={category.id} className="catalog-card">
               <span className="catalog-number">
                 {String(index + 1).padStart(2, "0")}
+                <CategoryIcon index={index} />
               </span>
               <h3>
                 <Link prefetch={false} href={category.href}>

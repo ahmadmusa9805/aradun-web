@@ -3,6 +3,9 @@ import type { ServiceDetail } from "../catalog-api.server";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ButtonLink } from "@/components/ui/button";
 import { PricePresentation } from "../components/price-presentation";
+import { Availability } from "../components/availability";
+import { CategoryIcon } from "@/components/ui/category-icon";
+import { serviceCategories } from "@/components/layout/public-navigation";
 const guidance: Record<
   ServiceDetail["variant"],
   { title: string; text: string; help: string }
@@ -47,9 +50,20 @@ export function ServiceTemplate({ service }: { service: ServiceDetail }) {
         current={service.name}
       />
       <section className="catalog-hero" aria-labelledby="service-title">
-        <p className="catalog-eyebrow">{service.parent.name}</p>
+        <p className="catalog-eyebrow">
+          <CategoryIcon
+            index={Math.max(
+              0,
+              serviceCategories.findIndex(
+                (item) => item.href === service.parent.href,
+              ),
+            )}
+          />
+          {service.parent.name}
+        </p>
         <h1 id="service-title">{service.name}</h1>
         <p className="lead">{service.summary}</p>
+        <Availability value={service.availability} />
         <p>
           <strong>{service.sourcePriceLabel}</strong> USD · Indicative pricing
         </p>
