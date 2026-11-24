@@ -6,8 +6,31 @@ import Link from "next/link";
 import { Availability } from "../components/availability";
 import { CategoryIcon } from "@/components/ui/category-icon";
 import { WebCategoryTemplate } from "./web-category";
+import { AutomationCategoryTemplate } from "./automation-category";
+import { MarketingCategoryTemplate } from "./marketing-category";
+import { MobileCategoryTemplate } from "./mobile-category";
+import { CloudCategoryTemplate } from "./cloud-pages";
+import { CyberCategoryTemplate } from "./cyber-pages";
+
+import { DesignCategoryTemplate } from "./design-pages";
+
+import { VideoCategoryTemplate } from "./video-pages";
 
 export function CategoryTemplate({ category }: { category: CategoryDetail }) {
+  if (category.id === "CAT-08")
+    return <VideoCategoryTemplate category={category} />;
+  if (category.id === "CAT-07")
+    return <DesignCategoryTemplate category={category} />;
+  if (category.id === "CAT-06")
+    return <CyberCategoryTemplate category={category} />;
+  if (category.id === "CAT-05")
+    return <CloudCategoryTemplate category={category} />;
+  if (category.id === "CAT-02")
+    return <MobileCategoryTemplate category={category} />;
+  if (category.id === "CAT-04")
+    return <MarketingCategoryTemplate category={category} />;
+  if (category.id === "CAT-03")
+    return <AutomationCategoryTemplate category={category} />;
   if (category.id === "CAT-01")
     return <WebCategoryTemplate category={category} />;
   const quote = `/get-a-quote?categoryId=${encodeURIComponent(category.id)}`;

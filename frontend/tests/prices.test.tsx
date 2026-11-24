@@ -30,7 +30,13 @@ it("renders unknown units with explicit qualification and custom without a zero 
       />
     </>,
   );
-  expect(screen.getByText("Billing unit requires confirmation.")).toBeTruthy();
+  expect(screen.queryByText("Billing unit requires confirmation.")).toBeNull();
+  expect(
+    screen.getAllByText(
+      "Indicative pricing. Your proposal confirms the scope, price and billing terms.",
+    ),
+  ).toHaveLength(2);
+  expect(screen.queryByText("$199/project")).toBeNull();
   expect(screen.getByText("Custom")).toBeTruthy();
   expect(screen.getByText("SAMPLE third-party fees separate")).toBeTruthy();
   expect(screen.queryByText("$0")).toBeNull();

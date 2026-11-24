@@ -1,3 +1,8 @@
+import { CompleteBusinessTemplate } from "./complete-business";
+import { CloudSolutionTemplate } from "./cloud-solution";
+import { BusinessGrowthTemplate } from "./business-growth";
+import { BusinessAutomationTemplate } from "./business-automation";
+import { DigitalPresenceTemplate } from "./digital-presence";
 import Link from "next/link";
 import type { SolutionDetail } from "../catalog-api.server";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
@@ -6,6 +11,16 @@ import { PricePresentation } from "../components/price-presentation";
 import { SolutionPriceCards } from "../components/solution-price-cards";
 
 export function SolutionTemplate({ solution }: { solution: SolutionDetail }) {
+  if (solution.id === "SOL-005")
+    return <CompleteBusinessTemplate solution={solution} />;
+  if (solution.id === "SOL-004")
+    return <CloudSolutionTemplate solution={solution} />;
+  if (solution.id === "SOL-003")
+    return <BusinessGrowthTemplate solution={solution} />;
+  if (solution.id === "SOL-002")
+    return <BusinessAutomationTemplate solution={solution} />;
+  if (solution.id === "SOL-001")
+    return <DigitalPresenceTemplate solution={solution} />;
   const quote = `/get-a-quote?solutionId=${encodeURIComponent(solution.id)}`;
   return (
     <>

@@ -1,5 +1,11 @@
 # ARADUN requirement traceability and coverage
 
+2026-11-24 M09-04 CAT-05 content checkpoint: eight canonical Cloud services retain source identity/pricing; category/detail task lists, responsibilities and pricing scope improved. [Verification](verification/cloud-category-refinement.md). No operational deployment/recovery proof, new migration offer, owner acceptance or release authorization inferred.
+
+2026-11-24 M09-02 CAT-02 correction: five canonical Mobile services retain source identity/pricing, with scoped category/detail content, platform/design/release boundaries and task-first cards. [Verification](verification/mobile-category-refinement.md). Optional new services not selected; owner acceptance and publication pending.
+
+2026-11-24 M09-03 CAT-04 correction: existing nine Digital Marketing services retain IDs/routes/source prices while category/detail content, task-list cards, scoped pricing context and budget explanations improved. [Verification and new-offer boundary](verification/digital-marketing-refinement.md). Owner acceptance/publication and whole-task closure remain pending.
+
 2026-11-17 M04/M09/M12 correction evidence: immediate Work/Insights filters with no-JS fallback; source01 social/contact links; startup/catalog recovery; original distinct project/editorial imagery and truthful solution-strip replacement. [Fourteen unit/Mongo and twenty-two browser tests, quality checks and live catalog/intake results](verification/public-filters-social-recovery.md). Source inventories/prices and proof/publication gates unchanged; owner review pending.
 
 2026-11-15 latest M06/M09 correction: aradunq prefix/AI I vs automation a, compatible signed receipts, branded HTML/plain acknowledgement signature, clear saved-state wording and separate editorial imagery. [22 backend/32 browser evidence](verification/query-signature-confirmation.md). Source requirements, genuine-proof and publication gates preserved.
@@ -353,3 +359,29 @@ FR-04-10 covers the general future workflow; its P1 article slice is FR-04-06. F
 | EXT-006 | Public trust and product policy extensions | v0.3.0, line 3289 | P1 actual privacy/cookie needs; P2/P3 product-specific policies as introduced. | Confirmed accurate-policy principle; extra documents proposed; S1 §11, S6. | FR-14-08; BR-006/007; D-014, D-018. | P1 actual privacy/cookie needs; P2/P3 product-specific policies as introduced. Preserve source conditional scope | Content; Operations; PUB-017, PUB-018, TRU-01, TRU-02, TRU-03 | [M09-09](sources/07-development-roadmap.md#m09-09); Preserve source conditional scope | Policies reflect actual entity/providers/data practices; applicability reviewed; website terms and client agreements distinguished; no copied false compliance claims; final routes belong to Step 2. | None | Not run; documentation reconciliation: [M00-01](verification/m00-01.md) | conditional |
 
 Local owner amendment (2026-11-12): [public-first resumption](verification/public-first-resume.md) and [decision register](../DECISIONS.md) qualify password-only local account reading. Original security criteria remain for sensitive operations and hosted deployment; this exception is not MFA assurance or full source-task acceptance.
+
+M09-04 / CAT-06 checkpoint (2026-11-24): Cybersecurity category and SVC-035—042 public detail content refined, canonical names/routes/prices retained. Responsive, targeted accessibility, package-link and build checks passed; owner acceptance pending. Evidence: [Cybersecurity refinement](verification/cybersecurity-refinement.md). No whole-task closure or actual security assessment claimed.
+
+M09-05 / CAT-07 Design checkpoint (2026-11-24): SVC-043–049 category/detail refinement verified; cross-listed SVC-009 remains one canonical page. Source names/prices retained, no new standalone offer. Video and whole-task acceptance remain open. [Evidence](verification/design-branding-refinement.md).
+
+M09-05 / CAT-08 checkpoint (2026-11-24): eight Video category/detail refinements verified, preserving SVC-050–057 source offers. Monthly-video billing interval remains unresolved before publication; no whole-task acceptance claimed. [Evidence](verification/video-production-refinement.md).
+
+M09-06 / PUB-002 overview refinement (2026-11-24): core/other service discovery, existing destinations, solution guidance and three concept examples verified. No changes to service/solution prices or source records. Owner acceptance pending. [Evidence](verification/all-services-refinement.md).
+
+M09-06 / SOL-01 (SOL-001) refinement (2026-11-24): source-priced solution and shared Pricing guidance verified with responsive/accessibility/link/parity checks. Exact proposed package entitlements and owner acceptance remain open; no whole-task closure. [Evidence](verification/digital-presence-refinement.md).
+
+M09-06 / SOL-001 owner-approved terms (2026-11-24): 3/8 pages, 2/3 revisions, 14/30-day defect correction and related input/testing/rights terms now recorded and shared on solution/Pricing. Supersedes earlier exact-terms deferral for these subjects only. [Evidence](verification/digital-presence-package-terms.md).
+
+M09-06 / SOL-001 UI polish (2026-11-24): package/list/button alignment, compact terms and project preview presentation verified; approved content/prices preserved. [Evidence](verification/digital-presence-ui-polish.md).
+
+M09-06 / SOL-02 (SOL-002) refinement (2026-11-24): source-price/route-preserving page and shared Pricing guidance verified; exact proposed package quantities/support and owner visual acceptance remain open. [Evidence](verification/business-automation-refinement.md).
+
+M09-06 / SOL-03 (SOL-003) refinement (2026-11-24): monthly source prices, shared Pricing guidance, marketing links and responsive/accessibility/parity/alignment checks verified. Numeric package/contract decisions and owner acceptance remain open. [Evidence](verification/business-growth-refinement.md).
+
+M09-06 / SOL-04 (SOL-004) refinement (2026-11-24): original source prices and shared Pricing guidance retained; responsive/accessibility/parity/link/alignment verified. Exact offer allowances and owner acceptance remain open. [Evidence](verification/cloud-technology-refinement.md).
+
+M09-06 / SOL-05 (SOL-005) refinement (2026-11-25): three custom source positions and shared Pricing guidance preserved; responsive/accessibility/parity/link/alignment/dispatch checks passed. Optional discovery price/package-model changes and owner acceptance remain open. [Evidence](verification/complete-business-refinement.md).
+
+M09-06 / PUB-003 refinement (2026-11-25): core/other solution discovery and source-price-preserving cards verified; duplicate selection content removed. Owner acceptance pending. [Evidence](verification/all-solutions-refinement.md).
+
+M09-06 / PUB-004 Pricing refinement (2026-11-25):57 unique/58 category listings, source starting-price display, search and deduplicated editable quote handoff verified. Unknown units/package entitlements and human acceptance remain open. [Evidence](verification/pricing-refinement.md).

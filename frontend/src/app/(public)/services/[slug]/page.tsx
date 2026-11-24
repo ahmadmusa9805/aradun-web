@@ -1,3 +1,5 @@
+import { videoMeta } from "@/modules/catalog/templates/video-copy";
+import { designMeta } from "@/modules/catalog/templates/design-copy";
 import {
   publicMetadata,
   siteOrigin,
@@ -9,6 +11,11 @@ import { ServiceTemplate } from "@/modules/catalog/templates/service";
 import { CatalogFrame } from "@/modules/catalog/templates/catalog-frame";
 import { CategoryTemplate } from "@/modules/catalog/templates/category";
 import { webCategoryMetaDescription } from "@/modules/catalog/templates/web-category-copy";
+import { automationMeta } from "@/modules/catalog/templates/automation-copy";
+import { marketingMeta } from "@/modules/catalog/templates/marketing-copy";
+import { mobileMeta } from "@/modules/catalog/templates/mobile-copy";
+import { cloudMeta } from "@/modules/catalog/templates/cloud-copy";
+import { cyberMeta } from "@/modules/catalog/templates/cyber-copy";
 import { Feedback } from "@/components/feedback/feedback";
 import navigation from "@/modules/catalog/data/navigation.generated.json";
 
@@ -29,7 +36,21 @@ export async function generateMetadata({
           result.data.category.name,
           result.data.category.id === "CAT-01"
             ? webCategoryMetaDescription
-            : result.data.category.intro,
+            : result.data.category.id === "CAT-03"
+              ? automationMeta
+              : result.data.category.id === "CAT-04"
+                ? marketingMeta
+                : result.data.category.id === "CAT-02"
+                  ? mobileMeta
+                  : result.data.category.id === "CAT-05"
+                    ? cloudMeta
+                    : result.data.category.id === "CAT-06"
+                      ? cyberMeta
+                      : category.id === "CAT-07"
+                        ? designMeta
+                        : category.id === "CAT-08"
+                          ? videoMeta
+                          : result.data.category.intro,
           result.data.category.href,
         )
       : { robots: { index: false, follow: false } };

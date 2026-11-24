@@ -1,3 +1,8 @@
+import { completeMeta } from "@/modules/catalog/templates/complete-business-copy";
+import { cloudSolutionMeta } from "@/modules/catalog/templates/cloud-solution-copy";
+import { growthMeta } from "@/modules/catalog/templates/business-growth-copy";
+import { businessAutomationMeta } from "@/modules/catalog/templates/business-automation-copy";
+import { digitalPresenceMeta } from "@/modules/catalog/templates/digital-presence-copy";
 import {
   publicMetadata,
   siteOrigin,
@@ -19,7 +24,17 @@ export async function generateMetadata({
   return result.state === "ready"
     ? publicMetadata(
         result.data.solution.name,
-        result.data.solution.metaDescription,
+        result.data.solution.id === "SOL-001"
+          ? digitalPresenceMeta
+          : result.data.solution.id === "SOL-002"
+            ? businessAutomationMeta
+            : result.data.solution.id === "SOL-003"
+              ? growthMeta
+              : result.data.solution.id === "SOL-004"
+                ? cloudSolutionMeta
+                : result.data.solution.id === "SOL-005"
+                  ? completeMeta
+                  : result.data.solution.metaDescription,
         result.data.solution.href,
       )
     : { robots: { index: false, follow: false } };
