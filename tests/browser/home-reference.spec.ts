@@ -47,7 +47,7 @@ test("reference header uses the supplied lockup and compact neutral-icon experti
     }
     expect(
       await brand
-        .locator(".brand-lockup")
+        .locator(".brand-vivid-symbol")
         .evaluate((node) => getComputedStyle(node).backgroundImage),
     ).toContain(
       theme === "Editorial Terracotta"

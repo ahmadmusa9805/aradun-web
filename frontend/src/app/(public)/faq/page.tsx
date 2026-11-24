@@ -33,23 +33,25 @@ export default function FaqPage() {
           </a>
         ))}
       </nav>
-      {groups.map((group, index) => (
-        <PublicSection key={group} title={group} id={`group-${index}`}>
-          {publicFaqs
-            .filter((faq) => faq.group === group)
-            .map((faq) => (
-              <details className="catalog-faq" id={faq.id} key={faq.id}>
-                <summary>{faq.question}</summary>
-                <p>{faq.answer}</p>
-                <p>
-                  <Link prefetch={false} href={`/faq/${faq.id}`}>
-                    Read the detailed guide
-                  </Link>
-                </p>
-              </details>
-            ))}
-        </PublicSection>
-      ))}
+      <div className="faq-category-grid">
+        {groups.map((group, index) => (
+          <PublicSection key={group} title={group} id={`group-${index}`}>
+            {publicFaqs
+              .filter((faq) => faq.group === group)
+              .map((faq) => (
+                <details className="catalog-faq" id={faq.id} key={faq.id}>
+                  <summary>{faq.question}</summary>
+                  <p>{faq.answer}</p>
+                  <p>
+                    <Link prefetch={false} href={`/faq/${faq.id}`}>
+                      Read the detailed guide
+                    </Link>
+                  </p>
+                </details>
+              ))}
+          </PublicSection>
+        ))}
+      </div>
       <PublicSection title="Still need help?">
         <p>
           Share your question and the context that will help us understand it.

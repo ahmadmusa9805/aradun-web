@@ -1,6 +1,11 @@
 /* Theme-dependent tokens: the only source of accent values. Never set data-appearance in React. */
 :root,
 :root[data-appearance="terracotta"] {
+  --brand-symbol-image: url("/_next/image?url=%2Fbrand%2Faradun-terracotta.png&w=640&q=75");
+  --brand-symbol-scale: 0.91;
+  --brand-symbol-aspect: 0.333333;
+  --brand-symbol-position: left center;
+  --brand-symbol-clip: inset(0 8% 0 0);
   --brand-vivid-parts: none;
   --brand-lockup: url("/_next/image?url=%2Fbrand%2Faradun-terracotta.png&w=640&q=75");
   --color-page: #f8f6f2;
@@ -18,6 +23,7 @@
   --color-selection-bg: #f5e7e1;
 }
 :root[data-appearance="slate-blue"] {
+  --brand-symbol-image: url("/_next/image?url=%2Fbrand%2Faradun-slate-blue.png&w=640&q=75");
   --brand-lockup: url("/_next/image?url=%2Fbrand%2Faradun-slate-blue.png&w=640&q=75");
   --color-page: #f6f7f8;
   --color-border-subtle: #ccd6dc;
@@ -34,6 +40,11 @@
   --color-selection-bg: #e7edf2;
 }
 :root[data-appearance="vivid-blue"] {
+  --brand-symbol-image: url("/_next/image?url=%2Fbrand%2Faradun-vivid-symbol.png&w=256&q=75");
+  --brand-symbol-scale: 0.34;
+  --brand-symbol-aspect: 1;
+  --brand-symbol-position: center calc(50% - 2px);
+  --brand-symbol-clip: none;
   --brand-vivid-parts: flex;
   --brand-lockup: none;
   --color-page: #f7f8fb;

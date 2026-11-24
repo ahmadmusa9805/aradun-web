@@ -17,6 +17,7 @@ export default async function Page() {
   await connection();
   return (
     <PublicPage
+      compact
       title="Request an initial consultation."
       intro="Use a free 15-minute initial screening to discuss your needs and a suitable next step. Your preferred time is a request, pending confirmation."
     >

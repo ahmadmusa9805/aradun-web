@@ -5,6 +5,7 @@ import { createSharedLimiter } from "./modules/operations/server/rate-limit.serv
 import { createApp } from "@/app.js";
 import { loadBackendEnv } from "./config/env.server.js";
 import { createDatabase } from "./server/db/connection.server.js";
+import { connectWithRetry } from "./server/db/startup-retry.server.js";
 import { logOperationalFailure } from "./modules/operations/server/logging.js";
 import { randomUUID } from "node:crypto";
 
@@ -18,11 +19,31 @@ async function main() {
   }
   const config = loadBackendEnv(process.env, ["database"]);
   const database = createDatabase(config.database!);
+  const startup = new AbortController();
+  const cancelStartup = () => startup.abort();
+  process.once("SIGINT", cancelStartup);
+  process.once("SIGTERM", cancelStartup);
   try {
-    await database.connect();
+    await connectWithRetry(() => database.connect(), {
+      signal: startup.signal,
+      onRetry: (_attempt, delayMs) => {
+        logOperationalFailure({
+          code: "dependency_unavailable",
+          correlationId: randomUUID(),
+        });
+        if (config.appEnv === "development")
+          console.info(
+            `Database connection unavailable; retrying in ${delayMs / 1000}s. Intake remains closed until database checks pass.`,
+          );
+      },
+    });
   } catch {
     await database.close();
+    if (startup.signal.aborted) return;
     throw new Error("Database startup failed");
+  } finally {
+    process.removeListener("SIGINT", cancelStartup);
+    process.removeListener("SIGTERM", cancelStartup);
   }
   const limiter = config.rateLimitSecret
     ? createSharedLimiter(await database.connect(), config.rateLimitSecret)

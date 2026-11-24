@@ -4,20 +4,19 @@ export function PublicPage({
   title,
   intro,
   children,
+  compact = false,
 }: {
   title: string;
   intro: string;
   children: ReactNode;
+  compact?: boolean;
 }) {
   return (
     <main
       id="main-content"
       tabIndex={-1}
-      className="container-marketing public-page"
+      className={`container-marketing public-page${compact ? " inquiry-page" : ""}`}
     >
-      <p className="public-preview">
-        Development preview / Content and launch readiness await review.
-      </p>
       <header className="public-hero">
         <p className="public-eyebrow">
           ARADUN / Technology &amp; Digital Solutions

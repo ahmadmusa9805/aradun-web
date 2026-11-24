@@ -69,6 +69,7 @@ beforeEach(async () => {
 afterAll(async () => {
   await fixture?.close();
 });
+
 it("commits one inquiry/alias notification set and processes it once with provider acceptance IDs", async () => {
   const key = randomUUID();
   const receipts = await Promise.all([
@@ -115,6 +116,10 @@ it("commits one inquiry/alias notification set and processes it once with provid
   );
   expect(alert.text).toContain("authorized staff sign-in required");
   expect(acknowledgement.text).not.toContain("/dashboard/leads/");
+  expect(acknowledgement.text).toContain("Hi SAMPLE Prospect,");
+  expect(acknowledgement.text).not.toContain(
+    "binding quote or payment confirmation",
+  );
   for (const event of await outboxEventModel(fixture.connection).find())
     expect(event).toMatchObject({
       status: "sent",
@@ -368,4 +373,46 @@ it("public clients cannot request unapproved snapshot bypasses or select a notif
   await expect(
     submit({ ...contact(), staffRecipientIds: [staffId] }, randomUUID()),
   ).rejects.toBeDefined();
+});
+
+it("explicit recipient delivery sends a personalized acknowledgement to the prospect and a separate fixed-inbox alert", async () => {
+  const fixed = await createSubmissionService(fixture.connection, {
+    secret: randomBytes(48).toString("base64url"),
+    policy: {
+      privacyAcknowledgementRequired: true,
+      privacyNoticeVersion: "SAMPLE-test-only",
+    },
+    staffRecipientIds: [],
+    fixedInbox: true,
+  });
+  await fixed(contact(), randomUUID());
+  const fetcher = vi
+    .fn<typeof fetch>()
+    .mockImplementation(
+      async () => new Response(JSON.stringify({ id: randomUUID() })),
+    );
+  const worker = await createInquiryMailWorker(
+    fixture.connection,
+    { ...config, sandbox: false },
+    "development",
+    [],
+    "http://127.0.0.1:3000",
+    fetcher,
+    true,
+  );
+  expect((await worker.run()).accepted).toBe(2);
+  const bodies = fetcher.mock.calls.map((call) =>
+    JSON.parse(String(call[1]!.body)),
+  );
+  const ack = bodies.find((body) => body.subject.includes("received your"));
+  const alert = bodies.find((body) => body.subject.includes("New ARADUN"));
+  expect(ack.to).toEqual(["sample@example.invalid"]);
+  expect(ack.text).toContain("Hi SAMPLE Prospect,");
+  expect(ack.html).toContain("ARADUN Team");
+  expect(ack.attachments[0].content_id).toBe("aradun-signature");
+  expect(ack.attachments[0].content.length).toBeGreaterThan(100);
+  expect(ack.text).not.toContain("PRIVATE SYNTHETIC MESSAGE");
+  expect(alert.to).toEqual([config.notificationEmail]);
+  expect(alert.text).toContain("PRIVATE SYNTHETIC MESSAGE");
+  expect(bodies.every((body) => !body.subject.startsWith("[TEST]"))).toBe(true);
 });

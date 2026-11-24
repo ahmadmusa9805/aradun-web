@@ -207,24 +207,28 @@ async function request<T>(
   path: string,
   validate: (value: unknown) => boolean,
 ): Promise<Result<T>> {
-  try {
-    const response = await fetch(
-      `${frontendEnv.apiBaseUrl}/api/catalog/${path}`,
-      { cache: "no-store", signal: AbortSignal.timeout(3000) },
-    );
-    if (response.status === 404) return { state: "missing" };
-    if (!response.ok) return { state: "unavailable" };
-    const json = await response.json();
-    if (
-      !object(json) ||
-      json.preview !== (frontendEnv.appEnv === "development") ||
-      !validate(json)
-    )
-      return { state: "unavailable" };
-    return { state: "ready", data: json as T };
-  } catch {
-    return { state: "unavailable" };
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const response = await fetch(
+        `${frontendEnv.apiBaseUrl}/api/catalog/${path}`,
+        { cache: "no-store", signal: AbortSignal.timeout(3000) },
+      );
+      if (response.status === 404) return { state: "missing" };
+      if ([502, 503, 504].includes(response.status) && attempt === 0) continue;
+      if (!response.ok) return { state: "unavailable" };
+      const json = await response.json();
+      if (
+        !object(json) ||
+        json.preview !== (frontendEnv.appEnv === "development") ||
+        !validate(json)
+      )
+        return { state: "unavailable" };
+      return { state: "ready", data: json as T };
+    } catch {
+      if (attempt === 1) return { state: "unavailable" };
+    }
   }
+  return { state: "unavailable" };
 }
 export const getCategories = () =>
   request<{ preview: boolean; categories: CategorySummary[] }>(

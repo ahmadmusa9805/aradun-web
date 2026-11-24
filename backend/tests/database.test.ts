@@ -25,6 +25,7 @@ it("registers only implemented models without automatically creating collections
   ).toEqual([
     "AuditEvent",
     "Inquiry",
+    "InquirySequence",
     "OutboxEvent",
     "RateLimitBucket",
     "StaffUser",
@@ -69,6 +70,13 @@ it("checks read-only, applies the reviewed additive plan, and verifies repeatabi
     },
     {
       collection: "inquiries",
+      missingCollection: false,
+      missing: [],
+      drift: [],
+      extra: [],
+    },
+    {
+      collection: "inquirySequences",
       missingCollection: false,
       missing: [],
       drift: [],

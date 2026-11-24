@@ -62,15 +62,14 @@ export function syntheticTransport(outcomes: readonly SyntheticOutcome[]) {
 type Event = Awaited<
   ReturnType<ReturnType<typeof outboxEventModel>["findOne"]>
 >;
-type Eligibility = (
-  event: NonNullable<Event>,
-) => Promise<
+type Eligibility = (event: NonNullable<Event>) => Promise<
   | { eligible: false }
   | {
       eligible: true;
       email: string;
       inquiryUrl?: string;
       inboxDetails?: string;
+      clientName?: string;
     }
 >;
 export type JobSummary = {
@@ -313,6 +312,7 @@ async function createOutboxWorker(
                           event.kind === "staff-intake-alert"
                             ? policy.inboxDetails
                             : undefined,
+                          policy.clientName,
                         )
                       : {
                           subject: `SAMPLE ARADUN reference ${event.payload.reference}`,

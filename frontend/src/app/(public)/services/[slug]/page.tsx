@@ -8,6 +8,7 @@ import { getCategory, getService } from "@/modules/catalog/catalog-api.server";
 import { ServiceTemplate } from "@/modules/catalog/templates/service";
 import { CatalogFrame } from "@/modules/catalog/templates/catalog-frame";
 import { CategoryTemplate } from "@/modules/catalog/templates/category";
+import { webCategoryMetaDescription } from "@/modules/catalog/templates/web-category-copy";
 import { Feedback } from "@/components/feedback/feedback";
 import navigation from "@/modules/catalog/data/navigation.generated.json";
 
@@ -26,7 +27,9 @@ export async function generateMetadata({
     return result.state === "ready"
       ? publicMetadata(
           result.data.category.name,
-          result.data.category.intro,
+          result.data.category.id === "CAT-01"
+            ? webCategoryMetaDescription
+            : result.data.category.intro,
           result.data.category.href,
         )
       : { robots: { index: false, follow: false } };

@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 /** One bounded decorative island. No continuous loop, touch capture or business state. */
 export function WorldView() {
+  const [paused, setPaused] = useState(false);
   const region = useRef<HTMLDivElement>(null);
   const artwork = useRef<HTMLDivElement>(null);
   const [failed, setFailed] = useState(false);
@@ -12,6 +13,10 @@ export function WorldView() {
     const root = region.current;
     const image = artwork.current;
     if (!root || !image) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      root.dataset.worldVisible = String(entry?.isIntersecting ?? false);
+    });
+    observer.observe(root);
     const preference = matchMedia(
       "(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
     );
@@ -42,6 +47,7 @@ export function WorldView() {
     root.addEventListener("pointerleave", reset);
     preference.addEventListener("change", reset);
     return () => {
+      observer.disconnect();
       root.removeEventListener("pointermove", move);
       root.removeEventListener("pointerleave", reset);
       preference.removeEventListener("change", reset);
@@ -49,8 +55,11 @@ export function WorldView() {
     };
   }, []);
   return (
-    <div className="home-world editorial-art" ref={region} aria-hidden="true">
-      <div className="world-interactive" ref={artwork}>
+    <div
+      className={`home-world editorial-art${paused ? " world-paused" : ""}`}
+      ref={region}
+    >
+      <div className="world-interactive" ref={artwork} aria-hidden="true">
         {failed ? (
           <div className="world-image-fallback" />
         ) : (
@@ -66,6 +75,14 @@ export function WorldView() {
           />
         )}
       </div>
+      <button
+        type="button"
+        className="world-motion-control"
+        aria-pressed={paused}
+        onClick={() => setPaused(!paused)}
+      >
+        {paused ? "Play globe motion" : "Pause globe motion"}
+      </button>
     </div>
   );
 }

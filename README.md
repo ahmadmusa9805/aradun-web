@@ -30,7 +30,7 @@ npm run frontend
 npm run backend
 ```
 
-Use separate terminals to run both. Inside `frontend/` or `backend/`, use `npm run dev` to start that application. The existing root `dev:frontend` and `dev:backend` commands remain available. The repository root has no combined `dev` command.
+From the repository root, `npm run dev` starts both applications together using Node 24. Stop existing development servers first to avoid port conflicts. On Windows with the portable runtime, use `./scripts/npm.cmd run dev` in Git Bash or `.\scripts\npm.cmd run dev` in PowerShell. Ctrl+C stops the launched processes. Separate `frontend`, `backend`, `dev:frontend` and `dev:backend` commands remain available; inside either workspace, `npm run dev` starts that application only.
 
 Use Node **24.22.2** and npm **11.19.1** (see `.node-version` and root engines). From the root, install with `npm ci`; keep the single root `package-lock.json`. In this workspace a checksum-verified portable Windows runtime is already available under ignored `.tools/`; the following launcher uses it without changing the system Node 22 installation:
 

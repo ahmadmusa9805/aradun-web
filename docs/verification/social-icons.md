@@ -1,0 +1,5 @@
+# Social icons and WhatsApp emphasis — 2026-11-23
+
+Owner requested icons instead of social text throughout the site and prominent WhatsApp presentation. Added a shared server-rendered inline-SVG SocialLink component, used by BusinessContact (Contact, Consultation and other existing placements) and Footer. Five social profiles use recognizable icons, accessible names and native title hints. WhatsApp uses an icon plus visible label in a contrasting dark-green/white button. Existing URLs/themes remain unchanged; no dependency or client JavaScript added.
+
+Changed: frontend/src/components/ui/social-link.tsx, components/layout/site-footer.tsx, modules/content/components/business-contact.tsx and styles/editorial.css. Live Contact/Footer checks passed at 1440px and 390px: five named icons per navigation, minimum 44px targets, correct WhatsApp URL/highlight and no horizontal overflow. Frontend TypeScript and focused ESLint passed. Screenshot retained in ignored .tools/social-icons-nov23.png. No external message sent or source document changed. Owner visual review pending; no deployment started.

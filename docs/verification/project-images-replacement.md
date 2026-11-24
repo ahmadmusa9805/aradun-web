@@ -1,0 +1,9 @@
+# Project image replacement — 2026-11-23
+
+Owner clarified images only, with supplied references guiding quality and visual diversity. Replaced all twenty-four active project covers with original AI-generated fictional portfolio visuals: photographic website compositions; distinct detailed automation/cloud/security interfaces; differently styled mobile device presentations; branding/component/creative portfolio work; cinematic/video/storyboard imagery. Built-in image-generation skill used, one distinct prompt/image per project. Prompt directions and saved asset names: frontend/public/images/projects/image-directions-v3.json; all active images in that directory are study-N-v3.png. Originals retained locally.
+
+Only application change is the cover filename mapping from v2 to v3 in concept-projects.ts. Project titles, descriptions, scope, detail text, category IDs, slugs, filters, counts and site styling are unchanged. New filenames prevent stale Next Image cache responses. Home, Work and project details share the same mapping. Existing study classifications remain; generated fictional UI content is not client proof.
+
+Verification passed: all eight category filters show three distinct projects with decoded images; first detail per category loads title and image; default twelve/all twenty-four preserved; twenty-four unique SHA-256 image hashes; mobile390px no overflow. Web/Mobile live screenshots visually inspected against the previous simplified previews. Exact serialized project records excluding cover matched the pre-change baseline, and all thirteen source hashes unchanged. Focused lint passed. No full build/regression, real-client verification or owner visual acceptance claimed.
+
+Changed: twenty-four v3 PNGs, cover mapping, prompt-direction manifest, project asset README, PROGRESS and this evidence. No external copyrighted screenshots copied, credentials used, deployment or next roadmap task started. Owner review pending.

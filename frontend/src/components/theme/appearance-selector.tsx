@@ -8,7 +8,7 @@ const themes = [
 export function AppearanceSelector() {
   return (
     <fieldset className="appearance-selector">
-      <legend>Appearance</legend>
+      <legend className="visually-hidden">Appearance</legend>
       <div className="appearance-options">
         {themes.map(([value, label]) => (
           <label key={value}>

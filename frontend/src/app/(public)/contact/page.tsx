@@ -17,6 +17,7 @@ export default async function Page() {
   await connection();
   return (
     <PublicPage
+      compact
       title="How can we help?"
       intro="Ask a general question, discuss an existing relationship or tell us what you need."
     >
@@ -30,9 +31,7 @@ export default async function Page() {
       </nav>
       <PublicSection title="Send a message" id="contact-form">
         <p>
-          Send a general question or partnership inquiry. Name, email, subject
-          and message are required; company and website are optional. You do not
-          need an account.
+          Tell us what you need. We'll review your message and reply by email.
         </p>
         <InquiryForm type="contact" apiBaseUrl={frontendEnv.apiBaseUrl} />
       </PublicSection>

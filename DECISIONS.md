@@ -1,5 +1,41 @@
 # ARADUN decision index
 
+## CAT-01 starting prices and service detail review — 2026-11-24
+
+Owner approves the recommended category hero, explicit Admin Dashboards capability and single starting-price category cards while retaining detailed individual options. Applies only to CAT-01/SVC-001–005. Source amounts/IDs retained; no invented per-project unit for unconfirmed source positions. Maintenance retains three monthly options, Custom one custom quote. Richer qualitative scope lists prepared as proposed discussion directions: exact inclusions/quantities/limits still need owner commercial review; this instruction is not approval of unspecified entitlements. Other categories/Solutions/Pricing unchanged. [Evidence](docs/verification/web-service-pricing-details.md).
+
+## Web category review boundary — 2026-11-23
+
+Owner requests CAT-01 only and explicitly excludes CMS; pasted external chat is reference, not blanket approval of its new catalog/prices/navigation decisions. Implemented category-only editorial/section refinement, retaining existing five services, source prices and URLs. Landing pages and fixes/optimization are explained as needs to discuss under existing services, not newly priced offers. Proposed new pages/prices remain unselected. Other categories, Solutions and Pricing await separate review. [Scope/evidence](docs/verification/web-category-refinement.md).
+
+## Public contact and presentation amendment — 2026-11-23
+
+Owner supplies +14045414448 for calls: display +1 404-541-4448, tel:+14045414448. Existing WhatsApp +8801302601121 remains unchanged; the new call number does not imply a new office/address. Owner authorizes a bottom-right WhatsApp shortcut, compact FAQ categories and photographic replacement of the five remaining Insights diagram covers. Shortcut opens the existing external WhatsApp conversation; no chat provider, tracker, embedded inbox or guaranteed response time is introduced. Source documents remain unchanged.
+
+## Public correction implementation — 2026-11-17
+
+Use source01's existing social URLs and phone/WhatsApp; no new owner facts needed for those links. Retain approved indicative Home starting prices and engagement models. Replace unrelated brand references with factual solution navigation pending genuine client content. Separate fictional study brands and original editorial photographs are presentation choices for owner review, not claimed customer work. Random internet businesses/photos/reviews do not establish an ARADUN client relationship; no ten-year operating history is approved. Network retries preserve database/publication guards and do not certify uninterrupted availability. [Evidence](docs/verification/public-filters-social-recovery.md). No provider/environment/deployment choice changed.
+
+## Latest query format and email signature - 2026-11-15
+
+Owner expressly changes future inquiry prefix from aradun- to aradunq- and separates AI uppercase I from automation a. Codes in the latest supplied order: w/m/v/g/I/a/d/c/s. SVC-014 AI Chatbot,015 AI Integrations,016 AI Voice Agent use I; other CAT-03 Automation/CRM services use a. Solutions derive codes from canonical constituent services, deduplicated. General inquiry omits service segment. Existing global per-database sequence continues; legacy aradun-/ARQ references valid, no record rewrite or client-ID feature.
+
+Owner authorizes signature contact details: ARADUN Team; hello@aradun.com; WhatsApp +8801302601121; https://aradun.com; Build. Automate. Grow. Email display and mailto both use hello, correcting the mismatched link in the supplied text. HTML/plain-text plus fixed local CID logo per Resend's primary documentation, without publishing assets or adding production configuration. New-friendly confirmation states storage/review accurately, without claiming mail arrival. Brand inspiration and preview-story wording stays truthful; request to falsely identify random companies/people as clients remains unimplemented. Independent project palettes and original editorial artwork authorized; site-wide theme unchanged.
+
+## Owner showcase scope correction - 2026-11-15
+
+Home3 studies; Work12 initially, View all projects opens all24 on the existing route (?view=all),3 per category. Existing detail paths retained and expanded; no new route family or CMS. Original guides and imagery prepared for development review. Real company logos appear only as explicitly unaffiliated brand references, not claimed clients;10 fictional feedback-layout entries remain labelled and development-only. No scraped portraits, copied agency projects, invented client outcomes, ratings or affiliations. Primary-source icon SVGs pinned with upstream license/provenance. The request to make fictional proof appear genuine is not implemented. Publication, proof permissions and owner visual review remain separate gates. Environment recovery changes running local processes only, not providers or security configuration.
+
+## Approved per-inquiry sequence - 2026-11-15
+
+Owner answers the pending reference question: new number for every inquiry, including repeated inquiries from the same person. One database-local sequence across all inquiry types, starting001 and growing without reset. Prefix aradun; letters w/a/d/c/s/m/g/v in owner sample order, deduplicated from validated services' primary categories; selected solutions resolve through canonical service membership. General requests without selections omit letters. Counter lives in implemented inquirySequences collection with fixed unique _id; intake transaction owns increment. Retry returns original number, abort rolls back allocation. Include this collection with inquiries/outbox in future backups; never reset it independently. Legacy ARQ references unchanged; signed receipts still required. No public tracking/PII lookup endpoint, migration of old records or deployment authorized. [Evidence](docs/verification/inquiry-reference-numbering.md).
+
+## Public email routing and presentation amendment - 2026-11-15
+
+Owner explicitly requests acknowledgement to each submitter plus fixed admin alert to ahmadmusa@aradun.com. Development can opt into EMAIL_DELIVERY_MODE=recipients; sandbox remains default and staging cannot opt in. Zero queued development messages verified before enabling; backend restarted. No production configuration or spending authorization. Names in plain-text acknowledgements are bounded and newline-normalized. Reference shortening is not activated pending clarification whether sequence belongs to inquiries or permanent clients; no historical IDs changed.
+
+Owner requests removal of visible development banners, priority category order in navigation, compact centered inquiry layout, footer brand, Work filters/details and globe/feedback animation. Changes preserve themes, Inter, canonical routes/IDs and publication gates. Supplied original brand assets reused. Ten colorful company placeholders and three illustrative concepts remain disclosed; unrelated real companies/reviews cannot be presented as ARADUN clients. Genuine approved proof remains an owner-input dependency, not a reason to fabricate it.
+
 ## Owner public-preview demo amendment - 2026-11-14
 
 Owner requests three feedback/project examples and a moving company-logo showcase. Examples remain visibly SAMPLE/DEMO with fictional identities and synthetic portraits; they assert no genuine endorsements or delivered results. Render in development only, replacing with permitted genuine records before publication. One controlled logo-strip loop has pause/play, hover/focus/offscreen pause and reduced-motion fallback. Vivid uses original owner-supplied bright-blue emblem and original wordmark; Slate retains original slate lockup. Contact aliases apply only to public intake at the configured development loopback port. No provider, spending, deployment or dashboard authorization is implied.

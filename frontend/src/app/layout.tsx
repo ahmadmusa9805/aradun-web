@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link
           id="appearance-tokens"
           rel="stylesheet"
-          href="/appearance.css?v=20261114d"
+          href="/appearance.css?v=20261115a"
         />
         {/* A same-origin parser-blocking script intentionally selects tokens before first paint. */}
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}

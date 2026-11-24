@@ -77,8 +77,9 @@ export default async function QuotePage({
     );
   return (
     <PublicPage
+      compact
       title="What would you like to build?"
-      intro="Share the need, choose the services you want to discuss, and review your request before sending. No automatic binding quote or payment."
+      intro="Tell us what you have in mind. Choose the services you need, share your priorities, and we'll discuss the right next step."
     >
       <PublicSection title="Start your project brief.">
         {result.state !== "ready" && (

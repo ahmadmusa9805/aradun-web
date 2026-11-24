@@ -1,0 +1,126 @@
+{
+  "method": "Built-in image generation; original fictional concept visuals, not client evidence",
+  "commonPrompt": "Professional landscape 3:2 portfolio cover; rich subject-specific detail; coherent fictional UI; no ARADUN, watermarks or external trademarks.",
+  "images": [
+    {
+      "file": "study-1-v3.png",
+      "brand": "FORM & FIELD",
+      "direction": "interiors studio website: warm ivory editorial serif design, enormous beautiful real architectural interior photograph, asymmetric typography and tiny furniture thumbnails. Flat front-on polished full website viewport, no browser frame"
+    },
+    {
+      "file": "study-2-v3.png",
+      "brand": "NORTHLINE ADVISORY",
+      "direction": "professional business advisory website: deep midnight navy and electric cobalt, strong sans-serif typography, cinematic photograph of a modern office tower at dusk, clean service navigation, overlapping white strategy cards. Flat front-on website screenshot"
+    },
+    {
+      "file": "study-3-v3.png",
+      "brand": "WELLSPRING CARE",
+      "direction": "appointment discovery website: bright white and mint medical design, welcoming photographic doctor portraits, distinctive search bar and appointment cards, friendly modern rounded typography. Flat front-on website screenshot"
+    },
+    {
+      "file": "study-4-v3.png",
+      "brand": "SIGNAL DESK",
+      "direction": "inquiry qualification SaaS: sophisticated charcoal and purple desktop dashboard, dense realistic inbox list at left, selected inquiry detail and qualification checklist at right, avatar dots and tags, refined real app UI"
+    },
+    {
+      "file": "study-5-v3.png",
+      "brand": "RELATION LOOP",
+      "direction": "client follow-up CRM: warm white and orange desktop product, large colorful kanban columns with varied cards, genuine-feeling compact table typography, top toolbar and left sidebar, realistic detailed SaaS"
+    },
+    {
+      "file": "study-6-v3.png",
+      "brand": "HANDOFF OPERATIONS",
+      "direction": "workflow automation builder: dark navy grid canvas, crisp cyan and lime connected workflow nodes and branching approval paths, floating step editor, sidebar of triggers, detailed realistic product screenshot"
+    },
+    {
+      "file": "study-7-v3.png",
+      "brand": "GROVE GOODS",
+      "direction": "premium home goods campaign website: full-bleed actual photograph of beautiful ceramics and linen on sunlit table, deep olive and butter yellow, elegant large serif typography, refined product cards and shopping navigation. Magazine-quality commerce visual"
+    },
+    {
+      "file": "study-8-v3.png",
+      "brand": "CONTENT ATELIER",
+      "direction": "content planning SaaS: white and lavender editorial calendar desktop, colorful image thumbnails inside scheduled posts, month grid, right side editorial queue, small social channel icons, highly detailed contemporary product UI"
+    },
+    {
+      "file": "study-9-v3.png",
+      "brand": "BRIGHTPATH ENERGY",
+      "direction": "residential clean energy campaign website: stunning photograph of a modern house with rooftop solar at golden hour, bold yellow and charcoal type, right white assessment form, strong contemporary conversion landing page"
+    },
+    {
+      "file": "study-10-v3.png",
+      "brand": "CARELINE",
+      "direction": "customer support mobile app: THREE differently angled premium smartphone mockups on saturated teal gradient backdrop, real polished app UI with ticket list, human support conversation, request details, profile photo avatars, white teal screens, rich dimensional studio presentation"
+    },
+    {
+      "file": "study-11-v3.png",
+      "brand": "DAYWELL",
+      "direction": "appointment companion mobile app: ONE large front-facing smartphone and two offset screen cards, peach and plum background, calendar and time slot interface, photographic practitioner profile, elegant rounded type, premium mobile portfolio art direction distinctly different from generic three-phone lineup"
+    },
+    {
+      "file": "study-12-v3.png",
+      "brand": "ROUTE CREW",
+      "direction": "field service mobile app: TWO offset smartphones against graphite and lime yellow background, one vivid detailed street map with route and pins, one work order checklist with real building photo, professional rugged operations app, dimensional device shadows"
+    },
+    {
+      "file": "study-13-v3.png",
+      "brand": "RELEASE DECK",
+      "direction": "release deployment SaaS: charcoal developer dashboard with vivid amber environment stages, real-looking code log panel, deployment timeline, version badges and approval checks, fine monospace labels, sophisticated engineering product screenshot"
+    },
+    {
+      "file": "study-14-v3.png",
+      "brand": "HARBOR CLOUD",
+      "direction": "cloud monitoring console: bright white blue desktop dashboard with left navigation, large detailed teal resource graph, service topology and CPU-memory cards, high-density realistic operations product screenshot, not kanban"
+    },
+    {
+      "file": "study-15-v3.png",
+      "brand": "CLEARSTATUS",
+      "direction": "public service status website: elegant minimal white and forest green, large status banner, crisp component rows, many tiny uptime bars and neat incident timeline, subtle serif headings with clean sans body, distinctive calm public product design"
+    },
+    {
+      "file": "study-16-v3.png",
+      "brand": "RISK LENS",
+      "direction": "security vulnerability review product: deep navy with red orange severity accents, detailed findings table, severity donut chart, asset inventory cards, crisp realistic cybersecurity console, no hacker illustrations"
+    },
+    {
+      "file": "study-17-v3.png",
+      "brand": "ACCESS LEDGER",
+      "direction": "identity access review product: light warm gray dashboard, indigo permission matrix, profile avatar photos, role chips, reviewer sidebar, highly polished enterprise application with generous typography"
+    },
+    {
+      "file": "study-18-v3.png",
+      "brand": "RESPONSE ROOM",
+      "direction": "incident response command center: black graphite and cyan interface, large live incident timeline, detailed owner checklist and communications panel, orange priority markers, mature real-looking security operations screenshot"
+    },
+    {
+      "file": "study-19-v3.png",
+      "brand": "FORME STUDIO",
+      "direction": "premium branding identity presentation: rich burgundy ivory luxury brand board, elegant FORME wordmark, photorealistic embossed stationery and business cards, large editorial serif letterform and color swatches, tactile studio lighting, not a website screenshot"
+    },
+    {
+      "file": "study-20-v3.png",
+      "brand": "PRISM SYSTEM",
+      "direction": "product design library interface: Figma-like white canvas and purple sidebar, beautifully organized button/input/component specimens, color token swatches, typography hierarchy and state cards, dense precise professional design system presentation"
+    },
+    {
+      "file": "study-21-v3.png",
+      "brand": "STILLFRAME COLLECTIVE",
+      "direction": "creative portfolio website: vibrant cobalt with giant off-white serif typography, asymmetric photography collage of architecture fashion and still life, visually daring award-quality artistic grid, editorial brand identity, flat website screenshot"
+    },
+    {
+      "file": "study-22-v3.png",
+      "brand": "FRAME HOUSE",
+      "direction": "video production portfolio website: black cinematic website with huge breathtaking landscape film photograph, refined white typography, orange play button and filmstrip of different cinematic scenes, premium filmmaker aesthetic"
+    },
+    {
+      "file": "study-23-v3.png",
+      "brand": "REVIEW CUT",
+      "direction": "video review application: dark plum desktop workspace, large cinematic video frame showing mountain landscape, timeline with colorful tracks at bottom, right rail timestamped feedback and avatar photos, very realistic detailed editing product"
+    },
+    {
+      "file": "study-24-v3.png",
+      "brand": "STORYBOARD NOTES",
+      "direction": "campaign storyboard workspace: cream editorial board with six beautifully distinct cinematic storyboard scene photographs, numbered shots, concise production annotations, thin orange rules, planning toolbar and tasteful professional film production design"
+    }
+  ]
+}

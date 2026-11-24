@@ -12,8 +12,8 @@ export default async function Page() {
   await connection();
   return (
     <PublicPage
-      title="Your inquiry."
-      intro="Check your saved request receipt and keep the reference for follow-up."
+      title="Your inquiry and next steps."
+      intro="See your confirmation below and find out what happens next."
     >
       <Confirmation apiBaseUrl={frontendEnv.apiBaseUrl} />
     </PublicPage>

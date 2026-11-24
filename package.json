@@ -15,6 +15,7 @@
     "minimatch": "11.0.1"
   },
   "scripts": {
+    "dev": "node scripts/dev.mjs",
     "mongodb": "node scripts/mongodb-local.mjs",
     "frontend": "npm run dev --workspace @aradun/frontend",
     "backend": "npm run dev --workspace @aradun/backend",

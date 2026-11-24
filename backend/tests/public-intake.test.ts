@@ -7,6 +7,7 @@ import { beforeAll, afterAll, it, expect, vi } from "vitest";
 import { startMongoFixture } from "./support/mongo-fixture.js";
 import { registeredModels } from "../src/server/db/model-registry.server.js";
 import { inquiryModel } from "../src/modules/intake/models/inquiry.model.js";
+import { inquirySequenceModel } from "../src/modules/intake/models/inquiry-sequence.model.js";
 import { outboxEventModel } from "../src/modules/notifications/models/outbox-event.model.js";
 import {
   staffUserModel,
@@ -81,7 +82,7 @@ it("concurrent same-key requests and a lost response return one durable inquiry 
     }),
   ).toBe(2);
   expect(values[0]).toEqual({
-    reference: expect.stringMatching(/^ARQ-/),
+    reference: expect.stringMatching(/^aradunq-[0-9]{3,}$/),
     type: "contact",
     delivery: "queued",
     bookingConfirmed: false,
@@ -93,6 +94,9 @@ it("concurrent same-key requests and a lost response return one durable inquiry 
   ).rejects.toMatchObject({ code: "conflict" });
 });
 it("outbox failure rolls back inquiry and all queued work", async () => {
+  const counterBefore = (await inquirySequenceModel(
+    fixture.connection,
+  ).findById("inquiries"))!.value;
   const before = await inquiryModel(fixture.connection).countDocuments(),
     events = await outboxEventModel(fixture.connection).countDocuments();
   const spy = vi
@@ -109,6 +113,10 @@ it("outbox failure rolls back inquiry and all queued work", async () => {
   expect(await outboxEventModel(fixture.connection).countDocuments()).toBe(
     events,
   );
+  expect(
+    (await inquirySequenceModel(fixture.connection).findById("inquiries"))!
+      .value,
+  ).toBe(counterBefore);
 });
 it("rejects forged roles/prices, missing consent and unknown IDs without persistence", async () => {
   const before = await inquiryModel(fixture.connection).countDocuments();
@@ -341,4 +349,34 @@ it("receipt verification preflight permits only its explicit POST path", async (
   } finally {
     await new Promise<void>((resolve) => server.close(() => resolve()));
   }
+});
+
+it("different concurrent inquiries from the same person receive consecutive numbers and retries do not consume one", async () => {
+  const before = (await inquirySequenceModel(fixture.connection).findById(
+    "inquiries",
+  ))!.value;
+  const keys = Array.from({ length: 6 }, () => randomUUID());
+  const receipts = await Promise.all(keys.map((key) => submit(contact(), key)));
+  expect(new Set(receipts.map((receipt) => receipt.reference)).size).toBe(6);
+  expect(
+    receipts
+      .map((receipt) => Number(receipt.reference.split("-").at(-1)))
+      .sort((a, b) => a - b),
+  ).toEqual(keys.map((_, index) => before + index + 1));
+  const retried = await submit(contact(), keys[0]!);
+  expect(retried.reference).toBe(receipts[0]!.reference);
+  expect(
+    (await inquirySequenceModel(fixture.connection).findById("inquiries"))!
+      .value,
+  ).toBe(before + 6);
+});
+
+it("continues past the three-digit display width without resetting the sequence", async () => {
+  await inquirySequenceModel(fixture.connection).updateOne(
+    { _id: "inquiries" },
+    { $set: { value: 999 } },
+  );
+  expect((await submit(contact(), randomUUID())).reference).toBe(
+    "aradunq-1000",
+  );
 });

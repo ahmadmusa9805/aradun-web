@@ -1,0 +1,12 @@
+# Call number, WhatsApp shortcut, FAQ and article covers — 2026-11-23
+
+Owner-requested public review correction; implemented, owner visual acceptance pending. Supports existing M09 public content and M12 presentation work without accepting entire milestones or authorizing deployment.
+
+- Calls now use +1 404-541-4448 / tel:+14045414448 in the shared BusinessContact. WhatsApp remains +8801302601121. Explicit owner amendment recorded in DECISIONS/AGENTS; no office location inferred.
+- Public layout includes a bottom-right WhatsApp link, with visible chat label on desktop and a 52px icon on mobile. Opens existing wa.me destination; no SDK, tracker, embedded chat, external message or new dependency. Safe-area offsets and bottom page clearance included. Hidden for print; staff routes unaffected.
+- FAQ's five categories use compact two-column panels on desktop and one column on mobile. Existing questions/answers, category anchors, detail links and native keyboard-accessible disclosures preserved.
+- Replaced five remaining article diagrams with original photographic images; all eight covers now use distinct photos through existing Next Image optimization, including article detail views. First three images unchanged. New asset provenance/prompt set is in frontend/public/images/articles/README.md; originals preserved, no client claims.
+
+Verification: live 1440px/390px browser checks passed for FAQ columns/stacking, disclosures, shortcut destination/viewport bounds, new call href and horizontal overflow. All eight article images decoded successfully; sampled detail cover decoded. FAQ/shortcut axe scan: zero violations after correcting shortcut accessible-name/visible-label mismatch. All three theme selections exercised successfully. Focused ESLint and frontend TypeScript passed. Existing social-link browser expectation updated for the approved phone number and scoped WhatsApp selector. No full build/regression or real WhatsApp message claimed. Screenshots retained in ignored .tools.
+
+Files: business-identity.ts; BusinessContact; SocialIcon export; new components/layout/whatsapp-shortcut.tsx; public layout; FAQ; editorial.css; editorial-guides.ts; Insights list/detail and Home image alt text; five article PNGs/provenance; filter-socials expectation; AGENTS/DECISIONS/PROGRESS and this report. Approved source documents unchanged. Review /faq, /contact and /insights?topic=all; no next task automatically started.

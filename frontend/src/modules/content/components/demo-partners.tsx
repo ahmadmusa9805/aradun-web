@@ -1,14 +1,9 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
+import Link from "next/link";
+import { CategoryIcon } from "@/components/ui/category-icon";
+import { businessSolutions } from "@/components/layout/public-navigation";
 
-const names = [
-  "Demo Company One",
-  "Demo Company Two",
-  "Demo Company Three",
-  "Demo Company Four",
-  "Demo Company Five",
-  "Demo Company Six",
-];
 export function DemoPartners() {
   const [paused, setPaused] = useState(true);
   const [reduced, setReduced] = useState(true);
@@ -37,9 +32,7 @@ export function DemoPartners() {
   return (
     <div className="demo-partners" ref={region}>
       <div className="demo-partner-heading">
-        <p className="demo-disclosure">
-          DEMO company-logo showcase — placeholders, not clients or partners.
-        </p>
+        <p className="demo-disclosure">Built around your business</p>
         <button
           type="button"
           className="demo-motion-toggle"
@@ -48,38 +41,42 @@ export function DemoPartners() {
           aria-pressed={paused}
         >
           {reduced
-            ? "Static logos"
+            ? "Static solutions"
             : paused
-              ? "Play logo motion"
-              : "Pause logo motion"}
+              ? "Play solution motion"
+              : "Pause solution motion"}
         </button>
       </div>
       <div
         className="demo-partner-viewport"
         tabIndex={0}
         role="region"
-        aria-label="Demo company logo strip"
+        aria-label="Business solutions strip"
       >
         <div
           className={`demo-partner-track ${moving ? "demo-partner-track--moving" : ""}`}
         >
-          <ul aria-label="Demo company logos">
-            {names.map((name, index) => (
-              <li key={name}>
-                <span aria-hidden="true">
-                  {["◈", "◇", "○", "□", "△", "⊙"][index]}
-                </span>
-                <strong>{name}</strong>
-                <small>DEMO</small>
+          <ul aria-label="Business solutions">
+            {businessSolutions.map((solution, index) => (
+              <li key={solution.href}>
+                <Link
+                  className="solution-strip-link"
+                  href={solution.href}
+                  prefetch={false}
+                >
+                  <CategoryIcon index={[0, 2, 3, 4, 6][index]!} />
+                  <strong>{solution.label}</strong>
+                </Link>
               </li>
             ))}
           </ul>
           <ul className="demo-partner-duplicate" aria-hidden="true">
-            {names.map((name, index) => (
-              <li key={name}>
-                <span>{["◈", "◇", "○", "□", "△", "⊙"][index]}</span>
-                <strong>{name}</strong>
-                <small>DEMO</small>
+            {businessSolutions.map((solution, index) => (
+              <li key={solution.href}>
+                <span className="solution-strip-link">
+                  <CategoryIcon index={[0, 2, 3, 4, 6][index]!} />
+                  <strong>{solution.label}</strong>
+                </span>
               </li>
             ))}
           </ul>

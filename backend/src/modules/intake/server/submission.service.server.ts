@@ -1,4 +1,8 @@
 import { createReceiptCodec } from "./receipt.server.js";
+import {
+  initializeInquirySequence,
+  nextInquiryReference,
+} from "./reference.server.js";
 import { staffUserModel } from "../../identity/models/staff-user.model.js";
 import { createHmac } from "node:crypto";
 import { z } from "zod";
@@ -63,6 +67,7 @@ export async function createSubmissionService(
     .max(options.fixedInbox ? 0 : 10)
     .parse(options.staffRecipientIds);
   const model = inquiryModel(connection);
+  await initializeInquirySequence(connection);
   const digest = (value: string) =>
     createHmac("sha256", options.secret).update(value).digest("hex");
   const codec = createReceiptCodec(options.secret);
@@ -160,6 +165,11 @@ export async function createSubmissionService(
           if (found) return receipt(found);
           const document = new model({
             ...parsed,
+            reference: await nextInquiryReference(
+              connection,
+              session,
+              parsed.type === "quote" ? parsed.selection : undefined,
+            ),
             submissionKeyHash,
             payloadHash,
             ...(offerSnapshot ? { offerSnapshot } : {}),

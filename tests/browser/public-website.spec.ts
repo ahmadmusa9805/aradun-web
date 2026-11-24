@@ -122,11 +122,9 @@ test("server-rendered catalog search and FAQ answers work without invented recor
     .click();
   await expect(page.getByText(/^No. Prices are indicative/)).toBeVisible();
   await page.goto("/our-work");
-  await expect(
-    page.getByText("No approved project case studies are published yet."),
-  ).toBeVisible();
+  await expect(page.getByText(/Independent design studies/)).toBeVisible();
   await page.goto("/insights");
-  await expect(page.getByText("No articles are published yet.")).toBeVisible();
+  await expect(page.locator(".article-card")).toHaveCount(8);
 });
 test("disabled intake preserves inputs and direct thank-you is not success", async ({
   page,
@@ -152,7 +150,7 @@ test("disabled intake preserves inputs and direct thank-you is not success", asy
   await page.goto("/thank-you");
   await expect(
     page.getByRole("heading", {
-      name: "No current verified receipt available.",
+      name: "We couldn't display your confirmation.",
     }),
   ).toBeVisible();
 });
@@ -198,14 +196,14 @@ test("quote selection survives Back and successful contact is durably verified w
   await page.getByRole("button", { name: "Send Message" }).click();
   await expect(page).toHaveURL(/\/thank-you$/);
   await expect(
-    page.getByRole("heading", { name: "Request received." }),
+    page.getByRole("heading", {
+      name: "Thank you. We've received your request.",
+    }),
   ).toBeVisible();
   await expect(page.getByText(/Your reference:/)).toContainText(
-    /ARQ-[0-9]{4}-[a-f0-9]{24}/,
+    /aradunq-(?:[wmvgIadcs]{1,9}-)?[0-9]{3,16}/,
   );
-  await expect(
-    page.getByText(/Email delivery has not been confirmed/),
-  ).toBeVisible();
+  await expect(page.getByText(/Your message is safely saved/)).toBeVisible();
   expect(
     await page.evaluate(() => sessionStorage.getItem("aradun-inquiry-receipt")),
   ).not.toContain("sample@example.invalid");
@@ -290,7 +288,9 @@ test("custom quote and manual consultation finish with truthful verified receipt
     .getByRole("button", { name: "Submit Quote Request", exact: true })
     .click();
   await expect(
-    page.getByRole("heading", { name: "Request received." }),
+    page.getByRole("heading", {
+      name: "Thank you. We've received your request.",
+    }),
   ).toBeVisible();
   await page.goto("/consultation");
   await page.getByLabel("Name", { exact: true }).fill("SAMPLE Consultation");
@@ -307,9 +307,13 @@ test("custom quote and manual consultation finish with truthful verified receipt
     .getByRole("button", { name: "Request Consultation", exact: true })
     .click();
   await expect(
-    page.getByRole("heading", { name: "Request received." }),
+    page.getByRole("heading", {
+      name: "Thank you. We've received your request.",
+    }),
   ).toBeVisible();
-  await expect(page.getByText(/No appointment is booked/)).toBeVisible();
+  await expect(
+    page.getByText(/agree a suitable consultation time/),
+  ).toBeVisible();
 });
 
 test("category context and touch-friendly service choices survive filtering and Back", async ({

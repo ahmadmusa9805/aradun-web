@@ -106,7 +106,7 @@ test("failed world image keeps a decorative fallback and all eleven honest homep
     page.getByRole("heading", { name: "Insights and resources", exact: true }),
   ).toBeVisible();
   await expect(
-    page.getByText(/fictional review copy and AI-generated portraits/),
+    page.getByText(/fictional profiles for layout review/),
   ).toBeVisible();
   await expect(page.locator("#insights .home-resource-card")).toHaveCount(3);
 });

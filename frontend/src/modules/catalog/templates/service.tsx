@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { WebServiceTemplate } from "./web-service";
+import { webServiceCopy } from "./web-service-copy";
 import type { ServiceDetail } from "../catalog-api.server";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ButtonLink } from "@/components/ui/button";
 import { PricePresentation } from "../components/price-presentation";
 import { Availability } from "../components/availability";
 import { CategoryIcon } from "@/components/ui/category-icon";
-import { serviceCategories } from "@/components/layout/public-navigation";
+import { canonicalServiceCategories as serviceCategories } from "@/components/layout/public-navigation";
 const guidance: Record<
   ServiceDetail["variant"],
   { title: string; text: string; help: string }
@@ -38,6 +40,8 @@ const guidance: Record<
 };
 
 export function ServiceTemplate({ service }: { service: ServiceDetail }) {
+  if (webServiceCopy[service.id])
+    return <WebServiceTemplate service={service} />;
   const quote = `/get-a-quote?serviceId=${encodeURIComponent(service.id)}`;
   return (
     <div data-service-variant={service.variant}>

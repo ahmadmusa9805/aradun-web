@@ -1,5 +1,6 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { ServiceError } from "../../../server/errors.js";
+import { inquiryReferencePattern } from "./reference.server.js";
 /** Bounded, authenticated, PII-free receipt; never an authorization grant or analytics event. */
 export function createReceiptCodec(secret: string, clock = () => Date.now()) {
   const mac = (body: string) =>
@@ -20,7 +21,7 @@ export function createReceiptCodec(secret: string, clock = () => Date.now()) {
       const body = `${reference}.${type}.${expiry}`,
         expected = mac(body);
       if (
-        !/^ARQ-[0-9]{4}-[a-f0-9]{24}$/.test(reference!) ||
+        !inquiryReferencePattern.test(reference!) ||
         !["contact", "quote", "consultation"].includes(type!) ||
         !/^[0-9]{13}$/.test(expiry!) ||
         Number(expiry) <= clock() ||

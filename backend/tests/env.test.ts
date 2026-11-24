@@ -15,6 +15,11 @@ const stage = {
   ALLOWED_ORIGINS: "https://staging.example.invalid",
   PORT: "4000",
 };
+it("keeps staging recipient delivery disabled even with an explicit override", () => {
+  expect(() =>
+    loadBackendEnv({ ...stage, EMAIL_DELIVERY_MODE: "recipients" }),
+  ).toThrow("EMAIL_DELIVERY_MODE");
+});
 it.each([
   { DB_MAX_POOL_SIZE: "0" },
   { DB_MAX_POOL_SIZE: "21" },
@@ -118,6 +123,14 @@ it("allows reviewed fixed-inbox intake without staff/account configuration and r
     fixedInbox: true,
     staffRecipientIds: [],
   });
+  expect(loadBackendEnv(input).email?.sandbox).toBe(true);
+  expect(
+    loadBackendEnv({ ...input, EMAIL_DELIVERY_MODE: "recipients" }).email
+      ?.sandbox,
+  ).toBe(false);
+  expect(() =>
+    loadBackendEnv({ ...input, EMAIL_DELIVERY_MODE: "invalid" }),
+  ).toThrow("EMAIL_DELIVERY_MODE");
   expect(() =>
     loadBackendEnv({ ...input, INTAKE_STAFF_RECIPIENT_IDS: "a".repeat(24) }),
   ).toThrow();

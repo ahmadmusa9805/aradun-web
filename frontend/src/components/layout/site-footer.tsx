@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { SocialLink } from "@/components/ui/social-link";
+import {
+  socialLinks,
+  whatsappUrl,
+} from "@/modules/content/data/business-identity";
 import {
   serviceCategories,
   businessSolutions,
@@ -45,9 +50,29 @@ export function SiteFooter() {
           </Link>
         </div>
         <div className="footer-identity">
-          <p className="brand-name">ARADUN</p>
+          <Link
+            className="brand-name footer-brand"
+            href="/"
+            aria-label="ARADUN homepage"
+            prefetch={false}
+          >
+            <BrandLockup />
+          </Link>
           <p>Technology &amp; Digital Solutions</p>
           <p>Build. Automate. Grow.</p>
+          <nav
+            aria-label="Footer social profiles"
+            className="footer-social-links"
+          >
+            <SocialLink platform="WhatsApp" href={whatsappUrl} />
+            {socialLinks.map((link) => (
+              <SocialLink
+                key={link.label}
+                platform={link.label}
+                href={link.href}
+              />
+            ))}
+          </nav>
           <p className="footer-intro">
             Technology, design and digital thinking.
             <br />
@@ -117,3 +142,4 @@ export function SiteFooter() {
     </footer>
   );
 }
+import { BrandLockup } from "./brand-lockup";

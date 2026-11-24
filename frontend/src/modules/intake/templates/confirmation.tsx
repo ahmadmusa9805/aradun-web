@@ -1,4 +1,7 @@
 "use client";
+
+import { inquiryReferencePattern } from "../reference";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 export function Confirmation({ apiBaseUrl }: { apiBaseUrl: string }) {
@@ -33,7 +36,7 @@ export function Confirmation({ apiBaseUrl }: { apiBaseUrl: string }) {
         if (!response.ok) return;
         const verified = await response.json();
         if (
-          /^ARQ-[0-9]{4}-[a-f0-9]{24}$/.test(verified.reference) &&
+          inquiryReferencePattern.test(verified.reference) &&
           ["contact", "quote", "consultation"].includes(verified.type) &&
           verified.delivery === "queued" &&
           verified.bookingConfirmed === false
@@ -55,47 +58,46 @@ export function Confirmation({ apiBaseUrl }: { apiBaseUrl: string }) {
   return (
     <section className="public-section inquiry-confirmation">
       {loading ? (
-        <p role="status">Checking your receipt...</p>
+        <p role="status">Getting your confirmation...</p>
       ) : receipt ? (
         <>
-          <h2>Request received.</h2>
+          <h2>Thank you. We've received your request.</h2>
           <p>
             Your reference: <strong>{receipt.reference}</strong>
           </p>
           <p>
-            Keep this reference for follow-up. Your request was saved for
-            review. Email delivery has not been confirmed.
+            Your message is safely saved. Our team will review the details and
+            reply to discuss the next step.
           </p>
           {receipt.emailDeliveryEnabled === false && (
             <p>
-              Email notifications are currently off. Your saved request remains
-              available for review.
+              Your request is saved, but email notifications are currently
+              unavailable. You can email us below if you need an update.
             </p>
           )}
           <p>
-            Please do not resubmit to obtain an email confirmation. If you need
-            to follow up, email{" "}
+            Want to add something or ask a question? Email{" "}
             <a
               href={`mailto:hello@aradun.com?subject=${encodeURIComponent(`Inquiry follow-up: ${receipt.reference}`)}`}
             >
               hello@aradun.com
             </a>{" "}
-            and include your reference.
+            and mention your reference so we can find your message.
           </p>
           {receipt.type === "consultation" && (
             <p>
-              Your consultation is a request only. No appointment is booked
-              until staff confirm the time with you.
+              We'll contact you by email to agree a suitable consultation time.
             </p>
           )}
         </>
       ) : (
         <>
-          <h2>No current verified receipt available.</h2>
+          <h2>We couldn't display your confirmation.</h2>
           <p>
-            Your receipt may have expired or the service may be unavailable.
-            Opening this page does not submit an inquiry or confirm a booking.
-            If you already received a reference, keep it and avoid resubmitting.
+            This page does not send a new message. If you have already sent your
+            inquiry, email hello@aradun.com with any reference you received and
+            we'll help you check it. You don't need to send the same message
+            again.
           </p>
         </>
       )}

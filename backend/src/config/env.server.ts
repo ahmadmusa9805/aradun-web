@@ -234,13 +234,18 @@ export function loadBackendEnv(
   if (!["disabled", "sink", "resend"].includes(provider))
     fail("EMAIL_PROVIDER");
   let email: ReturnType<typeof resendConfigSchema.parse> | undefined;
+  const emailDeliveryMode = input.EMAIL_DELIVERY_MODE ?? "sandbox";
+  if (!["sandbox", "recipients"].includes(emailDeliveryMode))
+    fail("EMAIL_DELIVERY_MODE");
+  if (tier.data === "staging" && emailDeliveryMode === "recipients")
+    fail("EMAIL_DELIVERY_MODE (staging must use sandbox)");
   if (provider === "resend") {
     const parsed = resendConfigSchema.safeParse({
       apiKey: input.RESEND_API_KEY,
       from: input.EMAIL_FROM,
       replyTo: input.EMAIL_REPLY_TO,
       notificationEmail: input.CONTACT_NOTIFICATION_EMAIL,
-      sandbox: tier.data !== "production",
+      sandbox: tier.data !== "production" && emailDeliveryMode !== "recipients",
     });
     if (!parsed.success)
       fail(

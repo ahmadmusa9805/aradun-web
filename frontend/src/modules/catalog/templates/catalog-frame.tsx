@@ -7,10 +7,6 @@ export function CatalogFrame({ children }: { children: ReactNode }) {
       tabIndex={-1}
       className="container-marketing catalog-page"
     >
-      <p className="catalog-preview">
-        Development preview — content and offer readiness await review. No
-        service availability or booking is confirmed.
-      </p>
       {children}
     </main>
   );

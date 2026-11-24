@@ -5,8 +5,11 @@ import { PricePresentation } from "../components/price-presentation";
 import Link from "next/link";
 import { Availability } from "../components/availability";
 import { CategoryIcon } from "@/components/ui/category-icon";
+import { WebCategoryTemplate } from "./web-category";
 
 export function CategoryTemplate({ category }: { category: CategoryDetail }) {
+  if (category.id === "CAT-01")
+    return <WebCategoryTemplate category={category} />;
   const quote = `/get-a-quote?categoryId=${encodeURIComponent(category.id)}`;
   return (
     <>

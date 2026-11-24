@@ -1,0 +1,9 @@
+# Original editorial guide illustrations
+
+Updated 2026-11-23: all eight guides now consume photographic covers. Five new original AI-generated images replace the remaining flat diagrams: mobile-planning-photo.png, cloud-handover-photo.png, security-review-photo.png, brand-planning-photo.png and video-brief-photo.png. Built-in image generation used; no purchased stock, external API credentials, real clients or endorsement claims. Original generated files preserved locally. Next Image supplies responsive optimized assets. Old SVGs are preserved but no longer selected for the eight guides.
+
+Prompt set: premium landscape 3:2 editorial photographs, realistic materials, no people/brands/overlay text/watermarks; subjects respectively a smartphone travel interface and planning notebook, contemporary server racks, security audit laptop and physical security key, tactile designer identity boards/swatches, and a video-editing monitor/camera/lens. Distinct natural or studio lighting and palettes per subject. Workspace files reside alongside this README.
+
+Updated 2026-11-17: website-brief-photo.png, workflow-planning-photo.png and campaign-planning-photo.png are original AI-generated editorial photographs for the three featured guides. They depict generic planning materials, not client work or endorsements. Unmodified originals are preserved in the local Codex generated_images directory. Next Image serves optimized responsive versions. The remaining five guide covers retain the original diagrams. Owner publication approval remains pending.
+
+guide-1.svg through guide-8.svg are original code-authored static editorial illustrations created2026-11-15 for ARADUN's planning guides. They are separate from project screenshots and have independent fixed palettes. No external images, scripts, private data or third-party brand claims. Owner content/visual approval required before publication.

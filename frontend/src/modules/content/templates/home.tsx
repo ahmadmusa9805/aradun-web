@@ -1,3 +1,5 @@
+import { editorialGuides, editorialGuideImage } from "../data/editorial-guides";
+import Image from "next/image";
 import { CategoryIcon } from "@/components/ui/category-icon";
 import { WorldView } from "../components/world-view";
 import { DemoProjects } from "../components/demo-projects";
@@ -6,7 +8,7 @@ import { DemoPartners } from "../components/demo-partners";
 import { frontendEnv } from "@/config/env.server";
 import Link from "next/link";
 import {
-  serviceCategories,
+  canonicalServiceCategories as serviceCategories,
   businessSolutions,
 } from "@/components/layout/public-navigation";
 import {
@@ -142,7 +144,7 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
           {showDemos ? (
             <>
               <DemoPartners />
-              <DemoProjects />
+              <DemoProjects limit={3} />
             </>
           ) : (
             <div className="home-evidence-layout">
@@ -216,9 +218,9 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
           id="starting-prices"
         >
           <p className="section-intro">
-            Choose an individual service or discuss a coordinated solution.
-            Prices are indicative USD starting points; scope, billing terms and
-            external costs must be agreed.
+            Find a starting point that fits your goals, from a focused project
+            to ongoing support. These are indicative USD prices. Your proposal
+            confirms the scope, billing terms and any third-party costs.
           </p>
           {solutions.length === 5 ? (
             <div className="public-grid">
@@ -265,28 +267,53 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
         </PublicSection>
         <PublicSection title="Insights and resources" id="insights">
           <p className="section-intro">
-            Practical guidance for your next digital decision. No articles are
-            published yet; these help guides are available now.
+            Practical guidance and useful checklists for your next digital
+            decision.
           </p>
           <div className="home-resource-grid">
-            {publicFaqs
-              .filter((faq) =>
-                ["not-sure", "starting-prices", "timelines"].includes(faq.id),
-              )
-              .map((faq) => (
-                <article className="home-resource-card" key={faq.id}>
-                  <p className="public-eyebrow">Help guide</p>
-                  <h3>
-                    <Link prefetch={false} href={`/faq/${faq.id}`}>
-                      {faq.question}
+            {showDemos
+              ? editorialGuides.slice(0, 3).map((guide) => (
+                  <article className="home-resource-card" key={guide.slug}>
+                    <Image
+                      className="article-cover"
+                      src={editorialGuideImage(guide.topic)}
+                      width={1100}
+                      height={720}
+                      sizes="(min-width:768px) 30vw, 92vw"
+                      alt={`Editorial photograph for ${guide.topic} planning guide`}
+                    />
+                    <p className="public-eyebrow">{guide.topic}</p>
+                    <h3>
+                      <Link href={`/insights/${guide.slug}`}>
+                        {guide.title}
+                      </Link>
+                    </h3>
+                    <p>{guide.summary}</p>
+                    <Link href={`/insights/${guide.slug}`}>
+                      Read the guide &rarr;
                     </Link>
-                  </h3>
-                  <p>{faq.answer}</p>
-                  <Link prefetch={false} href={`/faq/${faq.id}`}>
-                    Read the guide &rarr;
-                  </Link>
-                </article>
-              ))}
+                  </article>
+                ))
+              : publicFaqs
+                  .filter((faq) =>
+                    ["not-sure", "starting-prices", "timelines"].includes(
+                      faq.id,
+                    ),
+                  )
+                  .map((faq) => (
+                    <article className="home-resource-card" key={faq.id}>
+                      <p className="public-eyebrow">Help guide</p>
+                      <h3>
+                        <Link prefetch={false} href={`/faq/${faq.id}`}>
+                          {faq.question}
+                        </Link>
+                      </h3>
+                      <p>{faq.answer}</p>
+                      <Link prefetch={false} href={`/faq/${faq.id}`}>
+                        Read the guide &rarr;
+                      </Link>
+                    </article>
+                  ))}
           </div>
           <Link
             prefetch={false}
@@ -315,9 +342,6 @@ export function Home({ solutions = [] }: { solutions?: SolutionDetail[] }) {
           </p>
         </PublicSection>
         <ProjectInvitation id="next-step" />
-        <p className="public-preview">
-          Development preview / Content and launch readiness await review.
-        </p>
       </div>
     </main>
   );

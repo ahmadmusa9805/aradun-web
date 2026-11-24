@@ -7,9 +7,9 @@ test("development examples are disclosed, linked truthfully and accessible", asy
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
   await expect(page.locator(".demo-project")).toHaveCount(3);
-  await expect(page.locator(".demo-feedback-card")).toHaveCount(3);
+  await expect(page.locator(".demo-feedback-card")).toHaveCount(10);
   await expect(
-    page.getByText(/fictional review copy and AI-generated portraits/),
+    page.getByText(/fictional profiles for layout review/),
   ).toBeVisible();
   for (const img of await page.locator(".demo-avatar img").all()) {
     await img.scrollIntoViewIfNeeded();
@@ -19,11 +19,13 @@ test("development examples are disclosed, linked truthfully and accessible", asy
       )
       .toBeGreaterThan(0);
   }
-  for (const link of await page.locator(".demo-project > a").all()) {
+  for (const link of await page
+    .locator('.demo-project > a[href^="/get-a-quote"]')
+    .all()) {
     expect(await link.getAttribute("href")).toMatch(/^\/get-a-quote\?/);
   }
   await expect(
-    page.getByRole("button", { name: "Static logos" }),
+    page.getByRole("button", { name: "Static solutions" }),
   ).toBeDisabled();
   expect(
     await page
@@ -39,7 +41,7 @@ test("development examples are disclosed, linked truthfully and accessible", asy
     ).violations,
   ).toEqual([]);
   await page.goto("/our-work");
-  await expect(page.locator(".demo-project")).toHaveCount(3);
+  await expect(page.locator(".demo-project")).toHaveCount(12);
 });
 
 test("company strip has a usable pause control and stops on focus", async ({
@@ -48,15 +50,15 @@ test("company strip has a usable pause control and stops on focus", async ({
   await page.emulateMedia({ reducedMotion: "no-preference" });
   await page.goto("/");
   await page.locator(".demo-partners").scrollIntoViewIfNeeded();
-  const pause = page.getByRole("button", { name: "Pause logo motion" });
+  const pause = page.getByRole("button", { name: "Pause solution motion" });
   await expect(pause).toBeVisible();
   await pause.click();
   await expect(
-    page.getByRole("button", { name: "Play logo motion" }),
+    page.getByRole("button", { name: "Play solution motion" }),
   ).toBeVisible();
   await expect(page.locator(".demo-partner-track--moving")).toHaveCount(0);
-  await page.getByRole("button", { name: "Play logo motion" }).click();
-  await page.getByRole("region", { name: "Demo company logo strip" }).focus();
+  await page.getByRole("button", { name: "Play solution motion" }).click();
+  await page.getByRole("region", { name: "Business solutions strip" }).focus();
   expect(
     await page
       .locator(".demo-partner-track")

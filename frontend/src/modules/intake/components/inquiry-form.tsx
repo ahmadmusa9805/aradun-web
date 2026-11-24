@@ -1,4 +1,7 @@
 "use client";
+
+import { inquiryReferencePattern } from "../reference";
+
 import { publicContactEmail } from "@/modules/content/data/business-identity";
 import { EmailBrief } from "./email-brief";
 import Link from "next/link";
@@ -144,6 +147,25 @@ export function InquiryForm({
     };
   }, [apiBaseUrl, availabilityRetry]);
   useEffect(() => {
+    if (available !== false) return;
+    // Recheck readiness only: never retry a client's submission automatically.
+    const timer = setTimeout(() => {
+      if (document.visibilityState === "visible")
+        setAvailabilityRetry((value) => value + 1);
+    }, 15000);
+    const resume = () => {
+      if (document.visibilityState === "visible")
+        setAvailabilityRetry((value) => value + 1);
+    };
+    document.addEventListener("visibilitychange", resume);
+    window.addEventListener("online", resume);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("visibilitychange", resume);
+      window.removeEventListener("online", resume);
+    };
+  }, [available, availabilityRetry]);
+  useEffect(() => {
     if (error) feedback.current?.focus();
   }, [error]);
   useEffect(() => {
@@ -279,7 +301,7 @@ export function InquiryForm({
       }
       const receipt: Receipt = await response.json();
       if (
-        !/^ARQ-[0-9]{4}-[a-f0-9]{24}$/.test(receipt.reference) ||
+        !inquiryReferencePattern.test(receipt.reference) ||
         receipt.type !== type ||
         receipt.delivery !== "queued" ||
         receipt.bookingConfirmed !== false ||
@@ -363,34 +385,7 @@ export function InquiryForm({
               : "You can submit this form. Email notifications are currently off. Keep your reference after submitting."
             : "Online submissions are currently unavailable. You can prepare your brief below and send it by email; nothing is saved through this website."}
       </p>
-      <aside
-        className="intake-alternative"
-        aria-label="Other ways to contact ARADUN"
-      >
-        <p>
-          Prefer email? Send your question or project brief directly to{" "}
-          <a href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>.{" "}
-          {available === null
-            ? "Checking online submission availability..."
-            : available
-              ? "Online submission is available."
-              : "Online submission is currently unavailable."}
-        </p>
-        <button
-          type="button"
-          className="ui-button ui-button-secondary"
-          aria-disabled={available === null}
-          onClick={() => {
-            if (available !== null) setAvailabilityRetry((value) => value + 1);
-          }}
-        >
-          Check online submission again
-        </button>
-        <p className="form-note">
-          Checking again keeps your entries. Please do not email passwords or
-          access credentials.
-        </p>
-      </aside>
+
       {type === "quote" && (
         <ol className="quote-progress" aria-label="Quote request steps">
           {["Service", "Project", "Contact", "Review"].map((label, index) => (
@@ -460,32 +455,35 @@ export function InquiryForm({
                   Show only {initialCategory.name}
                 </label>
               )}
-              <fieldset className="service-choices">
-                <legend>Services (choose any that apply)</legend>
-                {visibleServices.length === 0 && (
-                  <p>
-                    No matching services. Clear the search or change the
-                    category filter.
-                  </p>
-                )}
-                {visibleServices.map((item) => (
-                  <label className="checkbox-label" key={item.id}>
-                    <input
-                      type="checkbox"
-                      checked={serviceIds.includes(item.id)}
-                      onChange={(event) => {
-                        setServiceIds((prior) =>
-                          event.target.checked
-                            ? [...prior, item.id]
-                            : prior.filter((id) => id !== item.id),
-                        );
-                        setPackageId("");
-                      }}
-                    />
-                    {item.name}
-                  </label>
-                ))}
-              </fieldset>
+              <details open className="quote-choice-menu">
+                <summary>Choose services</summary>
+                <fieldset className="service-choices">
+                  <legend>Services (choose any that apply)</legend>
+                  {visibleServices.length === 0 && (
+                    <p>
+                      No matching services. Clear the search or change the
+                      category filter.
+                    </p>
+                  )}
+                  {visibleServices.map((item) => (
+                    <label className="checkbox-label" key={item.id}>
+                      <input
+                        type="checkbox"
+                        checked={serviceIds.includes(item.id)}
+                        onChange={(event) => {
+                          setServiceIds((prior) =>
+                            event.target.checked
+                              ? [...prior, item.id]
+                              : prior.filter((id) => id !== item.id),
+                          );
+                          setPackageId("");
+                        }}
+                      />
+                      {item.name}
+                    </label>
+                  ))}
+                </fieldset>
+              </details>
               <p className="form-note" role="status">
                 {serviceIds.length} services selected. Filtering keeps your
                 choices.
@@ -515,26 +513,29 @@ export function InquiryForm({
                   ))}
                 </ul>
               )}
-              <fieldset>
-                <legend>Solutions</legend>
-                {solutions.map((item) => (
-                  <label className="checkbox-label" key={item.id}>
-                    <input
-                      type="checkbox"
-                      checked={solutionIds.includes(item.id)}
-                      onChange={(event) => {
-                        setSolutionIds((prior) =>
-                          event.target.checked
-                            ? [...prior, item.id]
-                            : prior.filter((id) => id !== item.id),
-                        );
-                        setPackageId("");
-                      }}
-                    />
-                    {item.name}
-                  </label>
-                ))}
-              </fieldset>
+              <details open className="quote-choice-menu">
+                <summary>Choose solutions</summary>
+                <fieldset>
+                  <legend>Solutions</legend>
+                  {solutions.map((item) => (
+                    <label className="checkbox-label" key={item.id}>
+                      <input
+                        type="checkbox"
+                        checked={solutionIds.includes(item.id)}
+                        onChange={(event) => {
+                          setSolutionIds((prior) =>
+                            event.target.checked
+                              ? [...prior, item.id]
+                              : prior.filter((id) => id !== item.id),
+                          );
+                          setPackageId("");
+                        }}
+                      />
+                      {item.name}
+                    </label>
+                  ))}
+                </fieldset>
+              </details>
               <label className="checkbox-label">
                 <input
                   type="checkbox"
@@ -690,6 +691,34 @@ export function InquiryForm({
           directly. No information is submitted by opening this page.
         </noscript>
       </form>
+      <aside
+        className="intake-alternative"
+        aria-label="Other ways to contact ARADUN"
+      >
+        <p>
+          Prefer email? Send your question or project brief directly to{" "}
+          <a href={`mailto:${publicContactEmail}`}>{publicContactEmail}</a>.{" "}
+          {available === null
+            ? "Checking online submission availability..."
+            : available
+              ? "Online submission is available."
+              : "Online submission is currently unavailable."}
+        </p>
+        <button
+          type="button"
+          className="ui-button ui-button-secondary"
+          aria-disabled={available === null}
+          onClick={() => {
+            if (available !== null) setAvailabilityRetry((value) => value + 1);
+          }}
+        >
+          Check online submission again
+        </button>
+        <p className="form-note">
+          Checking again keeps your entries. Please do not email passwords or
+          access credentials.
+        </p>
+      </aside>
       <EmailBrief brief={emailBrief} type={type} interactive={interactive} />
     </div>
   );

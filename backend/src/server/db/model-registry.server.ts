@@ -12,6 +12,7 @@ import { rateLimitBucketModel } from "../../modules/operations/models/rate-limit
 import type { Connection } from "mongoose";
 import { auditEventModel } from "../../modules/operations/models/audit-event.js";
 import { inquiryModel } from "../../modules/intake/models/inquiry.model.js";
+import { inquirySequenceModel } from "../../modules/intake/models/inquiry-sequence.model.js";
 import { outboxEventModel } from "../../modules/notifications/models/outbox-event.model.js";
 
 /** Operational tools only: register implemented models without opening a connection. */
@@ -19,6 +20,7 @@ export function registeredModels(connection: Connection) {
   return [
     { name: "AuditEvent", model: auditEventModel(connection) },
     { name: "Inquiry", model: inquiryModel(connection) },
+    { name: "InquirySequence", model: inquirySequenceModel(connection) },
     { name: "OutboxEvent", model: outboxEventModel(connection) },
     { name: "RateLimitBucket", model: rateLimitBucketModel(connection) },
     { name: "StaffUser", model: staffUserModel(connection) },

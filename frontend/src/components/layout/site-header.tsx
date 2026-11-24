@@ -16,7 +16,9 @@ function NavigationLinks({ items }: { items: readonly NavigationItem[] }) {
       {items.map((item, index) => (
         <li key={item.href}>
           <Link prefetch={false} href={item.href}>
-            {items === serviceCategories && <CategoryIcon index={index} />}
+            {items === serviceCategories && (
+              <CategoryIcon index={[0, 2, 3, 1, 4, 5, 6, 7][index]!} />
+            )}
             {item.label}
           </Link>
         </li>
@@ -61,6 +63,7 @@ export function SiteHeader() {
         <div className="container-marketing">
           <p>
             ARADUN <span>/ Build. Automate. Grow.</span>
+            <span className="studio-promise">Building tomorrow together</span>
           </p>
           <div className="appearance-utility">
             <AppearanceSelector />

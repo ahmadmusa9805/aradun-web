@@ -1,5 +1,75 @@
 # ARADUN progress
 
+## Web category prices and five service details — 2026-11-24
+
+Approved hero/Admin Dashboards/single starting-price card correction implemented; five individual web service pages expanded with benefits, deliverable/preparation lists and all original price options plus proposed qualitative scope. Source commercial records unchanged; fixed package entitlements await owner review. Live desktop/mobile for all five, contextual quote links, targeted service axe scans, category three-theme scans, lint/format/types passed. [Scope and verification](docs/verification/web-service-pricing-details.md). Owner review pending; no other category started.
+
+## CAT-01 category refinement — 2026-11-23
+
+Owner-requested Web & Software category-only improvement implemented: clearer introduction/service examples, capability links, needs-based selector, labelled web studies, five-step process and six FAQs. One H1, canonical/title and original five services/prices retained; no CMS or new service/price added. Desktop/mobile, three-theme targeted axe, lint/types and frontend build passed. [Evidence and scope](docs/verification/web-category-refinement.md). Owner content/visual review pending. Other categories and individual service/Solutions/Pricing pages not changed; no automatic continuation.
+
+## Project images only — final replacement 2026-11-23
+
+Owner clarified image replacement using supplied examples as visual reference. All twenty-four simplified previews replaced with distinct original AI-generated covers, with versioned URLs. Titles/text/routes/filtering/site styling unchanged (exact project-record comparison excluding cover passed). Eight filters, eight sampled details, all24 image hashes, twelve/all24 gallery counts and mobile overflow passed; Web/Mobile visual review completed; thirteen source hashes unchanged. [Evidence and asset prompts](docs/verification/project-images-replacement.md). Owner visual approval pending.
+
+## Distinct project previews and matching briefs — 2026-11-23
+
+Owner correction implemented: twenty-four curated briefs and distinct versioned interface screenshots; gallery/detail content aligned, existing routes/categories/counts retained. All eight filters checked (three each), eight sampled details/images, default12/all24, twenty-four unique image hashes and mobile overflow pass. Web/Mobile visually reviewed after fixing stale optimized-image URLs. Focused lint/types passed. [Evidence and asset source](docs/verification/unique-project-studies.md). Independent studies remain classified truthfully; owner review pending, no deployment.
+
+## Public call/WhatsApp, FAQ and article photos — 2026-11-23
+
+Owner correction implemented: +1 404-541-4448 call link; existing WhatsApp retained with fixed public shortcut; compact responsive five-category FAQ grid; remaining five article covers replaced by original photographs, all eight now photographic. Live desktop/mobile, disclosure/link/image checks, three themes, focused axe scan (zero violations), lint and frontend types passed. [Files, asset provenance and evidence](docs/verification/public-contact-faq-photos.md). Owner visual review pending; no deployment/new milestone started.
+
+## Public availability and matching social icons — 2026-11-23
+
+Latest owner correction supersedes the earlier WhatsApp pill: all six icons now share 44px circles/alignment, WhatsApp retaining green accent. Backend was absent; normal-access startup restored live catalog pages and intake/email readiness. Added root combined dev launcher and automatic form-readiness recovery, preserving honest outage states and input. Focused browser desktop/mobile, controlled outage recovery, lint/types and launcher syntax passed. [Evidence and operational limitations](docs/verification/public-availability-social-alignment.md). Owner review pending; no deployment started.
+
+## Social icons and WhatsApp — 2026-11-23
+
+Owner-requested social presentation correction implemented: reusable accessible icons across shared business-contact/footer placements; WhatsApp highlighted with icon and green button. Desktop/mobile live checks, focused lint and frontend types passed. [Evidence](docs/verification/social-icons.md). Existing URLs and themes preserved; owner visual review pending.
+
+## Consultation form alignment — 2026-11-23
+
+Owner-requested public-page review correction implemented: Consultation now reuses the existing centered Contact/Quote inquiry layout. Live desktop/mobile checks confirm zero center offset and no horizontal overflow. Fields/submission behavior unchanged; no real submission sent. [Evidence](docs/verification/consultation-alignment.md). Owner review pending; deployment remains unauthorized.
+
+## Public filters, socials and startup recovery — 2026-11-17
+
+Owner-requested correction batch implemented; owner review pending. Work/Insights immediate filters and reset, approved social/WhatsApp links, cancellable database startup retries and bounded catalog-read retries verified. After VPN was switched off, the existing retry loop recovered automatically: pricing returned 57 services/five solutions and intake available. Unrelated brand strip replaced with factual business-solution links; independent project study identities, three featured editorial photographs and clearer approved Home pricing copy added. Genuine client proof/company age was not invented. Fourteen unit/Mongo tests and twenty-two final browser cases passed; builds/lint/types/boundaries/secrets passed. All thirteen source hashes unchanged. [Full results, files and limitations](docs/verification/public-filters-social-recovery.md). No deployment or dashboard task started; no release acceptance inferred.
+
+## Query prefix / signature / confirmation and independent imagery - 2026-11-15
+
+Owner corrects query prefix to aradunq and adds separate AI I / Automation a codes. Implemented in stored inquiry, receipts and email pipeline, with existing sequence preserved and both legacy formats accepted. Explicit code order w/m/v/g/I/a/d/c/s; AI SVC-014–016 vs other CAT-03 Automation/CRM. Added branded HTML/plain-text acknowledgement signature with matched hello mailto, WhatsApp/website links and CID logo attachment; simplified website confirmation without claiming inbox delivery. Project palettes/marketing layout separated from ARADUN UI; eight new editorial SVGs replace reused project article covers. Positive Brand inspiration caption, preview-story wording retained truthful fictional classifications. No random business/person assigned invented client status.
+
+**22 backend tests and32 desktop/mobile browser cases PASS**, both builds/lint/types/boundaries/134-artifact secret scan PASS. Signature rendered from compiled backend module and visually reviewed locally; no real email sent this task. No source/deployment/provider/account changes or counter reset. [Evidence and changed-file scope](docs/verification/query-signature-confirmation.md). Ready for owner review; genuine proof still requires owner content. No next task started.
+
+## Local startup/status recheck - 2026-11-15
+
+Reproduced npm run frontend failure: EADDRINUSE because the approved Node24 ARADUN frontend already owns3000. Both localhost/127.0.0.1 return200; backend pricing200 with57 services/5 solutions and intake available true. Live browser verifies Home3, feedback10, brand marks10, Work12/all24 after navigation, guides8/images8 and Quote57/5 named choices in two disclosures. Old company/feedback demo sentences absent. Current terminal reports system Node22/npm10; use the existing portable24 launcher or activate it before starting future processes. Working servers preserved; no application/configuration changes or new task. Genuine-content/visual acceptance remains open.
+
+## Public showcase / articles / preview recovery - 2026-11-15
+
+Owner's latest correction limits Home to3 projects and Work initially12, with all24 through View all projects;3 studies per category and working details. Implemented24 original screenshot covers with website/mobile/operations/brand/video treatments, eight original planning guides with images/topic filters/details,10 explicitly illustrative feedback entries with controllable motion,10 real company marks labelled unaffiliated brand references, contained footer logo and consistent theme geometry, Contact whitespace and named Quote choice disclosures. Existing type/style/canonical catalog preserved; examples/guides remain development-review content, not approved publication or genuine client proof.
+
+Actual outage: backend stopped and Atlas initially unreachable; frontend ran system Node rather than approved portable24. Restarted verified repository previews using Node24. After owner confirms VPN off/IP allowed, secure TLS to all3 nodes and isolated development Mongo connection PASS. Backend pricing now200 with57 services/5 solutions; intake200/available true; actual localhost browser confirms Contact enabled and57/5 named Quote choices. No URI/credentials/access rules or production configuration changed; no test inquiry/email sent.
+
+Initial58 browser cases56 PASS/2 logo failures; corrected CSSOM theme-token integration, affected30/30 PASS; final carousel/brand/gallery/article/accessibility14/14 PASS. Build/lint/types/boundaries/126-artifact secret scan PASS; all13 source hashes unchanged. [Verification, files and remaining genuine-content gate](docs/verification/public-showcase-expansion.md). Implementation ready for owner visual/content review, not automatically accepted. No unrelated next task or deployment started.
+
+## Inquiry reference numbering - 2026-11-15
+
+Owner explicitly chooses **new number for every inquiry**. Implemented database-local global sequence and service-letter references: aradun-wa-001; no selected service: aradun-001. Number increments in the same transaction as inquiry/outbox, rolls back on failure and remains unchanged on idempotent retry. Three digits minimum, growing beyond999; no annual reset. Legacy references/receipts preserved. No user account/client numbering or public lookup added.
+
+**36 backend tests and10 desktop/mobile browser checks PASS**, both builds/lint/types/boundaries/89-artifact secret scan PASS. Actual local intake status200/available/email enabled. No live inquiry or email submitted for this task; tests use disposable databases/fake transport. [Verification and file scope](docs/verification/inquiry-reference-numbering.md). Numbering implementation complete, owner acceptance pending; remaining genuine-content/visual review from the prior correction stays open. No next task/deployment started.
+
+## Public inquiry / presentation correction - 2026-11-15
+
+Owner requests admin/client email split, personal acknowledgement, shorter references, clearer form layout, portfolio filters/details/images, branding/navigation/banner cleanup and motion while preserving design. Implemented and verified email/layout/presentation work; **reference numbering is still pending owner choice** (new inquiry number versus permanent client number), so this is not completion of every requested item or owner acceptance. Existing long references remain valid and unchanged.
+
+Development routing explicitly enabled after checking zero queued events: fixed alert to ahmadmusa@aradun.com and acknowledgement to validated submitter. Backend restarted to load settings. Sandbox remains default; staging refuses recipient override. Tests inject fake email transport, not real client email. Friendly acknowledgements use submitted names, explain the next step and avoid the previous generic booking/payment disclaimer.
+
+Contact/Quote centered and compact; email alternative moved below form; first field visible initially. Navigation order fixed without changing category IDs; footer logo/top-strip slogan added; Appearance legend visually hidden but accessible; development banners removed without enabling publication. Work now has four source03 regions, filters/reset/no-match, three concept preview images and linked seven-region detail templates. Ten colorful placeholder logos, feedback carousel and gentle globe movement have pause/reduced-motion support. No fictional endorsement is represented as real; genuine proof still required.
+
+Verification:42 backend tests PASS; initial62 browser cases54 PASS/8 failures; affected48-case rerun46 PASS/2 transient-contrast failures, corrected with atomic submit-button color transitions; final2/2 accessibility rerun PASS. Thus all62 distinct selected cases pass across final affected reruns. Both builds, lint/boundaries/types/secret scan PASS. All85 fixed public routes tested desktop/mobile. [Evidence, changed files and remaining work](docs/verification/public-inquiry-presentation-correction.md). No deployment or dashboard work; preserve source documents and unrelated changes.
+
 ## Contact / blue logo / demo showcase correction - 2026-11-14
 
 Owner requested Contact repair, blue branding, three feedback examples with images, three project examples and a moving company showcase. Implemented public-intake-only development localhost/127.0.0.1 aliases at the same port (staff/hosted restrictions retained), original blue emblem/wordmark for Vivid and slate lockup for Slate, development-only labelled demo projects, fictional feedback/synthetic portraits and six placeholder company wordmarks. Motion has pause/play, hover/focus/offscreen pause and static reduced-motion behavior. Genuine proof remains pending; no publication authorization.

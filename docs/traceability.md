@@ -1,5 +1,15 @@
 # ARADUN requirement traceability and coverage
 
+2026-11-17 M04/M09/M12 correction evidence: immediate Work/Insights filters with no-JS fallback; source01 social/contact links; startup/catalog recovery; original distinct project/editorial imagery and truthful solution-strip replacement. [Fourteen unit/Mongo and twenty-two browser tests, quality checks and live catalog/intake results](verification/public-filters-social-recovery.md). Source inventories/prices and proof/publication gates unchanged; owner review pending.
+
+2026-11-15 latest M06/M09 correction: aradunq prefix/AI I vs automation a, compatible signed receipts, branded HTML/plain acknowledgement signature, clear saved-state wording and separate editorial imagery. [22 backend/32 browser evidence](verification/query-signature-confirmation.md). Source requirements, genuine-proof and publication gates preserved.
+
+2026-11-15 latest M04/M09-07/M09-08/M12 public correction: source03 Work and reading regions exercised with development studies/guides, plus gallery/topic filters, images, brand geometry, client intake availability and motion. [Evidence](verification/public-showcase-expansion.md). Original source/page IDs/prices unchanged; unaffiliated company references/fictional reviews are not genuine proof or publication approval.
+
+2026-11-15 numbering clarification resolved: M06 inquiry references now use a transaction-safe per-inquiry sequence, canonical category letters and compatible signed receipts. [36 backend/10 browser check evidence](verification/inquiry-reference-numbering.md). Historical IDs preserved; no public private-record lookup or release authorization.
+
+2026-11-15 public correction: M06 distinct client/admin email routing, M04 branding/navigation/form layout, M09-07 source03 Work four-region/detail seven-region templates and M12 bounded/pausable motion checked. [Evidence and remaining numbering/content inputs](verification/public-inquiry-presentation-correction.md). Removing visual preview banners does not change source requirement statuses or publication gates.
+
 2026-11-14 owner correction: M06 public intake loopback-origin compatibility and M04/M09/M12 blue branding/development-only demo showcase verified in [Contact/showcase report](verification/contact-demo-showcase.md). Fictional examples are explicitly labelled, never genuine business proof; existing full requirement statuses and source register remain unchanged. Owner visual acceptance pending.
 
 2026-11-14 M09-01/M12 public homepage correction and M01 local-preview regression repair: all11 main regions now visible per latest owner amendment, truthful proof empty states; original per-theme logos, interactive partial world and asset fallback.54 checks across two passing browser runs, actual70 catalog APIs and real logo/menu clicks verified. Dev cache separated from .next builds. [Evidence](verification/homepage-complete-navigation.md); no full-platform/owner visual acceptance inferred.

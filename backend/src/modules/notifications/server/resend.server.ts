@@ -1,5 +1,9 @@
 import { createHash } from "node:crypto";
 import { z } from "zod";
+import {
+  clientAcknowledgement,
+  signatureLogo,
+} from "./email-signature.server.js";
 
 const mailbox = z
   .email()
@@ -42,6 +46,8 @@ export function createResendTransport(
       to: string;
       subject: string;
       text: string;
+      html?: string;
+      inlineLogo?: boolean;
       idempotencyKey: string;
     }): Promise<ResendResult> {
       if (
@@ -49,17 +55,31 @@ export function createResendTransport(
         /[\r\n]/.test(message.subject) ||
         message.subject.length > 200 ||
         message.text.length > 40000 ||
+        (message.html !== undefined &&
+          (typeof message.html !== "string" || message.html.length > 80000)) ||
         !message.idempotencyKey ||
         message.idempotencyKey.length > 256
       )
         return { outcome: "permanent" };
-      // Development/staging never relay a prospect's address. Configuration owns the recipient.
+      // Sandbox redirects all mail. Explicit recipient mode preserves validated recipients.
       const body = {
         from: config.from,
         to: [config.sandbox ? config.notificationEmail : message.to],
         reply_to: config.replyTo,
         subject: `${config.sandbox ? "[TEST] " : ""}${message.subject}`,
         text: message.text,
+        ...(message.html ? { html: message.html } : {}),
+        ...(message.inlineLogo && message.html
+          ? {
+              attachments: [
+                {
+                  filename: "aradun-symbol.png",
+                  content: signatureLogo,
+                  content_id: "aradun-signature",
+                },
+              ],
+            }
+          : {}),
       };
       const key = createHash("sha256")
         .update(message.idempotencyKey)
@@ -99,6 +119,7 @@ export function inquiryEmail(
   type: string,
   inquiryUrl?: string,
   inboxDetails?: string,
+  clientName?: string,
 ) {
   if (
     !/^[A-Za-z0-9_-]{1,100}$/.test(reference) ||
@@ -136,10 +157,7 @@ export function inquiryEmail(
       text: `A new ${type} inquiry has been saved.\nReference: ${reference}\n\nClient-submitted details (untrusted text):\n${inboxDetails}\n\nReply to the client email above. Scope and appointments require separate confirmation.`,
     };
   return kind === "inquiry-acknowledgement"
-    ? {
-        subject: `ARADUN received your ${type} request`,
-        text: `Thank you for contacting ARADUN. Your ${type} request has been saved.\nReference: ${reference}\n\nWe will review your request and respond. This is not a confirmed booking, binding quote or payment confirmation.\n\nARADUN - Technology & Digital Solutions`,
-      }
+    ? clientAcknowledgement(reference, type, clientName)
     : {
         subject: `New ARADUN ${type} inquiry - ${reference}`,
         text: `A new ${type} inquiry has been saved.\nReference: ${reference}\n\n${inquiryUrl ? `Review inquiry (authorized staff sign-in required):\n${inquiryUrl}\n\n` : "Review it using the authorized staff inquiry workflow. "}This notification intentionally excludes the private message and contact details. Forwarding this message does not grant access.`,

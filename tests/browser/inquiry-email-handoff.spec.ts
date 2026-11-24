@@ -48,18 +48,18 @@ for (const enabled of [false, true]) {
     await page.getByRole("button", { name: "Send Message" }).click();
     await expect(page).toHaveURL(/\/thank-you$/);
     await expect(
-      page.getByRole("heading", { name: "Request received." }),
+      page.getByRole("heading", {
+        name: "Thank you. We've received your request.",
+      }),
     ).toBeVisible();
+    await expect(page.getByText(/Your message is safely saved/)).toBeVisible();
     await expect(
-      page.getByText(/Email delivery has not been confirmed/),
-    ).toBeVisible();
-    await expect(
-      page.getByText(/Please do not resubmit to obtain an email confirmation/),
+      page.getByText(/Want to add something or ask a question/),
     ).toBeVisible();
     const link = page.locator('a[href^="mailto:hello@aradun.com?subject="]');
     await expect(link).toHaveCount(1);
     expect(await link.getAttribute("href")).toMatch(
-      /^mailto:hello@aradun\.com\?subject=Inquiry%20follow-up%3A%20ARQ-/,
+      /^mailto:hello@aradun\.com\?subject=Inquiry%20follow-up%3A%20aradunq-/,
     );
     const reference = await page.getByText(/Your reference:/).innerText();
     await page.reload();

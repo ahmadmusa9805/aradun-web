@@ -72,6 +72,7 @@ export async function createInquiryMailWorker(
         return {
           eligible: true,
           email: inquiry.submittedIdentity.emailNormalized,
+          clientName: inquiry.submittedIdentity.name,
         };
       if (
         fixedInbox &&
