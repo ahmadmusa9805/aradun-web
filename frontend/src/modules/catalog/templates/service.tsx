@@ -1,4 +1,14 @@
 import Link from "next/link";
+import { CyberServiceTemplate } from "./cyber-pages";
+import { cyberCopy } from "./cyber-copy";
+import { CloudServiceTemplate } from "./cloud-pages";
+import { cloudCopy } from "./cloud-copy";
+import { MobileServiceTemplate } from "./mobile-service";
+import { mobileCopy } from "./mobile-copy";
+import { MarketingServiceTemplate } from "./marketing-service";
+import { marketingCopy } from "./marketing-copy";
+import { AutomationServiceTemplate } from "./automation-service";
+import { automationCopy } from "./automation-copy";
 import { WebServiceTemplate } from "./web-service";
 import { webServiceCopy } from "./web-service-copy";
 import type { ServiceDetail } from "../catalog-api.server";
@@ -8,6 +18,12 @@ import { PricePresentation } from "../components/price-presentation";
 import { Availability } from "../components/availability";
 import { CategoryIcon } from "@/components/ui/category-icon";
 import { canonicalServiceCategories as serviceCategories } from "@/components/layout/public-navigation";
+import { DesignServiceTemplate } from "./design-pages";
+import { designCopy } from "./design-copy";
+
+import { VideoServiceTemplate } from "./video-pages";
+import { videoCopy } from "./video-copy";
+
 const guidance: Record<
   ServiceDetail["variant"],
   { title: string; text: string; help: string }
@@ -40,6 +56,17 @@ const guidance: Record<
 };
 
 export function ServiceTemplate({ service }: { service: ServiceDetail }) {
+  if (videoCopy[service.id]) return <VideoServiceTemplate service={service} />;
+  if (designCopy[service.id])
+    return <DesignServiceTemplate service={service} />;
+  if (cyberCopy[service.id]) return <CyberServiceTemplate service={service} />;
+  if (cloudCopy[service.id]) return <CloudServiceTemplate service={service} />;
+  if (mobileCopy[service.id])
+    return <MobileServiceTemplate service={service} />;
+  if (marketingCopy[service.id])
+    return <MarketingServiceTemplate service={service} />;
+  if (automationCopy[service.id])
+    return <AutomationServiceTemplate service={service} />;
   if (webServiceCopy[service.id])
     return <WebServiceTemplate service={service} />;
   const quote = `/get-a-quote?serviceId=${encodeURIComponent(service.id)}`;

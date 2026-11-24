@@ -18,12 +18,9 @@ export function PricePresentation({ price }: { price: PricePresentationDto }) {
       {price.sourceLabel && price.sourceLabel !== price.label && (
         <p>{price.sourceLabel}</p>
       )}
-      {!price.unitConfirmed && price.model !== "custom" && (
-        <p>Billing unit requires confirmation.</p>
-      )}
       <p>
-        Indicative pricing. Final scope and price are confirmed in your
-        proposal.
+        Indicative pricing. Your proposal confirms the scope, price and billing
+        terms.
       </p>
     </div>
   );

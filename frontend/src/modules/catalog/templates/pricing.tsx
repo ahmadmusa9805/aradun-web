@@ -1,8 +1,16 @@
 import Link from "next/link";
 import type { PricingDetail } from "../catalog-api.server";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
-import { Button, ButtonLink } from "@/components/ui/button";
-import { Choice } from "@/components/forms/field";
+import { ButtonLink } from "@/components/ui/button";
+import { PricingDirectory } from "../components/pricing-directory";
+import { webServiceCopy } from "./web-service-copy";
+import { automationCopy } from "./automation-copy";
+import { marketingCopy } from "./marketing-copy";
+import { mobileCopy } from "./mobile-copy";
+import { cloudCopy } from "./cloud-copy";
+import { cyberCopy } from "./cyber-copy";
+import { designCopy } from "./design-copy";
+import { videoCopy } from "./video-copy";
 import { SolutionPriceCards } from "../components/solution-price-cards";
 import { EngagementModels } from "../components/engagement-models";
 import { publicFaqs } from "@/modules/content/data/public-copy";
@@ -44,18 +52,77 @@ const pricingQuestions = [
 ];
 
 export function PricingTemplate({ data }: { data: PricingDetail }) {
+  const summaries: Record<string, { summary?: string; hero?: string }> = {
+    ...webServiceCopy,
+    ...automationCopy,
+    ...marketingCopy,
+    ...mobileCopy,
+    ...cloudCopy,
+    ...cyberCopy,
+    ...designCopy,
+    ...videoCopy,
+  };
+  const order = [
+    "CAT-01",
+    "CAT-03",
+    "CAT-04",
+    "CAT-02",
+    "CAT-05",
+    "CAT-06",
+    "CAT-07",
+    "CAT-08",
+  ];
+  const groups = order.flatMap((id) => {
+    const group = data.groups.find((item) => item.id === id);
+    return group
+      ? [
+          {
+            ...group,
+            services: group.services.map((service) => {
+              const amount = service.priceLabel.match(/\$[\d,]+(?:\.\d+)?/);
+              const monthly = /per month|\/month/i.test(service.priceLabel);
+              return {
+                ...service,
+                summary:
+                  summaries[service.id]?.summary ??
+                  summaries[service.id]?.hero ??
+                  "Explore the work and package options on the service page.",
+                startingPrice: amount
+                  ? `From ${amount[0]}${monthly ? "/month" : ""}`
+                  : "Custom quote",
+                note: ["SVC-019", "SVC-021"].includes(service.id)
+                  ? "Setup and ad spend separate"
+                  : ["SVC-009", "SVC-043", "SVC-044", "SVC-047"].includes(
+                        service.id,
+                      )
+                    ? "Design only; implementation separately scoped"
+                    : service.id === "SVC-053"
+                      ? "Filming, crew and travel separately scoped"
+                      : id === "CAT-05"
+                        ? "Cloud provider fees separate"
+                        : id === "CAT-03"
+                          ? "Software, API and messaging usage may be separate"
+                          : undefined,
+              };
+            }),
+          },
+        ]
+      : [];
+  });
   return (
-    <>
+    <div className="pricing-page">
       <Breadcrumbs
         parents={[{ label: "Home", href: "/" }]}
         current="Pricing & Packages"
       />
       <section className="catalog-hero" aria-labelledby="pricing-title">
-        <h1 id="pricing-title">Understand your options before you start.</h1>
+        <h1 id="pricing-title">
+          Find the right starting point for your budget.
+        </h1>
         <p className="lead">
-          Explore indicative starting prices and engagement models. Your final
-          quote reflects the work, responsibilities and costs agreed for your
-          project.
+          Compare connected solution packages or browse individual service
+          starting prices. Choose a focused task, a wider project or a custom
+          combination.
         </p>
         <div className="ui-actions">
           <ButtonLink href="#solution-prices">Solution prices</ButtonLink>
@@ -109,78 +176,58 @@ export function PricingTemplate({ data }: { data: PricingDetail }) {
         className="catalog-section"
         aria-labelledby="service-prices-title"
       >
-        <h2 id="service-prices-title">Looking for a specific service?</h2>
+        <h2 id="service-prices-title">Explore individual service prices</h2>
         <p>
-          Browse all eight categories. Cross-listed services use the same offer;
-          selecting services below does not calculate a binding total.
+          Browse starting prices and select one service or several. All prices
+          are indicative USD entry points. Service pages explain the full
+          options; your proposal confirms deliverables, billing units and
+          external costs.
         </p>
-        {data.groups.map((group) => (
-          <details className="catalog-faq" key={group.id}>
-            <summary>{group.name}</summary>
-            <ul className="catalog-links">
-              {group.services.map((service) => (
-                <li key={service.id}>
-                  <Link href={service.href} prefetch={false}>
-                    {service.name}
-                  </Link>
-                  <p>
-                    {service.priceLabel} USD — indicative; scope and billing
-                    units require confirmation.
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </details>
-        ))}
-      </section>
-      <section className="catalog-section" aria-labelledby="custom-title">
-        <h2 id="custom-title">Build a scope around your needs</h2>
         <p>
-          Select the services you want to discuss, or describe your needs. We’ll
-          review overlap, dependencies and scope before preparing a quote.
+          Monthly units appear where confirmed. Other deliverable units are
+          agreed for the selected work. Mobile App UI/UX Design is one shared
+          service across two categories.
         </p>
-        <form action="/get-a-quote" method="get">
-          <p>
-            Choose any relevant services, or continue with an unsure/custom
-            request. Your choices stay editable on the quote form.
-          </p>
-          <details className="catalog-faq">
-            <summary>Choose services to discuss</summary>
-            <fieldset>
-              <legend>Services for your quote request</legend>
-              {data.services.map((service) => (
-                <Choice
-                  key={service.id}
-                  id={`quote-${service.id}`}
-                  name="serviceId"
-                  value={service.id}
-                  label={service.name}
-                />
-              ))}
-            </fieldset>
-          </details>
-          <Choice
-            id="custom-request"
-            name="customRequested"
-            value="true"
-            label="Include custom or unsure requirements"
-          />
-          <Button type="submit">Request a Custom Quote</Button>
-        </form>
+        <PricingDirectory groups={groups} />
       </section>
       <section className="catalog-section" aria-labelledby="cost-title">
         <h2 id="cost-title">What affects your quote?</h2>
+        <dl className="pricing-factors">
+          {[
+            [
+              "Size and quantity",
+              "Pages, screens, workflows, assets and campaign quantities affect effort.",
+            ],
+            [
+              "Complexity",
+              "Custom behavior and difficult integrations require more work.",
+            ],
+            [
+              "Existing systems",
+              "Compatible systems may reduce setup; repairs or migrations can add effort.",
+            ],
+            [
+              "Content and materials",
+              "Ready-to-use approved content can reduce preparation time.",
+            ],
+            [
+              "Third-party costs",
+              "Hosting, subscriptions, ad spend, API usage and licenses may be separate.",
+            ],
+            [
+              "Ongoing support",
+              "Maintenance, monitoring, content and future improvements are scoped separately.",
+            ],
+          ].map(([title, text]) => (
+            <div key={title}>
+              <dt>{title}</dt>
+              <dd>{text}</dd>
+            </div>
+          ))}
+        </dl>
         <p>
-          Starting prices are indicative. Final scope, fees and any ongoing or
-          third-party costs are confirmed in your proposal.
-        </p>
-        <p>
-          The monthly scope, billing terms and any usage limits are agreed
-          before work begins.
-        </p>
-        <p>
-          Quantities, exclusions, revisions, client inputs, technology,
-          setup/recurring costs and support remain package decisions.
+          Your budget matters. Share your priorities and preferred budget; we
+          can discuss a smaller first stage or tailored scope.
         </p>
       </section>
       <section className="catalog-section" aria-labelledby="faq-title">
@@ -189,11 +236,6 @@ export function PricingTemplate({ data }: { data: PricingDetail }) {
           <details key={faq.question} className="catalog-faq">
             <summary>{faq.question}</summary>
             <p>{faq.answer}</p>
-            <p>
-              <Link prefetch={false} href={`/faq/${faq.help}`}>
-                Read the detailed guide
-              </Link>
-            </p>
           </details>
         ))}
       </section>
@@ -209,6 +251,6 @@ export function PricingTemplate({ data }: { data: PricingDetail }) {
           </ButtonLink>
         </div>
       </section>
-    </>
+    </div>
   );
 }

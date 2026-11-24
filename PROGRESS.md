@@ -1,5 +1,87 @@
 # ARADUN progress
 
+## PUB-004 Pricing refinement — 2026-11-25
+
+Single source starting prices, core-first eight dropdowns, reused summaries/notices, service search and deduplicated selection/GET quote handoff implemented. Five shared solution comparisons retained; cost factors improved. Lint/types/build,57 unique/58 memberships, four widths, search/cross-list/filter/handoff and three-theme axe passed. [Evidence](docs/verification/pricing-refinement.md). Unapproved units/solution allowances and human visual acceptance remain open. No next task started.
+
+## PUB-003 All Solutions refinement — 2026-11-25
+
+Three core/two other cards, concise API prices and Best for guidance, one pricing note, Services-versus-Solutions choice, process and five FAQs implemented. Duplicate selection content removed. Lint/types/build, four widths, three-theme axe, 11 links and aligned core actions passed. [Evidence](docs/verification/all-solutions-refinement.md). Owner visual acceptance pending; no next task started.
+
+## SOL-005 Complete Digital Business refinement — 2026-11-25
+
+Refined five scenarios, compact service groups, three illustrative combinations, engagement directions, costs, studies, process and FAQs. Three Custom prices/IDs retained, explained through distinct subtitles on solution/Pricing. Lint/types/build, four widths, three-theme axe, parity, 24 links, button alignment and other-solution dispatch passed. [Evidence](docs/verification/complete-business-refinement.md). Proposed $299 discovery/official package renaming not adopted; visual acceptance pending. All five solution refinements available for review; no next task started.
+
+## SOL-004 Cloud & Technology refinement — 2026-11-24
+
+Refined six scenarios, compact Cloud links, shared package guidance, platforms, three studies, process, costs/responsibilities and seven FAQs. $499/$1,999 per-project/Custom retained. Lint/types/build, four widths, three-theme axe, Pricing parity, 22 links and button alignment passed. [Evidence](docs/verification/cloud-technology-refinement.md). Exact proposed resource/support allowances and owner visual acceptance remain open. No next task started.
+
+Business Growth service-list polish (2026-11-24): replaced long horizontal service rows with compact three-column groups (two on tablet, one on narrow screens), smaller typography/link spacing and a single concise introduction. All ten service links and scope qualification retained. Focused lint/types and four-width/no-overflow/three-theme axe checks passed; final desktop/mobile screenshots reviewed. Owner visual acceptance pending.
+
+## SOL-003 Business Growth refinement — 2026-11-24
+
+Updated situations, grouped service discovery, shared compact package cards, measurement, costs/contract terms, three studies, process and FAQs. Original monthly prices retained. Lint/types/build, four widths, three-theme axe, Pricing parity, 25 links and button alignment passed. [Evidence](docs/verification/business-growth-refinement.md). Exact proposed channel/workload/contract allowances and visual acceptance pending. No next task started.
+
+## SOL-002 Business Automation refinement — 2026-11-24
+
+Refined scenarios, services, illustrative workflow, three examples, platform options, process, cost/responsibility terms and FAQs. Shared compact Pricing cards retain $699/$2,499 per-project/Custom. Lint/types/build, four widths, three-theme axe, parity, 20 links and measured button alignment passed. Digital Presence terms preserved. [Evidence](docs/verification/business-automation-refinement.md). Proposed numeric package allowances/support require owner decision; visual acceptance pending. No next task started.
+
+## SOL-001 UI polish — 2026-11-24
+
+Compact checkmark package lists, equal-row bottom-aligned buttons, cleaner three-project previews and smaller expectations text implemented. Approved terms/prices preserved. Four-width, three-theme axe, Pricing parity, 19 links, measured button alignment, lint and build checks passed. [Evidence](docs/verification/digital-presence-ui-polish.md). Owner visual acceptance pending; no next task.
+
+## SOL-001 approved package terms — 2026-11-24
+
+Owner authorized all proposed improvements: Starter 3 pages/2 revision rounds/14-day bug fixes; Professional 8 pages including landing page/3 rounds/30-day bug fixes. Shared solution/Pricing terms updated with content, testing, SEO/analytics, rights, handoff and exclusions. Prior exact-package deferral superseded for these terms. Lint/types/build, four widths, three-theme targeted axe, Pricing parity, 19 destinations and other-solution checks passed. [Evidence](docs/verification/digital-presence-package-terms.md). Implementation complete; owner visual acceptance pending, no deployment or next task.
+
+## SOL-001 Digital Presence refinement — 2026-11-24
+
+Refined hero, four situations, five optional service combinations, shared tier guidance on solution/Pricing, three studies, process and six FAQs. Original prices/IDs/routes retained. Lint/types/build, four widths, three-theme axe, Pricing parity, 18 links and other-solution dispatch checks passed. [Evidence](docs/verification/digital-presence-refinement.md). Owner visual acceptance and exact proposed package entitlements remain pending; no next task started.
+
+## PUB-002 All Services refinement — 2026-11-24
+
+Three core categories followed by five Other services; improved descriptions/links, connected-solution guidance, engagement options, expectations, three concept project examples and four answered FAQs. Lint/types/build, four widths, three-theme targeted axe and 45 internal-link checks passed. [Evidence](docs/verification/all-services-refinement.md). Owner visual/content acceptance pending; no next task started.
+
+## CAT-08 Video Editing & Production refinement — 2026-11-24
+
+Eight category cards and eight service details refined with task lists, tools, needs guide, process, FAQs and rights/delivery boundaries. Source names/routes/prices retained. Lint/types/build, responsive 1440/390/320, three-theme category and eight-detail axe/package checks passed. [Evidence](docs/verification/video-production-refinement.md). Owner visual/content acceptance pending. SVC-057 billing interval remains an explicit publication gate; M09-05 not wholly accepted. All eight category refinement batches are available for consolidated review; no next task started.
+
+## CAT-07 Design & Branding refinement — 2026-11-24
+
+Eight category cards and seven design details refined; shared SVC-009 Mobile detail retained. Clear work lists, source starting prices, selection guide, design examples, process and ownership/revision/licensing guidance added. Lint/types/build, three responsive widths, three-theme category and eight linked-detail axe/package checks passed. [Evidence](docs/verification/design-branding-refinement.md). Owner visual/content acceptance pending; no Video work started.
+
+## CAT-06 Cybersecurity refinement — 2026-11-24
+
+Category and eight details refined with compact task lists, reference guidance, deliverables, authorization-first process and clear service boundaries. Names/routes/source prices retained. Lint/types/build, three responsive widths, three-theme category and eight-detail axe/package checks passed. [Evidence](docs/verification/cybersecurity-refinement.md). Owner visual/content acceptance pending; no actual security testing or next category started.
+
+Category hero spacing (2026-11-24): restrained CSS correction on the five reviewed categories; explicit title/headline/description/action gaps and modest service-grid separation. Twenty live viewport/route combinations passed without overlap/overflow; desktop/mobile screenshots reviewed. [Evidence](docs/verification/category-hero-spacing.md). Owner visual acceptance pending; no content/price changes.
+
+## CAT-05 Cloud & DevOps refinement — 2026-11-24
+
+Category/eight details refined with compact checkmark cards, nine task names, tools/source starting prices, needs guide, concept examples, process, cost/responsibility guidance and seven FAQs. Optional migration offer not added; source prices/IDs/routes retained. Live1440/390/320, all-theme category/eight-detail axe, package-link, lint/types/format/build checks passed. [Evidence](docs/verification/cloud-category-refinement.md). No infrastructure/deployment/spending/commit/push; owner review pending, no next category started.
+
+## CAT-02 Mobile App refinement — 2026-11-24
+
+Category/five existing details refined with compact checkmark cards, nine tasks each, technologies/source starting prices, selection guide, concept examples, process, ownership/platform guidance and seven FAQs. No new optional offers, rename, price or route change. Desktop/mobile320/390, all-theme category and five-detail axe/package-link checks, lint/types/format/build passed. [Files and scope](docs/verification/mobile-category-refinement.md). Owner visual/content review pending; no next category/deployment/commit/push.
+
+## CAT-04 Digital Marketing refinement — 2026-11-24
+
+Category and nine existing details improved: task-first compact checkmark cards, nine work types each, tools/starting prices, goal guide, process, explicit budget split and useful FAQs. Source names/routes/prices retained. Lead generation/campaign management explained within existing scope; Telemarketing/new Sales/B2B offer not added. Live1440/390/320, nine-detail/package-link, all-theme category axe and detail axe checks passed; lint/format/types/frontend build passed. [Evidence](docs/verification/digital-marketing-refinement.md). Owner review pending; no next category/deployment/commit/push.
+
+Home reversal (2026-11-24): owner prefers the previous five-solution pricing layout. Removed the added699 website card and its extra API fetch/prop; service prices elsewhere unchanged. Live browser confirms five solution cards, no website card and Digital Presence899/project preserved; focused lint/format passed. [Updated evidence](docs/verification/home-price-card-clarity.md).
+
+AI card list polish (2026-11-24): What we can do now uses aligned neutral check marks and clearer spacing, preserving nine items per service and semantic lists. Desktop/mobile320/390 checks passed; screenshot reviewed. [Evidence](docs/verification/automation-crm-refinement.md). Owner visual review pending.
+
+## Home price clarity and compact AI cards — 2026-11-24
+
+Final frontend production build passed.
+
+Home shows Business Website Development From699 separately from Digital Presence solution899/project; original prices retained. Replaced awkward billing-unit sentence with concise proposal qualification. AI cards compacted with all nine task names preserved. Desktop/mobile/link/price/overflow/axe checks and two pricing tests passed; lint/types passed. [Evidence](docs/verification/home-price-card-clarity.md). Owner review pending; no deployment/commit/push.
+
+## CAT-03 AI Automation & CRM review — 2026-11-24
+
+Existing category and seven service pages refined: four service groups, nine work types before tools on each card, single indicative starting prices, eight use cases, selection guide/process/FAQs and fuller detail/pricing scope context. Live desktop/mobile, category all-theme and seven-detail axe checks, lint/types/format and frontend build passed. [Files/evidence](docs/verification/automation-crm-refinement.md). Owner visual review and explicit four-new-offer/pricing decision pending; not eleven-service completion. No other category work or backend/price/source changes; no next task started.
+
 ## Web category prices and five service details — 2026-11-24
 
 Approved hero/Admin Dashboards/single starting-price card correction implemented; five individual web service pages expanded with benefits, deliverable/preparation lists and all original price options plus proposed qualitative scope. Source commercial records unchanged; fixed package entitlements await owner review. Live desktop/mobile for all five, contextual quote links, targeted service axe scans, category three-theme scans, lint/format/types passed. [Scope and verification](docs/verification/web-service-pricing-details.md). Owner review pending; no other category started.

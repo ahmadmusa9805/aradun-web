@@ -1,53 +1,159 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import type { SolutionDetail } from "../catalog-api.server";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { ButtonLink } from "@/components/ui/button";
-import { PricePresentation } from "../components/price-presentation";
-
+const coreIds = ["SOL-001", "SOL-002", "SOL-003"];
+const otherIds = ["SOL-004", "SOL-005"];
+const copy: Record<
+  string,
+  { description: string; types: string; fit: string }
+> = {
+  "SOL-001": {
+    description:
+      "Build or improve your website, brand presentation and customer inquiry experience.",
+    types: "Websites · Branding · Landing pages",
+    fit: "New businesses and companies improving their websites",
+  },
+  "SOL-002": {
+    description:
+      "Connect your CRM and business tools to reduce repetitive work and improve customer follow-up.",
+    types: "CRM · Workflows · Integrations",
+    fit: "Teams handling repetitive tasks and customer workflows",
+  },
+  "SOL-003": {
+    description:
+      "Improve marketing through selected channels, coordinated activities and measurable priorities.",
+    types: "SEO · Advertising · Social media",
+    fit: "Businesses improving customer acquisition and marketing",
+  },
+  "SOL-004": {
+    description:
+      "Prepare hosting, deploy applications and improve selected infrastructure and operating processes.",
+    types: "Cloud setup · Deployment · CI/CD",
+    fit: "Startups and technical teams improving infrastructure",
+  },
+  "SOL-005": {
+    description:
+      "Bring selected technology, automation, design and marketing services together through one coordinated plan.",
+    types: "Connected projects · Phased delivery · Ongoing service planning",
+    fit: "Businesses with several connected digital needs",
+  },
+};
 export const solutionQuestions = [
   {
     question: "Does a solution include every related service?",
     answer:
-      "The final package identifies included services and deliverables. The solution name and starting price do not establish a complete scope.",
-    help: "services",
+      "No. Only the services and deliverables identified in your selected package or custom proposal are included.",
   },
   {
-    question: "Can this work with our existing systems?",
+    question: "Can you work with existing systems?",
     answer:
-      "Existing systems are reviewed for access, compatibility, licensing and condition. Reuse or replacement must be justified and agreed; neither is automatic.",
-    help: "not-sure",
+      "We review access, compatibility and condition to understand what can be reused or improved.",
   },
   {
-    question: "Can we discuss custom work?",
-    answer: "Request a quote so we can review your requirements.",
-    help: "not-sure",
-  },
-  {
-    question: "Are starting prices a final quote?",
+    question: "Can I request a smaller custom project?",
     answer:
-      "Starting prices are indicative. Final scope, fees and any ongoing or third-party costs are confirmed in your proposal.",
-    help: "starting-prices",
+      "You can discuss an individual service or tailored project. Custom pricing does not automatically mean a larger or more expensive engagement.",
+  },
+  {
+    question: "Are starting prices final?",
+    answer:
+      "They are indicative entry points. Your proposal confirms selected deliverables, final fees, billing terms and separate costs.",
+  },
+  {
+    question: "What if I do not know which solution I need?",
+    answer:
+      "Tell us your main business goal and current situation. We can help identify a suitable starting point.",
   },
 ];
+const process = [
+  [
+    "Share your goals",
+    "Tell us about your business, challenges and what you want to achieve.",
+  ],
+  [
+    "Choose an approach",
+    "Review requirements and identify suitable services or solutions.",
+  ],
+  [
+    "Review your proposal",
+    "Understand deliverables, costs, responsibilities and project stages.",
+  ],
+  [
+    "Start the agreed work",
+    "Approve the scope before delivery, with defined review and handoff points.",
+  ],
+];
+function SolutionCards({
+  solutions,
+  ids,
+}: {
+  solutions: SolutionDetail[];
+  ids: string[];
+}) {
+  return (
+    <ul className="catalog-grid solutions-card-grid">
+      {ids.flatMap((id) => {
+        const solution = solutions.find((item) => item.id === id);
+        if (!solution) return [];
+        const detail = copy[id]!;
+        return [
+          <li
+            className="catalog-card solutions-overview-card"
+            key={id}
+            data-solution-id={id}
+          >
+            <h3>
+              <Link href={solution.href}>{solution.name}</Link>
+            </h3>
+            <p>{detail.description}</p>
+            <p className="solutions-types">{detail.types}</p>
+            <p className="solutions-best">
+              <strong>Best for: </strong>
+              {detail.fit}
+            </p>
+            <p className="solutions-starting-price">
+              <strong>
+                {id === "SOL-005"
+                  ? "Custom project pricing"
+                  : solution.prices[0]!.price.label}
+              </strong>
+              {id !== "SOL-005" && <span> USD</span>}
+            </p>
+            <Link className="solutions-card-action" href={solution.href}>
+              {id === "SOL-005"
+                ? "Explore engagement options"
+                : `Explore ${solution.name}`}{" "}
+              →
+            </Link>
+          </li>,
+        ];
+      })}
+    </ul>
+  );
+}
 export function SolutionsOverview({
   solutions,
 }: {
   solutions: SolutionDetail[];
 }) {
   return (
-    <>
+    <div className="solutions-overview">
       <Breadcrumbs
         parents={[{ label: "Home", href: "/" }]}
         current="Solutions"
       />
       <section className="catalog-hero" aria-labelledby="solutions-title">
-        <h1 id="solutions-title">
-          Find a solution around your business goals.
-        </h1>
+        <p className="catalog-eyebrow">Our solutions</p>
+        <h1 id="solutions-title">Digital solutions for your business goals.</h1>
         <p className="lead">
-          Explore five ways to connect relevant services around a business need.
-          Each engagement starts with a review of your requirements and an
-          agreed scope.
+          From building your online presence to automating operations and
+          improving marketing, bring the right services together around what you
+          want to achieve.
+        </p>
+        <p>
+          Start with a focused project, ongoing support or a custom combination
+          suited to your needs and budget.
         </p>
         <div className="ui-actions">
           <ButtonLink href="#solutions">Explore Solutions</ButtonLink>
@@ -57,105 +163,91 @@ export function SolutionsOverview({
         </div>
       </section>
       <section
-        className="catalog-section"
+        className="catalog-section solutions-core"
         id="solutions"
-        aria-labelledby="options-title"
+        aria-labelledby="core-solutions-title"
       >
-        <h2 id="options-title">What would you like to improve?</h2>
-        <ul className="catalog-grid">
-          {solutions.map((solution) => (
-            <li key={solution.id} className="catalog-card">
-              <h3>
-                <Link href={solution.href} prefetch={false}>
-                  {solution.name}
-                </Link>
-              </h3>
-              <p>{solution.summary}</p>
-              <PricePresentation price={solution.prices[0]!.price} />
-              <Link href={solution.href} prefetch={false}>
-                Explore {solution.name}
-              </Link>
-              <Link prefetch={false} href={`/pricing#solution-${solution.id}`}>
-                Compare package options
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <p className="catalog-eyebrow">Build · Automate · Grow</p>
+        <h2 id="core-solutions-title">Core solutions</h2>
+        <p>
+          Three starting points for your online presence, everyday operations
+          and marketing.
+        </p>
+        <SolutionCards solutions={solutions} ids={coreIds} />
+      </section>
+      <section
+        className="catalog-section"
+        aria-labelledby="other-solutions-title"
+      >
+        <h2 id="other-solutions-title">More ways we can help</h2>
+        <p>
+          Support your application infrastructure or coordinate several
+          connected business needs.
+        </p>
+        <SolutionCards solutions={solutions} ids={otherIds} />
+        <p className="solutions-price-note">
+          Prices are indicative USD starting points. Each solution page explains
+          its options; your proposal confirms selected deliverables, final fees
+          and any separate third-party or ongoing costs.
+        </p>
       </section>
       <section className="catalog-section" aria-labelledby="selection-title">
-        <h2 id="selection-title">Choose your starting point</h2>
-        <p>
-          Compare your situation first. Related services are possibilities to
-          discuss, not guaranteed package inclusions.
-        </p>
-        <dl className="solution-selection">
-          {solutions.map((solution) => (
-            <div key={solution.id}>
-              <dt>
-                <Link href={solution.href} prefetch={false}>
-                  {solution.name}
-                </Link>
-              </dt>
-              <dd>
-                <p>
-                  <strong>Who this is for:</strong> {solution.audience}
-                </p>
-                <p>
-                  <strong>Your starting point:</strong> {solution.problem}
-                </p>
-                <div className="ui-actions">
-                  <ButtonLink
-                    variant="secondary"
-                    href={`/get-a-quote?solutionId=${encodeURIComponent(solution.id)}`}
-                  >
-                    Discuss {solution.name}
-                  </ButtonLink>
-                </div>
-              </dd>
-            </div>
-          ))}
-        </dl>
+        <h2 id="selection-title">A service or a solution?</h2>
+        <div className="solutions-choice-grid">
+          <div>
+            <h3>Choose a service</h3>
+            <p>
+              You know the specific work you need, such as website development,
+              CRM setup or SEO.
+            </p>
+            <Link href="/services">Explore services →</Link>
+          </div>
+          <div>
+            <h3>Choose a solution</h3>
+            <p>
+              You have a business goal that may need several connected services.
+              Compare the five directions above.
+            </p>
+            <Link href="#solutions">Compare solutions →</Link>
+          </div>
+        </div>
       </section>
       <section className="catalog-section" aria-labelledby="approach-title">
-        <h2 id="approach-title">From your goals to an agreed scope</h2>
-        <p>
-          Review the goal, identify suitable services, agree the work and costs,
-          then define delivery and review points.
-        </p>
-        <ButtonLink href="/pricing" variant="secondary">
-          Explore Pricing
-        </ButtonLink>
-        <p className="section-link">
-          Not sure which direction fits?{" "}
-          <Link prefetch={false} href="/consultation">
-            Request a consultation
-          </Link>{" "}
-          or{" "}
-          <Link prefetch={false} href="/faq/not-sure">
-            read the selection guide
-          </Link>
-          .
-        </p>
+        <h2 id="approach-title">How we work</h2>
+        <ol className="solutions-process">
+          {process.map(([title, text], index) => (
+            <li key={title}>
+              <span aria-hidden="true">0{index + 1}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </li>
+          ))}
+        </ol>
+        <Link href="/pricing">Explore pricing &amp; packages →</Link>
       </section>
       <section className="catalog-section" aria-labelledby="faq-title">
         <h2 id="faq-title">Before choosing a solution</h2>
         {solutionQuestions.map((faq) => (
-          <details key={faq.question} className="catalog-faq">
+          <details className="catalog-faq" key={faq.question}>
             <summary>{faq.question}</summary>
             <p>{faq.answer}</p>
-            <p>
-              <Link prefetch={false} href={`/faq/${faq.help}`}>
-                Read the detailed guide
-              </Link>
-            </p>
           </details>
         ))}
+        <p>
+          <Link href="/faq">View all FAQs →</Link>
+        </p>
       </section>
       <section
         className="catalog-section catalog-next"
         aria-labelledby="next-title"
       >
-        <h2 id="next-title">Let’s identify the right approach</h2>
+        <h2 id="next-title">
+          Let's find the right solution for your business.
+        </h2>
+        <p>
+          Whether you are starting with one project or planning wider
+          improvements, tell us what you want to achieve.
+        </p>
         <div className="ui-actions">
           <ButtonLink href="/get-a-quote">Get a Quote</ButtonLink>
           <ButtonLink href="/consultation" variant="secondary">
@@ -163,6 +255,6 @@ export function SolutionsOverview({
           </ButtonLink>
         </div>
       </section>
-    </>
+    </div>
   );
 }
