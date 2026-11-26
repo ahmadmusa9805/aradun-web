@@ -15,13 +15,13 @@
     "minimatch": "11.0.1"
   },
   "scripts": {
-    "dev": "node scripts/dev.mjs",
+    "dev": "node init && node scripts/dev.mjs",
     "mongodb": "node scripts/mongodb-local.mjs",
     "frontend": "npm run dev --workspace @aradun/frontend",
     "backend": "npm run dev --workspace @aradun/backend",
-    "dev:frontend": "npm run dev --workspace @aradun/frontend",
-    "dev:backend": "npm run dev --workspace @aradun/backend",
-    "build": "npm run catalog:check && npm run build --workspaces",
+    "dev:frontend": "node init && npm run dev --workspace @aradun/frontend",
+    "dev:backend": "node init && npm run dev --workspace @aradun/backend",
+    "build": "node init && npm run catalog:check && npm run build --workspaces",
     "typecheck": "npm run typecheck --workspaces && npm run typecheck:tests",
     "typecheck:tests": "tsc -p tests/tsconfig.json",
     "lint": "eslint frontend backend tests scripts *.ts eslint.config.mjs && npm run check:boundaries",
