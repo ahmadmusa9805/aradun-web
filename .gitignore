@@ -1,18 +1,35 @@
+# Dependencies
 node_modules/
 .tools/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Build and output files
 .next/
 .next-local/
 out/
 dist/
+*.tsbuildinfo
+
+# Testing and coverage
 coverage/
 test-results/
 playwright-report/
-*.tsbuildinfo
+
+# Logs
 *.log
-!.env.example
-!.env.*.example
+
+# Python
 __pycache__/
 *.pyc
+
+# Operating system files
 .DS_Store
 Thumbs.db
+
+# Local configuration
 config.bat
